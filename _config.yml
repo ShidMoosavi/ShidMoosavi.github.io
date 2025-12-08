@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # Currently available options are "default", "air"
-title                    : "Shid-Moosavi"
+title                    : "Sina Shid-Moosavi"
 title_separator          : "-"
 name                     : &name "Sina Shid_Moosavi"
 description              : &description "PhD Candidate in Data and Systems"   # Update this with a general description of your site, this is the default if not overridden by a page
