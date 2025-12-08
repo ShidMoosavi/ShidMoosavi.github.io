@@ -4,7 +4,7 @@ collection: teaching
 type: "Graduate Teaching Assistant"
 permalink: /teaching/2024-1-spring-teaching
 venue: "Northeastern University"
-date: Spring 2024
+date: 2024-03-01
 location: "Boston, USA"
 ---
 
