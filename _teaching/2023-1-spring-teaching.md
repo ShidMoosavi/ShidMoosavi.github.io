@@ -2,9 +2,9 @@
 title: "Mechanics of Materials Laboratory"
 collection: teaching
 type: "Graduate Teaching Assistant"
-permalink: /teaching/2022-2-Fall-teaching
-venue: "University of Central Florida, Fall"
-date: 2022-01-01
+permalink: /teaching/2023-1-spring-teaching
+venue: "University of Central Florida, Spring"
+date: 2023-01-01
 location: "Orlando, USA"
 ---
 
