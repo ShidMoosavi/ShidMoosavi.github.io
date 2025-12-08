@@ -4,7 +4,7 @@ title: "Gallery"
 permalink: /gallery/
 ---
 
-Explore images and visuals from some of our events.
+Explore images and visuals from my journey.
 
 <style>
   .gallery-section {
@@ -35,23 +35,24 @@ Explore images and visuals from some of our events.
 
 ---
 
-## Summer School
-Highlights from our exciting annual summer school program in The Netherlands.
+## Northeastern University
 
 <div class="gallery-section">
   <div class="gallery-title">2025</div>
   <div class="gallery-images">
     {% for i in (1..15) %}
-      <img src="/images/holland/2025_netherlands{{ i }}.jpg" alt="Summer School 2024 {{ i }}">
+      <img src="/images/Gallery/NU/{{ i }}.jpg" alt="Northeastern University {{ i }}">
     {% endfor %}
   </div>
 </div>
+
+## University of Central Florida
 
 <div class="gallery-section">
   <div class="gallery-title">2024</div>
   <div class="gallery-images">
     {% for i in (1..15) %}
-      <img src="/images/holland/2024_netherlands{{ i }}.jpg" alt="Summer School 2024 {{ i }}">
+      <img src="/images/Gallery/UCF/{{ i }}.jpg" alt="University of Central Florida {{ i }}">
     {% endfor %}
   </div>
 </div>
