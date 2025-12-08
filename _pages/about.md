@@ -60,7 +60,7 @@ I have +4 years of experience in leveraging AI and ML frameworks to enhance smar
 
 <div class="skills-row">
   <div class="skills-column">
-    <h2><strong>Software and Programming</strong></h2>
+    <h2><strong>Programming</strong></h2>
     <img src="{{ '/images/5904463.png' | relative_url }}" alt="Software and programming icon">
     <ul class="skills-list">
       <li>Python (TensorFlow, PyTorch, Keras, OpenCV, scikit-learn, NumPy, pandas, Matplotlib, Seaborn)</li>
