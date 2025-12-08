@@ -1,20 +1,19 @@
 ---
-title: "Seismic Performance of Integral and Semi-Integral Bridges"
-permalink: /research/project_1/
-excerpt: "Study of the seismic and thermal performance of integral, semi-integral, and conventional bridges, highlighting how soil-structure interaction and connection details influence resilience.<br/><center><img alt='Integral bridge' class='align-center' src='/images/projects/Integral.png' style='width: 500px; padding: 10px; margin: 10px 20px' /></center>"
+title: "Structural Monitoring Using Multi-Camera Photogrammetry"
+permalink: /research/project_3/
+excerpt: ""
 collection: research
 ---
 
 <div style="text-align: justify;">
-Bridges are essential elements of transportation networks, but their performance under seismic and thermal conditions poses significant engineering challenges. This study examines the behavior of integral, semi-integral, and conventional bridges under such loads, focusing on their structural responses and soil-structure interactions. Integral bridges, with their continuous connections between the deck and abutments, enhance seismic resilience and lower maintenance by eliminating expansion joints and bearings. Semi-integral bridges, using limited bearings, provide a compromise between flexibility and durability. Conventional bridges, though common, often experience greater displacements and maintenance due to their segmented design. The research explores how soil-backfill interactions and connection types affect bridge performance under these conditions. Advanced finite element modeling and time-history analysis show that integral and semi-integral bridges perform better during seismic events due to their frame action and soil interaction. The study also examines thermal loads on abutment deformations and backfill pressure, highlighting the superior stress distribution of semi-integral systems. These findings aid in optimizing bridge designs for improved resilience and sustainability by addressing interactions between structural components and environmental forces.
-<a href="https://ajce.aut.ac.ir/article_2909_0.html"><b>(Journal Paper, </b></a>
-<a href="https://www.researchgate.net/publication/334064146_The_Performance_of_Integral_and_Semi-integral_pre-tensioned_concrete_bridges_under_thermal_loads_depending_on_various_deck_to_pier_connections"><b>Conference Paper 1, </b></a>
-<a href="https://www.researchgate.net/publication/341909051_Seismic_Performance_of_Integral_Semi-Integral_and_Conventional_Bridges"><b>Conference Paper 2)</b></a>
+Structural monitoring relies on advanced technologies to measure displacements and vibrations accurately. Multi-camera photogrammetry has proven to be a dependable, non-contact method for dynamic displacement measurement, particularly during shake table tests of civil structures. This study examines two critical aspects of this technique: multi-vision triangulation for accurate 3D reconstruction and data synchronization to align camera perspectives temporally. The multi-vision triangulation method achieves precise 3D displacement measurement using synchronized images from multiple cameras. By intersecting viewing rays from various angles, this approach accurately determines spatial positions of structural features, even under complex motion. Using direct linear transformation (DLT) methods, it captures structural responses in three dimensions, offering valuable insights into structural behavior during dynamic tests. Data synchronization is equally vital. Time drift between camera clocks can cause frame mismatches, leading to measurement errors. To mitigate this, audio-based synchronization with cross-correlation techniques was used to align video frames precisely. This ensures that data from all cameras corresponds to the same time points, allowing integrated multi-vision analysis.
+<a href = https://arxiv.org/abs/2403.01587><b>(Conference Paper 1, </b></a> <a href = https://www.researchgate.net/publication/366581669_Towards_Full-Field_Sensing_of_3D_Deformation_in_Structural_Components_using_Multi-Camera_Photogrammetry><b>Conference Paper 2)</b></a>
+			  
 
 </div>
 
 <center>
   <img alt="Integral bridge" class="align-center"
-       src="/images/projects/Integral.png"
+       src="/images/projects/Shacking.png"
        style="width: 500px; padding: 10px; margin: 10px 20px" />
 </center>
