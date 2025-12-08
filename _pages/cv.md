@@ -20,14 +20,14 @@ last_updated: "December 2025"
 <div class="pdf-container">
     <iframe src="https://shidmoosavi.github.io/files/CV/CV_ShidMoosavi.pdf" width="90%" height="700px" style="border: 1px solid #ccc; border-radius: 5px;">
         Your browser does not support PDFs.
-        Please <a href="https://shidmoosavi.github.io/files/CV/CV_ShidMoosavi.pd">download the PDF here</a>.
+        Please <a href="https://shidmoosavi.github.io/files/CV/CV_ShidMoosavi.pdf">download the PDF here</a>.
     </iframe>
 </div>
 
 <!-- Mobile: View & Download Button -->
 <div class="mobile-view">
     <div style="text-align: center; margin-top: 20px;">
-        <a href="https://shidmoosavi.github.io/files/CV/CV_ShidMoosavi.pd" target="_blank" 
+        <a href="https://shidmoosavi.github.io/files/CV/CV_ShidMoosavi.pdf" target="_blank" 
            style="font-size: 18px; padding: 10px 20px; background-color: #007bff; color: white; 
                   text-decoration: none; border-radius: 5px;">
             📄 View CV
