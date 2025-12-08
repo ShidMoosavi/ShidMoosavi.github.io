@@ -18,7 +18,10 @@ main:
     url: /teaching/
     
   - title: "CV"
-    url: /cv/    
+    url: /cv/
+
+  - title: "Gallery"
+    url: /gallery/    
     
   # - title: "Portfolio"
   #  url: /portfolio/
