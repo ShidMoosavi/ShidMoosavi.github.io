@@ -61,7 +61,7 @@ I have +4 years of experience in leveraging AI and ML frameworks to enhance smar
 <div class="skills-row">
   <div class="skills-column">
     <h2><strong>Software and Programming</strong></h2>
-    <img src="{{ '/static/figures/5904463.png' | relative_url }}" alt="Software and programming icon">
+    <img src="{{ '/images/5904463.png' | relative_url }}" alt="Software and programming icon">
     <ul class="skills-list">
       <li>Python (TensorFlow, PyTorch, Keras, OpenCV, scikit-learn, NumPy, pandas, Matplotlib, Seaborn)</li>
       <li>MATLAB</li>
@@ -74,7 +74,7 @@ I have +4 years of experience in leveraging AI and ML frameworks to enhance smar
 
   <div class="skills-column">
     <h2><strong>Skills</strong></h2>
-    <img src="{{ '/static/figures/2103650.png' | relative_url }}" alt="Skills icon">
+    <img src="{{ '/images/2103650.png' | relative_url }}" alt="Skills icon">
     <ul class="skills-list">
       <li>Machine learning (decision trees, random forests, SVM, KNN, ANN)</li>
       <li>Deep learning (RNN, CNN, LSTM, GNN, transformers)</li>
@@ -87,7 +87,7 @@ I have +4 years of experience in leveraging AI and ML frameworks to enhance smar
 
   <div class="skills-column">
     <h2><strong>Selected Coursework</strong></h2>
-    <img src="{{ '/static/figures/document.png' | relative_url }}" alt="Coursework icon">
+    <img src="{{ '/images/document.png' | relative_url }}" alt="Coursework icon">
     <ul class="skills-list">
       <li>Machine Learning and Pattern Recognition</li>
       <li>Time Series and Geospatial Data Sciences</li>
