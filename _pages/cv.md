@@ -10,8 +10,7 @@ last_updated: "December 2025"
 
 {% include base_path %}
 
-<div style="text-align: center;">
-    <h2>Curriculum Vitae</h2>
+<div style="text-align">
     <p>
         A PDF copy of my CV, <strong>last updated {{ page.last_updated }}</strong>, is available below:
     </p>
