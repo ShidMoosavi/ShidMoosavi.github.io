@@ -1,15 +1,18 @@
 ---
 permalink: /
-title: "Academic Pages is a ready-to-fork GitHub Pages template for academic personal websites"
+title: "Sina Shid-Moosavi"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the repository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. Incidentally, these same features make it a great template for anyone that needs to show off a professional template!
+Welcome to my website! I’m Sina, a dedicated Ph.D. candidate in the Department of Civil & Environmental Engineering at <a href=https://www.northeastern.edu/><b>Northeastern University</b></a>.
+My research focuses on the application of smart city technologies, particularly in Structural Health Monitoring, where I aim to make a meaningful impact using cutting-edge methodologies.
 
- You can fork [this template](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and Markdown files, add your own PDFs and other content, and have your own site for free, with no ads!
+With a B.Sc. in Civil Engineering from Shiraz University (2014), an M.Sc. in Structural Engineering from Amirkabir University of Technology (2017), and a second Master’s in Smart Cities from the University of Central Florida (2023), I have developed a strong foundation in engineering principles and advanced research techniques. My work integrates machine learning, artificial intelligence, and non-contact sensing methods to optimize structural and mobility monitoring systems.
+
+I have +4 years of experience in leveraging AI and ML frameworks to enhance smart sensing technologies. My skills in data analysis, project management, and evidence-driven decision-making empowers me to create innovative solutions for real-world problems in smart cities and structural health monitoring.
 
 A data-driven personal website
 ======
