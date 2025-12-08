@@ -5,18 +5,8 @@ permalink: /teaching/
 author_profile: true
 ---
 
-<h2>Structural Analysis</h2>
-<p>
-  Graduate Teaching Assistant, <i>Northeastern University</i>, Spring 2024, Boston, USA
-</p>
-<p>
-  Led classes and conducted problem solving sessions for undergraduate students.
-</p>
+{% include base_path %}
 
-<h2>Another Course</h2>
-<p>
-  Instructor, <i>University Name</i>, Fall 2023, City, Country
-</p>
-<p>
-  Short description of what you did in this course.
-</p>
+{% for post in site.teaching reversed %}
+  {% include archive-single.html %}
+{% endfor %}
