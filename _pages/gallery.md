@@ -38,7 +38,7 @@ Explore images and visuals from my journey.
 ## Northeastern University
 
 <div class="gallery-section">
-  <div class="gallery-title">2025</div>
+  <!-- <div class="gallery-title">2025</div> -->
   <div class="gallery-images">
     {% for i in (1..15) %}
       <img src="/images/Gallery/NU/{{ i }}.jpg" alt="Northeastern University {{ i }}">
@@ -49,7 +49,7 @@ Explore images and visuals from my journey.
 ## University of Central Florida
 
 <div class="gallery-section">
-  <div class="gallery-title">2024</div>
+  <!-- <div class="gallery-title">2024</div> -->
   <div class="gallery-images">
     {% for i in (1..15) %}
       <img src="/images/Gallery/UCF/{{ i }}.jpg" alt="University of Central Florida {{ i }}">
