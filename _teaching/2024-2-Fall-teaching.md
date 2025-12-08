@@ -2,7 +2,7 @@
 title: "Statics and Solid Mechanics"
 collection: teaching
 type: "Graduate Teaching Assistant"
-permalink: /teaching/2024-Fall-teaching
+permalink: /teaching/2024-2-Fall-teaching
 venue: "Northeastern University"
 date: Fall 2024
 location: "Boston, USA"
