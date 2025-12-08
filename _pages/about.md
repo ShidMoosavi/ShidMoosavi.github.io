@@ -9,7 +9,7 @@ redirect_from:
 
 <div style="text-align: justify;">
 <p>
-Welcome to my website! I’m Sina, a dedicated Ph.D. candidate in the Department of Civil & Environmental Engineering at <a href=https://www.northeastern.edu/><b>Northeastern University</b></a>. My research focuses on the application of smart city technologies, particularly in Structural Health Monitoring, where I aim to make a meaningful impact using cutting-edge methodologies.
+Welcome to my website! I’m Sina, a dedicated Ph.D. candidate in the Department of Civil & Environmental Engineering at <a href="https://www.northeastern.edu/"><b>Northeastern University</b></a>. My research focuses on the application of smart city technologies, particularly in Structural Health Monitoring, where I aim to make a meaningful impact using cutting-edge methodologies.
 </p>
 <p>
 With a B.Sc. in Civil Engineering from Shiraz University (2014), an M.Sc. in Structural Engineering from Amirkabir University of Technology (2017), and a second Master’s in Smart Cities from the University of Central Florida (2023), I have developed a strong foundation in engineering principles and advanced research techniques. My work integrates machine learning, artificial intelligence, and non-contact sensing methods to optimize structural and mobility monitoring systems.
