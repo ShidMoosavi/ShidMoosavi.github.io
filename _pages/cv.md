@@ -1,64 +1,50 @@
 ---
 layout: archive
-title: "CV"
+title: "Curriculum Vitae"
 permalink: /cv/
 author_profile: true
 redirect_from:
   - /resume
+last_updated: "November 2025"
 ---
 
 {% include base_path %}
 
-Education
-======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+<div style="text-align: center;">
+    <h2>Curriculum Vitae</h2>
+    <p>
+        A PDF copy of my CV, <strong>last updated {{ page.last_updated }}</strong>, is available below:
+    </p>
+</div>
 
-Work experience
-======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+<!-- Desktop: Embedded PDF -->
+<div class="pdf-container">
+    <iframe src="https://shidmoosavi.github.io/files/CV/Resume_ShidMoosavi.pdf" width="90%" height="700px" style="border: 1px solid #ccc; border-radius: 5px;">
+        Your browser does not support PDFs.
+        Please <a href="https://shidmoosavi.github.io/files/CV/Resume_ShidMoosavi.pd">download the PDF here</a>.
+    </iframe>
+</div>
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+<!-- Mobile: View & Download Button -->
+<div class="mobile-view">
+    <div style="text-align: center; margin-top: 20px;">
+        <a href="https://shidmoosavi.github.io/files/CV/Resume_ShidMoosavi.pd" target="_blank" 
+           style="font-size: 18px; padding: 10px 20px; background-color: #007bff; color: white; 
+                  text-decoration: none; border-radius: 5px;">
+            📄 View CV
+        </a>
+    </div>
+    <div style="text-align: center; margin-top: 10px;">
+        <p>If the CV does not open, <a href="https://shidmoosavi.github.io/files/CV/Resume_ShidMoosavi.pd" download>click here to download</a>.</p>
+    </div>
+</div>
 
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
-
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+<!-- Hide iframe on mobile, show buttons instead -->
+<style>
+    @media (max-width: 768px) {
+        .pdf-container { display: none; }  /* Hide iframe for mobile */
+    }
+    @media (min-width: 769px) {
+        .mobile-view { display: none; }  /* Hide buttons for desktop */
+    }
+</style>
