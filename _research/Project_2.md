@@ -1,17 +1,20 @@
 ---
-title: "Seismic Performance of Integral and Semi-Integral Bridges"
-permalink: /research/project_1/
-excerpt: "Study of the seismic and thermal performance of integral, semi-integral, and conventional bridges, highlighting how soil-structure interaction and connection details influence resilience.<br/><center><img alt='Integral bridge' class='align-center' src='/images/projects/Integral.png' style='width: 500px; padding: 10px; margin: 10px 20px' /></center>"
+title: "Watershed Mapping in Dense Forests Using UAV-Based Lidar"
+permalink: /research/project_2/
+excerpt: "Use of UAV-based lidar to detect water bodies hidden beneath dense forest canopies, improving watershed delineation and hydrologic analysis in complex environments.<br/><center><img alt='UAV Lidar' class='align-center' src='/images/projects/UAV.png' style='width: 700px; padding: 10px; margin: 10px 20px' /></center>"
 collection: research
 ---
 
-Bridges are essential elements of transportation networks, but their performance under seismic and thermal conditions poses significant engineering challenges. This study examines the behavior of integral, semi-integral, and conventional bridges under such loads, focusing on their structural responses and soil-structure interactions. Integral bridges, with their continuous connections between the deck and abutments, enhance seismic resilience and lower maintenance by eliminating expansion joints and bearings. Semi-integral bridges, using limited bearings, provide a compromise between flexibility and durability. Conventional bridges, though common, often experience greater displacements and maintenance due to their segmented design. The research explores how soil-backfill interactions and connection types affect bridge performance under these conditions. Advanced finite element modeling and time-history analysis show that integral and semi-integral bridges perform better during seismic events due to their frame action and soil interaction. The study also examines thermal loads on abutment deformations and backfill pressure, highlighting the superior stress distribution of semi-integral systems. These findings aid in optimizing bridge designs for improved resilience and sustainability by addressing interactions between structural components and environmental forces.
-<a href="https://ajce.aut.ac.ir/article_2909_0.html"><b>(Journal Paper, </b></a>
-<a href="https://www.researchgate.net/publication/334064146_The_Performance_of_Integral_and_Semi-integral_pre-tensioned_concrete_bridges_under_thermal_loads_depending_on_various_deck_to_pier_connections"><b>Conference Paper 1, </b></a>
-<a href="https://www.researchgate.net/publication/341909051_Seismic_Performance_of_Integral_Semi-Integral_and_Conventional_Bridges"><b>Conference Paper 2)</b></a>
+
+Accurate mapping of water bodies and analyzing watershed dynamics are crucial for understanding hydrologic processes like baseflow recession and surface water-groundwater interactions. Traditional methods, such as satellite imagery, often lack the spatial resolution to capture small waterways in densely vegetated areas, driving the adoption of UAV-based lidar technology. UAV-based lidar offers high precision by collecting detailed 3D data in diverse terrains, including areas with dense tree canopies. It penetrates vegetation, isolates ground data, and provides accurate representations of water surfaces and topography, outperforming traditional methods in challenging environments like Florida’s forests.
+This research applies UAV-based lidar to estimate water surface areas with high accuracy, focusing on small creeks obscured by dense vegetation. By filtering non-relevant data and using lidar ground returns, it generates robust models of water bodies that support dynamic hydrologic modeling and seasonal watershed monitoring.
+
+<a href="https://ui.adsabs.harvard.edu/abs/2022AGUFM.H36D..05S/abstract"><b>(Conference Presentation, </b></a>
+<a href="https://lidarmag.com/2022/12/23/uav-based-watershed-surveying-over-florida-forests/"><b>Workshop Presentation)</b></a>
 
 <center>
-  <img alt="Integral bridge" class="align-center"
-       src="/images/projects/Integral.png"
-       style="width: 500px; padding: 10px; margin: 10px 20px" />
+  <img alt="UAV Lidar" class="align-center"
+       src="/images/projects/UAV.png"
+       style="width: 700px; padding: 10px; margin: 10px 20px" />
 </center>
+
