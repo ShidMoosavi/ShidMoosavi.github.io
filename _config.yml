@@ -23,7 +23,7 @@ repository               : "shidMoosavi/shidMoosavi.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "Profile.png"
   name             : "Sina Shid-Moosavi"
   pronouns         : # example: "she/her"  
   bio              : "PhD Candidate in Data and Systems at Northeastern University"
