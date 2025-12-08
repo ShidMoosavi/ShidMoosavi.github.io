@@ -1,0 +1,14 @@
+---
+layout: archive
+title: "Research"
+permalink: /research/
+author_profile: true
+---
+
+Hi, there! This section only highlights <b>only a few</b> of my GitHub projects. You can view my complete GitHub profile <a href="https://github.com/natdave">here</a>.     
+
+{% include base_path %}
+                                                                  
+{% for post in site.github %}
+  {% include archive-single.html %}
+{% endfor %}
