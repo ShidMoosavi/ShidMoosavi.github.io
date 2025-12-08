@@ -18,18 +18,20 @@ I have +4 years of experience in leveraging AI and ML frameworks to enhance smar
 <style>
   .skills-row {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;         /* prevents wrapping */
     justify-content: center;
     align-items: stretch;
-    gap: 2rem;
     margin-top: 2rem;
+    overflow-x: auto;          /* enables horizontal scroll when needed */
+    -webkit-overflow-scrolling: touch;
   }
 
   .skills-column {
-    flex: 1 1 260px;
-    max-width: 340px;
+    flex: 0 0 320px;           /* fixed column width */
+    max-width: 320px;
     text-align: center;
     padding: 1rem;
+    box-sizing: border-box;
   }
 
   .skills-column img {
