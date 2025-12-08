@@ -251,7 +251,7 @@ defaults:
       path: ""
       type: pages
     values:
-      layout: default
+      layout: talk
       author_profile: true
   # _teaching
   - scope:
