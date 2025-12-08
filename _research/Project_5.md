@@ -1,20 +1,25 @@
 ---
-title: "Seismic Performance of Integral and Semi-Integral Bridges"
-permalink: /research/project_1/
-excerpt: "Study of the seismic and thermal performance of integral, semi-integral, and conventional bridges, highlighting how soil-structure interaction and connection details influence resilience.<br/><center><img alt='Integral bridge' class='align-center' src='/images/projects/Integral.png' style='width: 500px; padding: 10px; margin: 10px 20px' /></center>"
+title: "Offshore Wind Farm Efficiency Through Wake Dynamics"
+permalink: /research/project_5/
+excerpt: "Study of wake interactions in offshore wind farms and their impact on energy loss, focusing on turbulence, yaw misalignment, and environmental factors that shape turbine performance and farm wide efficiency.<br/><center><img alt='Wake Dynamics' class='align-center' src='/images/projects/Wake.png' style='width: 700px; padding: 10px; margin: 10px 20px' /></center>"
 collection: research
 ---
 
-<div style="text-align: justify;">
-Bridges are essential elements of transportation networks, but their performance under seismic and thermal conditions poses significant engineering challenges. This study examines the behavior of integral, semi-integral, and conventional bridges under such loads, focusing on their structural responses and soil-structure interactions. Integral bridges, with their continuous connections between the deck and abutments, enhance seismic resilience and lower maintenance by eliminating expansion joints and bearings. Semi-integral bridges, using limited bearings, provide a compromise between flexibility and durability. Conventional bridges, though common, often experience greater displacements and maintenance due to their segmented design. The research explores how soil-backfill interactions and connection types affect bridge performance under these conditions. Advanced finite element modeling and time-history analysis show that integral and semi-integral bridges perform better during seismic events due to their frame action and soil interaction. The study also examines thermal loads on abutment deformations and backfill pressure, highlighting the superior stress distribution of semi-integral systems. These findings aid in optimizing bridge designs for improved resilience and sustainability by addressing interactions between structural components and environmental forces.
-<a href="https://ajce.aut.ac.ir/article_2909_0.html"><b>(Journal Paper, </b></a>
-<a href="https://www.researchgate.net/publication/334064146_The_Performance_of_Integral_and_Semi-integral_pre-tensioned_concrete_bridges_under_thermal_loads_depending_on_various_deck_to_pier_connections"><b>Conference Paper 1, </b></a>
-<a href="https://www.researchgate.net/publication/341909051_Seismic_Performance_of_Integral_Semi-Integral_and_Conventional_Bridges"><b>Conference Paper 2)</b></a>
 
+<div style="text-align: justify;">
+Wake interactions in offshore wind farms, caused by aerodynamic disturbances between turbines, reduce energy efficiency by decreasing power output and increasing mechanical stress on downstream turbines. Understanding and mitigating these effects is essential for improving the sustainability and performance of modern wind energy systems.
+
+This study conducts a sensitivity analysis of influential operational and environmental parameters that shape wake behavior. Factors such as turbulence intensity, yaw misalignment, and turbine operating conditions are examined using advanced modeling tools. These analyses help clarify how wake formation and recovery affect power losses within clustered turbine arrays.
+
+As offshore wind farms expand in scale and density, addressing wake induced inefficiencies becomes increasingly important. The study integrates experimental observations with modeling frameworks to calibrate predictive tools that better reflect real world conditions. Seasonal variations in turbulence and their influence on wake recovery are also evaluated, offering insight into temporal changes in farm performance.
+
+These findings help guide turbine layout decisions and operational strategies that minimize energy losses and enhance overall wind farm reliability.
+
+<a href="https://doi.org/10.1016/j.renene.2024.122126"><b>(Journal Paper)</b></a>
 </div>
 
 <center>
-  <img alt="Integral bridge" class="align-center"
-       src="/images/projects/Integral.png"
-       style="width: 500px; padding: 10px; margin: 10px 20px" />
+  <img alt="Wake Dynamics" class="align-center"
+       src="/images/projects/Wake.png"
+       style="width: 700px; padding: 10px; margin: 10px 20px" />
 </center>
