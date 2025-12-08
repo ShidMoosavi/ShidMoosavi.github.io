@@ -34,7 +34,7 @@ last_updated: "December 2025"
         </a>
     </div>
     <div style="text-align: center; margin-top: 10px;">
-        <p>If the CV does not open, <a href="https://shidmoosavi.github.io/files/CV/CV_ShidMoosavi.pd" download>click here to download</a>.</p>
+        <p>If the CV does not open, <a href="https://shidmoosavi.github.io/files/CV/CV_ShidMoosavi.pdf" download>click here to download</a>.</p>
     </div>
 </div>
 
