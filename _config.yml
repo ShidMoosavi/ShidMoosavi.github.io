@@ -12,7 +12,7 @@ site_theme               : "default" # Currently available options are "default"
 title                    : "Shid-Moosavi"
 title_separator          : "-"
 name                     : &name "Sina Shid_Moosavi"
-description              : &description "PhD Candidate in Data and Systems at Northeastern University"   # Update this with a general description of your site, this is the default if not overridden by a page
+description              : &description "PhD Candidate in Data and Systems"   # Update this with a general description of your site, this is the default if not overridden by a page
 url                      : https://ShidMoosavi.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -26,7 +26,7 @@ author:
   avatar           : "Profile.png"
   name             : "Sina Shid-Moosavi"
   pronouns         : # example: "she/her"  
-  bio              : "PhD Candidate in Data and Systems at Northeastern University"
+  bio              : "PhD Candidate in Data and Systems"
   location         : "Boston, MA, USA"
   employer         : "Northeastern University"
   uri              : # URL
