@@ -34,7 +34,7 @@ I have +4 years of experience applying AI and ML frameworks to advance smart sen
 
 ## Technical Skills  
 
-<!-- Skills Section CSS -->
+<!-- Layout CSS -->
 <style>
   .skills-row {
     display: flex;
@@ -50,84 +50,47 @@ I have +4 years of experience applying AI and ML frameworks to advance smart sen
   .skills-column {
     flex: 0 0 320px;
     max-width: 320px;
-    text-align: center;
-    padding: 1rem;
     box-sizing: border-box;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    background: white;
     margin-right: 20px;
-    transition: transform 0.3s;
-  }
-
-  .skills-column:hover {
-    transform: scale(1.03);
-  }
-
-  .skills-column img {
-    width: 160px;
-    height: auto;
-    margin: 0.5rem auto 1rem auto;
-    display: block;
-  }
-
-  .skills-column h2 {
-    font-size: 1.35rem;
-    margin-bottom: 0.75rem;
-  }
-
-  .skills-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    font-size: 14px;
-    color: #555;
-  }
-
-  .skills-list li {
-    margin-bottom: 0.25rem;
   }
 </style>
 
 
-<!-- Skills Section HTML -->
+<!-- Skills Section -->
 <div class="skills-row">
 
-  <!-- Programming and Tools -->
+  <!-- Card 1 -->
   <div class="skills-column">
-    <a href="#" style="text-decoration: none; color: inherit;">
-      <img src="/images/Programing.png" alt="Programming and Tools">
-      <h2>Programming and Tools</h2>
-      <ul class="skills-list">
-        <li>Python (TensorFlow, PyTorch, Keras, OpenCV, scikit-learn, NumPy, pandas, Matplotlib, Seaborn)</li>
-        <li>MATLAB</li>
-        <li>FLORIS</li>
-        <li>ArcGIS</li>
-        <li>arcpy</li>
-        <li>Bash</li>
-        <li>Git</li>
-      </ul>
-    </a>
+    <div style="width: 300px; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s;">
+      <a href="#" style="text-decoration: none; color: inherit;">
+        <img src="/images/Programing.png" alt="Programming and Tools" style="width: 100%; height: auto;">
+        <div style="padding: 15px;">
+          <h3 style="margin: 0;">Programming and Tools</h3>
+          <p style="font-size: 14px; color: #555;">
+            Python (TensorFlow, PyTorch, Keras, OpenCV, scikit-learn, NumPy, pandas, Matplotlib, Seaborn) | MATLAB | FLORIS | ArcGIS | arcpy | Bash | Git
+          </p>
+        </div>
+      </a>
+    </div>
   </div>
 
-  <!-- Machine Learning and Data Science Skills -->
+  <!-- Card 2 -->
   <div class="skills-column">
-    <a href="#" style="text-decoration: none; color: inherit;">
-      <img src="/images/ML.png" alt="Machine Learning and Data Science Skills">
-      <h2>Machine Learning and Data Science Skills</h2>
-      <ul class="skills-list">
-        <li>Machine learning (decision trees, random forests, SVM, KNN, ANN)</li>
-        <li>Deep learning (RNN, CNN, LSTM, GNN, transformers)</li>
-        <li>Statistical analysis and regression</li>
-        <li>Clustering and classification</li>
-        <li>Time series forecasting</li>
-        <li>Data assimilation</li>
-      </ul>
-    </a>
+    <div style="width: 300px; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s;">
+      <a href="#" style="text-decoration: none; color: inherit;">
+        <img src="/images/ML.png" alt="Machine Learning and Data Science Skills" style="width: 100%; height: auto;">
+        <div style="padding: 15px;">
+          <h3 style="margin: 0;">Machine Learning and Data Science Skills</h3>
+          <p style="font-size: 14px; color: #555;">
+            Machine learning (decision trees, random forests, SVM, KNN, ANN) | Deep learning (RNN, CNN, LSTM, GNN, transformers) | Statistical analysis and regression | Clustering and classification | Time series forecasting | Data assimilation
+          </p>
+        </div>
+      </a>
+    </div>
   </div>
 
 </div>
+
 
 
 <!-- <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
