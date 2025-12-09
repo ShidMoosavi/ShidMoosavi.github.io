@@ -63,7 +63,7 @@ I have +4 years of experience applying AI and ML frameworks to advance smart sen
 
 <style>
   :root {
-    --text-color: #444;
+    --text-color: #555;
   }
 
   @media (prefers-color-scheme: dark) {
