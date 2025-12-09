@@ -44,7 +44,7 @@ I have +4 years of experience applying AI and ML frameworks to advance smart sen
   .skills-row {
     display: flex;
     flex-wrap: nowrap;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: stretch;
     margin-top: 2rem;
     overflow-x: auto;
