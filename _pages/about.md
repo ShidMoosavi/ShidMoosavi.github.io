@@ -19,6 +19,18 @@ I have +4 years of experience applying AI and ML frameworks to advance smart sen
 </p>
 </div>
 
+---
+
+## Education  
+
+| Degree | Institution | Location | Year |
+|---------|----------------|------------|------|
+| **Ph.D. in Data and Systems** *(Expected)* | Northeastern University | Boston, MA, USA | 2027 |
+| **M.S. in Smart Cities** | University of Cetral Florida | Orlando, FL, USA | 2023 |
+| **M.S. in  Structural Engineering** | Amirkabir University of Technology - Tehran Polytechnic | Tehran, Iran | 2017 |
+| **B.Sc. in Civil Engineering** | Shiraz University | Shiraz, Iran | 2014 |
+
+---
 
 <style>
   .skills-row {
