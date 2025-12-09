@@ -15,7 +15,7 @@ I am a PhD candidate in Data and Systems at Northeastern University. My research
 Before beginning my doctoral work, I completed my master's degree at the University of Central Florida, where I developed computer vision and machine learning based tools for smart mobility. This included designing and evaluating automated passenger sensing algorithms that integrate GPS data with deep learning models for detection, tracking, and re-identification in real transit environments.
 </p>
 <p>
-I have +5 years of experience applying AI and ML frameworks to advance smart sensing technologies. My skills in data analysis, project management, and evidence-based decision making support the development of practical solutions for challenges in smart cities, mobility systems, and structural health monitoring.
+I have +4 years of experience applying AI and ML frameworks to advance smart sensing technologies. My skills in data analysis, project management, and evidence-based decision making support the development of practical solutions for challenges in smart cities, mobility systems, and structural health monitoring.
 </p>
 </div>
 
