@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Sina Shid-Moosavi"
+title: "About me"
 author_profile: true
 redirect_from: 
   - /about/
@@ -9,13 +9,13 @@ redirect_from:
 
 <div style="text-align: justify;">
 <p>
-Welcome to my website! I’m Sina, a dedicated Ph.D. candidate in the Department of Civil & Environmental Engineering at <a href="https://www.northeastern.edu/"><b>Northeastern University</b></a>. My research focuses on the application of smart city technologies, particularly in Structural Health Monitoring, where I aim to make a meaningful impact using cutting-edge methodologies.
+I am a PhD candidate in Data and Systems at Northeastern University. My research centers on data-driven structural health monitoring, where I use AI and ML methods to analyze vibration data, detect structural anomalies, and model fatigue progression in wind turbines. I focus on developing adaptive and robust monitoring strategies that remain reliable under changing environmental and operational conditions.
 </p>
 <p>
-With a B.Sc. in Civil Engineering from Shiraz University (2014), an M.Sc. in Structural Engineering from Amirkabir University of Technology (2017), and a second Master’s in Smart Cities from the University of Central Florida (2023), I have developed a strong foundation in engineering principles and advanced research techniques. My work integrates machine learning, artificial intelligence, and non-contact sensing methods to optimize structural and mobility monitoring systems.
+Before beginning my doctoral work, I completed my master's degree at the University of Central Florida, where I developed computer vision and machine learning based tools for smart mobility. This included designing and evaluating automated passenger sensing algorithms that integrate GPS data with deep learning models for detection, tracking, and re-identification in real transit environments.
 </p>
 <p>
-I have +4 years of experience in leveraging AI and ML frameworks to enhance smart sensing technologies. My skills in data analysis, project management, and evidence-driven decision-making empowers me to create innovative solutions for real-world problems in smart cities and structural health monitoring.
+I have +5 years of experience applying AI and ML frameworks to advance smart sensing technologies. My skills in data analysis, project management, and evidence-based decision making support the development of practical solutions for challenges in smart cities, mobility systems, and structural health monitoring.
 </p>
 </div>
 
