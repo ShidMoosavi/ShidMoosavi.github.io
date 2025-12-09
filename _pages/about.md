@@ -32,7 +32,42 @@ I have +4 years of experience applying AI and ML frameworks to advance smart sen
 
 ---
 
-<style>
+## Technical Skills  
+
+<div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+
+<div style="width: 300px; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s;">
+  <a href="#" style="text-decoration: none; color: inherit;">
+    <img src="https://natdave.github.io/images/about/tsp.jpg" alt="Traffic Signal Optimization" style="width: 100%; height: auto;">
+    <div style="padding: 15px;">
+      <h3 style="margin: 0;">Traffic Signal Optimization & Smart Transit Priority</h3>
+      <p style="font-size: 14px; color: #555;">Enhancing traffic flow and public transit reliability with smart signal control strategies.</p>
+    </div>
+  </a>
+</div>
+
+<div style="width: 300px; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s;">
+  <a href="#" style="text-decoration: none; color: inherit;">
+    <img src="https://natdave.github.io/images/about/ai.png" alt="AI & ML in Transportation" style="width: 100%; height: auto;">
+    <div style="padding: 15px;">
+      <h3 style="margin: 0;">AI & ML/DL in Transportation</h3>
+      <p style="font-size: 14px; color: #555;">Applying machine learning and AI to real-time traffic management and mobility solutions.</p>
+    </div>
+  </a>
+</div>
+
+</div>
+
+---
+
+
+
+
+
+
+
+
+<!-- <style>
   .skills-row {
     display: flex;
     flex-wrap: nowrap;           /* keep all 3 in one row */
@@ -115,4 +150,4 @@ I have +4 years of experience applying AI and ML frameworks to advance smart sen
       <li>System Identification</li>
     </ul>
   </div>
-</div>
+</div> -->
