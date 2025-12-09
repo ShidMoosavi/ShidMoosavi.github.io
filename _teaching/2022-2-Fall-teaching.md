@@ -8,5 +8,5 @@ date: 2022-01-01
 location: "Orlando, USA"
 ---
 
-Leading the lab sections and conducting experiments for undergraduate students. 
+Led the lab sections and conducted experiments for undergraduate students. 
 
