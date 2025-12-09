@@ -48,10 +48,10 @@ I have +4 years of experience applying AI and ML frameworks to advance smart sen
 
 <div style="width: 300px; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s;">
   <a href="#" style="text-decoration: none; color: inherit;">
-    <img src="https://ShidMoosavi.github.io/images/ML.png" alt="AI & ML in Transportation" style="width: 100%; height: auto;">
+    <img src="https://ShidMoosavi.github.io/images/ML.png" alt="Machine Learning and Data Science Skills" style="width: 100%; height: auto;">
     <div style="padding: 15px;">
-      <h3 style="margin: 0;">AI & ML/DL in Transportation</h3>
-      <p style="font-size: 14px; color: #555;">Applying machine learning and AI to real-time traffic management and mobility solutions.</p>
+      <h3 style="margin: 0;">Machine Learning and Data Science Skills</h3>
+      <p style="font-size: 14px; color: #555;">Machine learning (decision trees, random forests, SVM, KNN, ANN) | Deep learning (RNN, CNN, LSTM, GNN, transformers) | Statistical analysis and regression | Clustering and classification | Time series forecasting | Data assimilation</p>
     </div>
   </a>
 </div>
