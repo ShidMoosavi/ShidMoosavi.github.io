@@ -71,7 +71,12 @@ I have +4 years of experience applying AI and ML frameworks to advance smart sen
       --text-color: #ddd;
     }
   }
+
+  body {
+    color: var(--text-color);
+  }
 </style>
+
 
 
 
