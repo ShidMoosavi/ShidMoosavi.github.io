@@ -41,7 +41,7 @@ I have +4 years of experience applying AI and ML frameworks to advance smart sen
     <img src="/images/Programing.png" alt="Programming and Tools" style="width: 100%; height: auto;">
     <div style="padding: 15px;">
       <h3 style="margin: 0;">Programming and Tools</h3>
-      <p style="font-size: 14px; color: #555;">Python (TensorFlow, PyTorch, Keras, OpenCV, scikit-learn, NumPy, pandas, Matplotlib, Seaborn) | MATLAB | FLORIS | ArcGIS | arcpy | Bash | Git</p>
+      <p style="font-size: 14px; color: #555);">Python (TensorFlow, PyTorch, Keras, OpenCV, scikit-learn, NumPy, pandas, Matplotlib, Seaborn) | MATLAB | FLORIS | ArcGIS | arcpy | Bash | Git</p>
     </div>
   </a>
 </div>
