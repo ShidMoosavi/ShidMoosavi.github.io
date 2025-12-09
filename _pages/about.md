@@ -58,6 +58,13 @@ I have +4 years of experience applying AI and ML frameworks to advance smart sen
     box-sizing: border-box;
     margin-right: 20px;
   }
+
+  /* Mobile layout: align to start */
+  @media (max-width: 768px) {
+    .skills-row {
+      justify-content: flex-start; /* mobile: start alignment */
+    }
+  }
 </style>
 
 
