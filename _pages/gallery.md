@@ -49,10 +49,11 @@ Explore images and visuals from my journey.
 ## University of Central Florida
 
 <div class="gallery-section">
-  <!-- <div class="gallery-title">2024</div> -->
   <div class="gallery-images">
     {% for i in (1..18) %}
-      <img src="/images/Gallery/UCF/{{ 19 - i }}.jpg" alt="University of Central Florida {{ 19 - i }}">
+      {% assign n = 19 | minus: i %}
+      <img src="/images/Gallery/UCF/{{ n }}.jpg" alt="University of Central Florida {{ n }}">
     {% endfor %}
   </div>
 </div>
+
