@@ -41,7 +41,7 @@ Explore images and visuals from my journey.
   <!-- <div class="gallery-title">2025</div> -->
   <div class="gallery-images">
     {% for i in (1..15) %}
-      <img src="/images/Gallery/NU/{{ i }}.jpg" alt="Northeastern University {{ i }}">
+      <img src="/images/NU/{{ i }}.jpg" alt="Northeastern University {{ i }}">
     {% endfor %}
   </div>
 </div>
@@ -52,7 +52,7 @@ Explore images and visuals from my journey.
   <div class="gallery-images">
     {% for i in (1..18) %}
       {% assign n = 19 | minus: i %}
-      <img src="/images/Gallery/UCF/{{ n }}.jpg" alt="University of Central Florida {{ n }}">
+      <img src="/images/UCF/{{ n }}.jpg" alt="University of Central Florida {{ n }}">
     {% endfor %}
   </div>
 </div>
