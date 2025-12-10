@@ -51,8 +51,8 @@ Explore images and visuals from my journey.
 <div class="gallery-section">
   <!-- <div class="gallery-title">2024</div> -->
   <div class="gallery-images">
-    {% for i in (1..15) %}
-      <img src="/images/Gallery/UCF/{{ i }}.jpg" alt="University of Central Florida {{ i }}">
+    {% for i in (1..18) %}
+      <img src="/images/Gallery/UCF/{{ 19 - i }}.jpg" alt="University of Central Florida {{ 19 - i }}">
     {% endfor %}
   </div>
 </div>
