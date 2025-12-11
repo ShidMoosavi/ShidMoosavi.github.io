@@ -51,8 +51,8 @@ Explore images and visuals from my journey.
 
 <div class="gallery-section">
   <div class="gallery-images">
-    {% for i in (1..18) %}
-      {% assign n = 19 | minus: i %}
+    {% for i in (1..12) %}
+      {% assign n = 13 | minus: i %}
       <img src="/images/UCF/{{ n }}.jpg" alt="University of Central Florida {{ n }}">
     {% endfor %}
   </div>
