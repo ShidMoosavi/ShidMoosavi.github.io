@@ -38,13 +38,14 @@ Explore images and visuals from my journey.
 ## Northeastern University
 
 <div class="gallery-section">
-  <div class="gallery-section">
-    <div class="gallery-images">
-      {% for i in (1..6) %}
-        {% assign n = 7 | minus: i %}
-        <img src="/images/NU/{{ n }}.jpg" alt="Northeastern University {{ n }}">
-      {% endfor %}
-    </div>
+  <div class="gallery-images">
+    {% for i in (1..6) %}
+      {% assign n = 7 | minus: i %}
+      <img src="/images/NU/{{ n }}.jpg" alt="Northeastern University {{ n }}">
+    {% endfor %}
+  </div>
+</div>
+
 
 ## University of Central Florida
 
