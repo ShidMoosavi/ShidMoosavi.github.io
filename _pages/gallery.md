@@ -39,8 +39,8 @@ Explore images and visuals from my journey.
 
 <div class="gallery-section">
   <div class="gallery-images">
-    {% for i in (1..18) %}
-      {% assign n = 19 | minus: i %}
+    {% for i in (1..21) %}
+      {% assign n = 22 | minus: i %}
       <img src="/images/NU/{{ n }}.jpg" alt="Northeastern University {{ n }}">
     {% endfor %}
   </div>
