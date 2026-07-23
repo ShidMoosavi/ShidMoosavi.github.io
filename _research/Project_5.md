@@ -15,7 +15,8 @@ As offshore wind farms expand in scale and density, addressing wake induced inef
 
 These findings help guide turbine layout decisions and operational strategies that minimize energy losses and enhance overall wind farm reliability.
 
-<a href="https://doi.org/10.1016/j.renene.2024.122126"><b>(Journal Paper)</b></a>
+<a href="https://doi.org/10.1016/j.renene.2024.122126"><b>(Journal Paper 1,</b></a>
+<a href="https://doi.org/10.1016/j.jfluidstructs.2026.104655"><b>Journal Paper 2),</b></a>
 </div>
 
 <center>
