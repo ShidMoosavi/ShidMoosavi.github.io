@@ -267,6 +267,27 @@ hr {
   }
 }
 
+/* Research page: show project cards in 2 columns (1 column on phones) */
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25em;
+
+  .list__item {
+    margin-bottom: 0;
+  }
+
+  .list__item img {
+    width: 100% !important;
+    margin: 10px 0 !important;
+    padding: 0 !important;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 /* --------------------------------------------------------------------------
    8. HOME PAGE - Education table and Technical Skills cards
