@@ -1,36 +1,31 @@
-# The following is the order of the links in the header of the website.
+# TOP MENU (tabs at the top of every page)
 #
-# Changing the order here will adjust the order and you can also add additional
-# links. Removing a link prevents it from showing in the header, but does not
-# prevent it from being included in the site.
+# - Tabs appear in the same order as listed here.
+# - To remove a tab: delete its two lines (or put # in front of them).
+# - To add a tab that points to a NEW page: create the page first
+#   (see README.md -> "Add a new tab"), then add:
 #
-# NOTE that only one of the CV options should be selected, the first is for the
-#      Markdown formatted page while the second is generated using JSON.
+#     - title: "My New Tab"
+#       url: /my-new-tab/
+#
+# - To add a tab that opens an outside website in a new browser tab:
+#
+#     - title: "Google Scholar"
+#       url: https://scholar.google.com/...
+#       new_tab: true
 
 main:
   - title: "Research"
-    url: /research/ 
-    
+    url: /research/
+
   - title: "Publications"
-    url: /publications/   
+    url: /publications/
 
   - title: "Teaching"
     url: /teaching/
-    
+
   - title: "CV"
     url: /cv/
 
   - title: "Gallery"
-    url: /gallery/    
-    
-  # - title: "Portfolio"
-  #  url: /portfolio/
-        
-  # - title: "Blog Posts"
-  #  url: /year-archive/
-    
-  # - title: "CV"
-  #   url: /cv-json/
-    
-  # - title: "Guide"
-  #  url: /markdown/
+    url: /gallery/
