@@ -2,7 +2,7 @@
 title: "Structural Analysis"
 collection: teaching
 type: "Graduate Teaching Assistant"
-permalink: /teaching/2024-2-Fall-teaching
+permalink: /teaching/2025-2-Fall-teaching
 venue: "Northeastern University, Fall"
 date: 2025-01-01
 location: "Boston, USA"
