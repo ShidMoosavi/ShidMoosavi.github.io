@@ -34,70 +34,30 @@ I have +4 years of experience applying AI and ML frameworks to advance smart sen
 
 ## Technical Skills  
 
-<!-- Layout CSS -->
-<style>
-  .skills-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-  .skills-row {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: stretch;
-    margin-top: 2rem;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    width: 100%;
-  }
-
-  .skills-column {
-    flex: 0 0 320px;
-    max-width: 320px;
-    box-sizing: border-box;
-    margin-right: 20px;
-  }
-
-  /* Mobile layout: align to start */
-  @media (max-width: 768px) {
-    .skills-row {
-      justify-content: flex-start; /* mobile: start alignment */
-    }
-  }
-</style>
-
-
-<!-- Skills Section -->
+<!-- Skills Section
+     To add a card: copy one <div class="skill-card"> ... </div> block and paste it below the last one.
+     Card style lives in _sass/_custom.scss (section 8). -->
 <div class="skills-row">
 
   <!-- Card 1 -->
-  <div class="skills-column">
-    <div style="width: 300px; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s;">
-      <a href="#" style="text-decoration: none; color: inherit;">
-        <img src="/images/Programing.png" alt="Programming and Tools" style="width: 100%; height: auto;">
-        <div style="padding: 15px;">
-          <h3 style="margin: 0;">Programming and Tools</h3>
-          <p style="font-size: 14px; color: #555);">
-            Python (TensorFlow, PyTorch, Keras, OpenCV, scikit-learn, NumPy, pandas, Matplotlib, Seaborn) | MATLAB | FLORIS | ArcGIS | arcpy | Bash | Git
-          </p>
-        </div>
-      </a>
+  <div class="skill-card">
+    <img src="/images/Programing.png" alt="Programming and Tools">
+    <div class="skill-card__body">
+      <h3>Programming and Tools</h3>
+      <p>
+        Python (TensorFlow, PyTorch, Keras, OpenCV, scikit-learn, NumPy, pandas, Matplotlib, Seaborn) | MATLAB | FLORIS | ArcGIS | arcpy | Bash | Git
+      </p>
     </div>
   </div>
 
   <!-- Card 2 -->
-  <div class="skills-column">
-    <div style="width: 300px; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s;">
-      <a href="#" style="text-decoration: none; color: inherit;">
-        <img src="/images/ML.png" alt="Machine Learning and Data Science Skills" style="width: 100%; height: auto;">
-        <div style="padding: 15px;">
-          <h3 style="margin: 0;">Machine Learning and Data Science Skills</h3>
-          <p style="font-size: 14px; color: #555);">
-            Machine learning (decision trees, random forests, SVM, KNN, ANN) | Deep learning (RNN, CNN, LSTM, GNN, transformers) | Statistical analysis and regression | Clustering and classification | Time series forecasting | Data assimilation
-          </p>
-        </div>
-      </a>
+  <div class="skill-card">
+    <img src="/images/ML.png" alt="Machine Learning and Data Science Skills">
+    <div class="skill-card__body">
+      <h3>Machine Learning and Data Science Skills</h3>
+      <p>
+        Machine learning (decision trees, random forests, SVM, KNN, ANN) | Deep learning (RNN, CNN, LSTM, GNN, transformers) | Statistical analysis and regression | Clustering and classification | Time series forecasting | Data assimilation
+      </p>
     </div>
   </div>
 

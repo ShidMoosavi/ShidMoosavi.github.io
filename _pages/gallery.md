@@ -4,57 +4,35 @@ title: "Gallery"
 permalink: /gallery/
 ---
 
+{% include base_path %}
+
 Explore images and visuals from my journey.
 
-<style>
-  .gallery-section {
-    margin-bottom: 40px;
-  }
-  .gallery-title {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  .gallery-images {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-  .gallery-images img {
-    width: 300px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    border: 2px solid #ddd;
-    transition: transform 0.3s;
-  }
-  .gallery-images img:hover {
-    transform: scale(1.05);
-    border-color: #007bff;
-  }
-</style>
+{% comment %}
+  Sections and folders are listed in _data/gallery.yml - edit that file, not this one.
+  Style lives in _sass/_custom.scss (section 12).
+{% endcomment %}
 
----
-
-## Northeastern University
-
+{% for section in site.data.gallery %}
+{% assign folder_path = '/images/' | append: section.folder | append: '/' %}
+{% assign photos = site.static_files | where_exp: "f", "f.path contains folder_path" | where: "extname", ".jpg" %}
+<h2>{{ section.title }}</h2>
+{% if section.description %}<p class="gallery-description">{{ section.description }}</p>{% endif %}
 <div class="gallery-section">
   <div class="gallery-images">
-    {% for i in (1..21) %}
-      {% assign n = 22 | minus: i %}
-      <img src="/images/NU/{{ n }}.jpg" alt="Northeastern University {{ n }}">
+    {% for i in (1..photos.size) %}
+      {% assign n = photos.size | plus: 1 | minus: i %}
+      <img src="{{ base_path }}{{ folder_path }}{{ n }}.jpg" alt="{{ section.title }} {{ n }}" loading="lazy">
     {% endfor %}
   </div>
 </div>
+{% endfor %}
 
-
-## University of Central Florida
-
-<div class="gallery-section">
-  <div class="gallery-images">
-    {% for i in (1..12) %}
-      {% assign n = 13 | minus: i %}
-      <img src="/images/UCF/{{ n }}.jpg" alt="University of Central Florida {{ n }}">
-    {% endfor %}
-  </div>
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox__btn lightbox__btn--close" aria-label="Close">&times;</button>
+  <button class="lightbox__btn lightbox__btn--prev" aria-label="Previous photo">&#8249;</button>
+  <img src="" alt="">
+  <button class="lightbox__btn lightbox__btn--next" aria-label="Next photo">&#8250;</button>
 </div>
 
+<script src="{{ base_path }}/assets/js/gallery.js"></script>
