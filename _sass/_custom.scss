@@ -1,0 +1,538 @@
+/* ==========================================================================
+   CUSTOM SITE STYLE  (Sina Shid-Moosavi)
+   --------------------------------------------------------------------------
+   This is the ONE file that controls the personal look of the website.
+   It is loaded last, so anything here overrides the original template.
+
+   QUICK EDITS
+   - Change the main colors  -> section 1 (light mode) and section 2 (dark mode)
+   - Change the fonts        -> section 3 (fonts are loaded in _includes/head/custom.html)
+   - Everything else is grouped by page / component below.
+   ========================================================================== */
+
+
+/* --------------------------------------------------------------------------
+   1. COLORS - LIGHT MODE
+   -------------------------------------------------------------------------- */
+:root {
+  --brand-color             : #17607a;   /* main accent (links, highlights)   */
+  --brand-color-strong      : #0f3d55;   /* darker accent (headings, hover)   */
+  --brand-color-soft        : #e8f2f5;   /* very light accent (backgrounds)   */
+  --card-bg-color           : #ffffff;
+  --card-shadow             : 0 1px 3px rgba(15, 35, 50, 0.08), 0 4px 14px rgba(15, 35, 50, 0.06);
+  --card-shadow-hover       : 0 6px 22px rgba(15, 35, 50, 0.14);
+  --muted-text-color        : #5b6670;
+
+  /* template variables re-pointed to the new palette */
+  --global-text-color          : #26313a;
+  --global-link-color          : var(--brand-color);
+  --global-link-color-hover    : var(--brand-color-strong);
+  --global-link-color-visited  : var(--brand-color);
+  --global-masthead-link-color : #26313a;
+  --global-masthead-link-color-hover : var(--brand-color);
+  --global-footer-bg-color     : #f4f7f8;
+  --global-border-color        : #e3e8eb;
+}
+
+
+/* --------------------------------------------------------------------------
+   2. COLORS - DARK MODE  (moon/sun button in the top menu)
+   -------------------------------------------------------------------------- */
+html[data-theme="dark"] {
+  --brand-color             : #5cc3dc;
+  --brand-color-strong      : #9fdcec;
+  --brand-color-soft        : #16303b;
+  --card-bg-color           : #18232c;
+  --card-shadow             : 0 1px 3px rgba(0, 0, 0, 0.4);
+  --card-shadow-hover       : 0 6px 22px rgba(0, 0, 0, 0.55);
+  --muted-text-color        : #a7b4bd;
+
+  --global-base-color          : #10181f;
+  --global-bg-color            : #10181f;
+  --global-footer-bg-color     : #0c1318;
+  --global-text-color          : #e4eaee;
+  --global-text-color-light    : #b9c4cc;
+  --global-link-color          : var(--brand-color);
+  --global-link-color-hover    : var(--brand-color-strong);
+  --global-link-color-visited  : var(--brand-color);
+  --global-masthead-link-color : #e4eaee;
+  --global-masthead-link-color-hover : var(--brand-color);
+  --global-border-color        : #2a3843;
+  --global-thead-color         : #1c2a34;
+}
+
+
+/* --------------------------------------------------------------------------
+   3. FONTS
+   Body text font = "Inter" (set at the top of $sans-serif in _sass/_themes.scss)
+   Heading font   = the variable below
+   -------------------------------------------------------------------------- */
+$custom-heading-font : "Source Serif 4", Georgia, "Times New Roman", serif;
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6,
+.page__title,
+.archive__item-title,
+.author__name {
+  font-family: $custom-heading-font;
+  color: var(--brand-color-strong);
+  letter-spacing: -0.01em;
+}
+
+p, li, td {
+  line-height: 1.7;
+}
+
+a {
+  transition: color 0.2s ease;
+}
+
+
+/* --------------------------------------------------------------------------
+   4. TOP MENU (masthead)
+   -------------------------------------------------------------------------- */
+.masthead {
+  background: var(--global-bg-color);
+  box-shadow: 0 1px 0 var(--global-border-color);
+
+  &::after {
+    display: none;
+  }
+}
+
+.masthead__menu-item--lg a {
+  font-family: $custom-heading-font;
+  font-size: 1.15em;
+  color: var(--brand-color-strong) !important;
+}
+
+.greedy-nav {
+  .visible-links a {
+    font-weight: 500;
+
+    &:before {
+      height: 2px;
+      background: var(--brand-color);
+    }
+  }
+
+  /* highlight the tab of the page you are on */
+  .visible-links .is-active a,
+  .hidden-links .is-active a {
+    color: var(--brand-color);
+
+    &:before {
+      transform: scaleX(1);
+    }
+  }
+}
+
+
+/* --------------------------------------------------------------------------
+   5. LEFT SIDEBAR (photo, name, links)
+   -------------------------------------------------------------------------- */
+.author__avatar img {
+  padding: 4px;
+  border: 2px solid var(--brand-color) !important;
+  box-shadow: 0 4px 14px rgba(15, 35, 50, 0.15);
+}
+
+.author__name {
+  font-size: 1.25em !important;
+  margin-top: 0.6em;
+}
+
+.author__bio {
+  color: var(--muted-text-color);
+}
+
+.author__urls {
+  a {
+    color: var(--global-text-color);
+    transition: color 0.2s ease, padding-left 0.2s ease;
+
+    &:hover {
+      color: var(--brand-color);
+      padding-left: 3px;
+    }
+  }
+
+  .icon-pad-right {
+    color: var(--brand-color);
+  }
+}
+
+
+/* --------------------------------------------------------------------------
+   6. PAGE TITLES AND SECTION HEADINGS
+   -------------------------------------------------------------------------- */
+.page__title {
+  position: relative;
+  padding-bottom: 0.45em;
+  margin-bottom: 0.9em;
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 56px;
+    height: 3px;
+    border-radius: 3px;
+    background: var(--brand-color);
+  }
+}
+
+.page__content h2,
+.archive h2:not(.archive__item-title) {
+  border-bottom: 1px solid var(--global-border-color);
+  padding-bottom: 0.35em;
+  margin-top: 1.6em;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--global-border-color);
+}
+
+
+/* --------------------------------------------------------------------------
+   7. LIST PAGES AS CARDS (Research, Teaching)
+   -------------------------------------------------------------------------- */
+.archive .list__item {
+  margin-bottom: 1.25em;
+  padding: 1.1em 1.4em 0.4em;
+  background: var(--card-bg-color);
+  border: 1px solid var(--global-border-color);
+  border-left: 4px solid var(--brand-color);
+  border-radius: 10px;
+  box-shadow: var(--card-shadow);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+
+  &:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-2px);
+  }
+
+  .archive__item-title {
+    margin-top: 0;
+    font-size: 1.3em;
+
+    a {
+      text-decoration: none;
+      color: var(--brand-color-strong);
+
+      &:hover {
+        color: var(--brand-color);
+      }
+    }
+  }
+
+  .archive__item-excerpt {
+    font-size: 0.95em;
+    color: var(--global-text-color);
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+}
+
+.archive .archive__item:hover .archive__item-title {
+  text-decoration: none;
+}
+
+
+/* --------------------------------------------------------------------------
+   8. HOME PAGE - Education table and Technical Skills cards
+   -------------------------------------------------------------------------- */
+.page__content table {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--global-border-color);
+  box-shadow: var(--card-shadow);
+
+  thead {
+    background: var(--brand-color-soft);
+  }
+
+  th {
+    color: var(--brand-color-strong);
+    border-bottom: 2px solid var(--brand-color);
+  }
+
+  tr:hover td {
+    background: var(--brand-color-soft);
+  }
+}
+
+.skills-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.skill-card {
+  flex: 0 1 300px;
+  max-width: 320px;
+  background: var(--card-bg-color);
+  border: 1px solid var(--global-border-color);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+
+  &:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-4px);
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  &__body {
+    padding: 15px 18px 18px;
+  }
+
+  h3 {
+    margin: 0 0 0.5em;
+    font-size: 1.1em;
+  }
+
+  p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--muted-text-color);
+  }
+}
+
+
+/* --------------------------------------------------------------------------
+   9. PUBLICATIONS PAGE
+   -------------------------------------------------------------------------- */
+.pub-list {
+  list-style: none;
+  margin: 1em 0 0;
+  padding: 0;
+  counter-reset: pub;
+
+  li {
+    position: relative;
+    margin-bottom: 1em;
+    padding: 0.9em 1.2em 0.9em 3.4em;
+    background: var(--card-bg-color);
+    border: 1px solid var(--global-border-color);
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+    transition: box-shadow 0.25s ease;
+    counter-increment: pub;
+
+    &:before {
+      content: counter(pub);
+      position: absolute;
+      left: 1em;
+      top: 0.95em;
+      width: 1.7em;
+      height: 1.7em;
+      line-height: 1.7em;
+      text-align: center;
+      font-size: 0.8em;
+      font-weight: 600;
+      color: #fff;
+      background: var(--brand-color);
+      border-radius: 50%;
+    }
+
+    &:hover {
+      box-shadow: var(--card-shadow-hover);
+    }
+
+    a {
+      font-weight: 600;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    strong {
+      color: var(--brand-color-strong);
+    }
+  }
+}
+
+html[data-theme="dark"] .pub-list li:before {
+  color: #10181f;
+}
+
+
+/* --------------------------------------------------------------------------
+   10. BUTTONS (CV page, etc.)
+   -------------------------------------------------------------------------- */
+.btn-brand {
+  display: inline-block;
+  padding: 0.6em 1.4em;
+  font-weight: 600;
+  color: #fff !important;
+  text-decoration: none !important;
+  background: var(--brand-color);
+  border-radius: 999px;
+  box-shadow: var(--card-shadow);
+  transition: background 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    background: var(--brand-color-strong);
+    transform: translateY(-1px);
+  }
+
+  & + & {
+    margin-left: 0.6em;
+  }
+}
+
+html[data-theme="dark"] .btn-brand {
+  color: #10181f !important;
+}
+
+
+/* --------------------------------------------------------------------------
+   11. CV PAGE
+   -------------------------------------------------------------------------- */
+.cv-actions {
+  margin: 0.5em 0 1.5em;
+}
+
+.cv-frame {
+  width: 100%;
+  height: 800px;
+  border: 1px solid var(--global-border-color);
+  border-radius: 10px;
+  box-shadow: var(--card-shadow);
+}
+
+.cv-mobile {
+  display: none;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .cv-desktop { display: none; }
+  .cv-mobile  { display: block; }
+}
+
+
+/* --------------------------------------------------------------------------
+   12. GALLERY PAGE
+   -------------------------------------------------------------------------- */
+.gallery-section {
+  margin-bottom: 40px;
+}
+
+.gallery-description {
+  color: var(--muted-text-color);
+}
+
+.gallery-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 14px;
+
+  img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: zoom-in;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: scale(1.03);
+      box-shadow: var(--card-shadow-hover);
+    }
+  }
+}
+
+/* full-screen photo viewer (assets/js/gallery.js) */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(8, 14, 20, 0.92);
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+
+  &.is-open {
+    display: flex;
+  }
+
+  img {
+    max-width: 92vw;
+    max-height: 88vh;
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+  }
+
+  &__btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0.3em 0.6em;
+    font-size: 2em;
+    line-height: 1;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    &--prev  { left: 2vw; }
+    &--next  { right: 2vw; }
+    &--close { top: 2em; right: 2vw; transform: none; font-size: 1.5em; }
+  }
+}
+
+
+/* --------------------------------------------------------------------------
+   13. FOOTER
+   -------------------------------------------------------------------------- */
+.page__footer {
+  border-top: 1px solid var(--global-border-color);
+
+  .social-icons a {
+    color: var(--global-text-color);
+
+    &:hover {
+      color: var(--brand-color);
+    }
+  }
+
+  .social-icons i {
+    color: var(--brand-color);
+  }
+}
+
+.page__footer-copyright {
+  color: var(--muted-text-color);
+}
