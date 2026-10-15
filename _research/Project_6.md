@@ -1,20 +1,24 @@
 ---
-title: "Seismic Performance of Integral and Semi-Integral Bridges"
-permalink: /research/project_1/
-excerpt: "Study of the seismic and thermal performance of integral, semi-integral, and conventional bridges, highlighting how soil-structure interaction and connection details influence resilience.<br/><center><img alt='Integral bridge' class='align-center' src='/images/projects/Integral.png' style='width: 500px; padding: 10px; margin: 10px 20px' /></center>"
+title: "Wind Power Forecasting Across North American Power Grids"
+permalink: /research/project_6/
+excerpt: "A forecasting framework that combines weather models with data driven and physics based approaches to predict wind power generation for grid operators across North America, from the regional level down to individual wind farms.<br/><center><img alt='Wind Power Forecasting' class='align-center' src='/images/projects/NA_Wind_Forecasting.png' style='width: 700px; padding: 10px; margin: 10px 20px' /></center>"
 collection: research
 ---
 
 <div style="text-align: justify;">
-Bridges are essential elements of transportation networks, but their performance under seismic and thermal conditions poses significant engineering challenges. This study examines the behavior of integral, semi-integral, and conventional bridges under such loads, focusing on their structural responses and soil-structure interactions. Integral bridges, with their continuous connections between the deck and abutments, enhance seismic resilience and lower maintenance by eliminating expansion joints and bearings. Semi-integral bridges, using limited bearings, provide a compromise between flexibility and durability. Conventional bridges, though common, often experience greater displacements and maintenance due to their segmented design. The research explores how soil-backfill interactions and connection types affect bridge performance under these conditions. Advanced finite element modeling and time-history analysis show that integral and semi-integral bridges perform better during seismic events due to their frame action and soil interaction. The study also examines thermal loads on abutment deformations and backfill pressure, highlighting the superior stress distribution of semi-integral systems. These findings aid in optimizing bridge designs for improved resilience and sustainability by addressing interactions between structural components and environmental forces.
-<a href="https://ajce.aut.ac.ir/article_2909_0.html"><b>(Journal Paper, </b></a>
-<a href="https://www.researchgate.net/publication/334064146_The_Performance_of_Integral_and_Semi-integral_pre-tensioned_concrete_bridges_under_thermal_loads_depending_on_various_deck_to_pier_connections"><b>Conference Paper 1, </b></a>
-<a href="https://www.researchgate.net/publication/341909051_Seismic_Performance_of_Integral_Semi-Integral_and_Conventional_Bridges"><b>Conference Paper 2)</b></a>
+As wind energy becomes a larger share of the electricity supply, accurate forecasts of wind power generation are essential for grid operators, energy traders, and market participants. Wind generation is highly variable and depends on weather conditions that change across regions and time scales, making reliable forecasting a key challenge for grid stability and market planning.
 
+This project develops a forecasting framework for Regional Transmission Organizations and Independent System Operators across North America. Wind farms are mapped to their grid regions and subregions, and site specific weather information at each farm location is used as model input. Historical generation data are carefully cleaned and aligned with farm level information to build a consistent foundation for modeling.
+
+The framework combines multiple weather sources, including reanalysis data and global numerical weather prediction models, with both data driven and physics based approaches. Machine learning models learn the relationship between wind conditions and power output, while turbine power curves provide a physically grounded representation of generation at each farm. Together, these approaches produce power forecasts across a range of forecast horizons.
+
+Forecasts are generated at the regional and subregional levels and then disaggregated to individual wind farms, providing a consistent view of expected generation from the grid scale down to the farm scale. This multi level structure supports operational planning, market decisions, and a better understanding of how wind resources contribute to the evolving North American power system.
+
+<b>(Industry Data Science Internship Project)</b>
 </div>
 
 <center>
-  <img alt="Integral bridge" class="align-center"
-       src="/images/projects/Integral.png"
-       style="width: 500px; padding: 10px; margin: 10px 20px" />
+  <img alt="Wind Power Forecasting" class="align-center"
+       src="/images/projects/NA_Wind_Forecasting.png"
+       style="width: 700px; padding: 10px; margin: 10px 20px" />
 </center>
