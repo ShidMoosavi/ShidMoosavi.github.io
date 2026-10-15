@@ -21,6 +21,6 @@ These findings help guide turbine layout decisions and operational strategies th
 
 <center>
   <img alt="Wake Dynamics" class="align-center"
-       src="/images/projects/Wake.png"
+       src="/images/projects/Wake_graphical_abstract.png"
        style="width: 700px; padding: 10px; margin: 10px 20px" />
 </center>
