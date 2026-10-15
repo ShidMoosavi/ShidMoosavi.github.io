@@ -248,6 +248,25 @@ hr {
   text-decoration: none;
 }
 
+/* Make the whole card clickable: the title link's ::after stretches over the card */
+.archive .list__item {
+  position: relative;
+
+  .archive__item-title a:first-child::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
+
+  /* Keep other links (permalink icon, Download Paper/Slides, Read more) clickable on top */
+  .archive__item-title a + a,
+  p a {
+    position: relative;
+    z-index: 2;
+  }
+}
+
 
 /* --------------------------------------------------------------------------
    8. HOME PAGE - Education table and Technical Skills cards
