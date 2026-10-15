@@ -1,7 +1,7 @@
 ---
 title: "Offshore Wind Farm Efficiency Through Wake Dynamics"
 permalink: /research/project_5/
-excerpt: "Study of wake interactions in offshore wind farms and their impact on energy loss, focusing on turbulence, yaw misalignment, and environmental factors that shape turbine performance and farm wide efficiency.<br/><center><img alt='Wake Dynamics' class='align-center' src='/images/projects/Wake.png' style='width: 700px; padding: 10px; margin: 10px 20px' /></center>"
+excerpt: "Study of wake interactions in offshore wind farms and their impact on energy loss, focusing on turbulence, yaw misalignment, and environmental factors that shape turbine performance and farm wide efficiency.<br/><center><img alt='Wake Dynamics' class='align-center' src='/images/projects/Wake_graphical_abstract.png' style='width: 700px; padding: 10px; margin: 10px 20px' /></center>"
 collection: research
 ---
 
