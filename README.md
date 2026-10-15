@@ -1,96 +1,198 @@
-# Academic Pages
-**Academic Pages is a GitHub Pages template for personal and professional portfolio-oriented websites.**
+# Sina Shid-Moosavi — Personal Website
 
-![Academic Pages template example](images/themes/homepage-light.png "Academic Pages template example")
+Live site: **https://shidmoosavi.github.io**
 
-# Getting Started
-
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Click the "Use this template" button in the top right.
-1. On the "New repository" page, enter your public repository name as "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and add your content.
-1. Upload any files (like PDFs, .zip files, etc.) to the `files/` directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.
-1. Check status by going to the repository settings, in the "GitHub pages" section
-1. (Optional) Use the Jupyter notebooks or python scripts in the `markdown_generator` folder to generate markdown files for publications and talks from a TSV file.
-
-See more info at https://academicpages.github.io/
-
-## Running locally
-
-When you are initially working on your website, it is very useful to be able to preview the changes locally before pushing them to GitHub. To work locally you will need to:
-
-1. Clone the repository and made updates as detailed above.
-
-### Using a different IDE
-1. Make sure you have ruby-dev, bundler, and nodejs installed
-    
-    On most Linux distribution and [Windows Subsystem Linux](https://learn.microsoft.com/en-us/windows/wsl/about) the command is:
-    ```bash
-    sudo apt install ruby-dev ruby-bundler nodejs
-    ```
-    If you see error `Unable to locate package ruby-bundler`, `Unable to locate package nodejs `, run the following:
-    ```bash
-    sudo apt update && sudo apt upgrade -y
-    ```
-    then try run `sudo apt install ruby-dev ruby-bundler nodejs` again.
-
-    On MacOS the commands are:
-    ```bash
-    brew install ruby
-    brew install node
-    gem install bundler
-    ```
-1. Run `bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
-
-    If you see file permission error like `Fetching bundler-2.6.3.gem ERROR:  While executing gem (Gem::FilePermissionError) You don't have write permissions for the /var/lib/gems/3.2.0 directory.` or `Bundler::PermissionError: There was an error while trying to write to /usr/local/bin.`
-    Install Gems Locally (Recommended):
-    ```bash
-    bundle config set --local path 'vendor/bundle'
-    ```
-    then try run `bundle install` again. If succeeded, you should see a folder called `vendor` and `.bundle`.
-
-1. Run `jekyll serve -l -H localhost` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change to Markdown (*.md) and HTML files, while changes to the core template and configuration (i.e., `_config.yml`) will require stoping and restarting Jekyll.
-    You may also try `bundle exec jekyll serve -l -H localhost` to ensure jekyll to use specific dependencies on your own local machine.
-
-If you are running on Linux it may be necessary to install some additional dependencies prior to being able to run locally: `sudo apt install build-essential gcc make`
-
-## Using Docker
-
-Working from a different OS, or just want to avoid installing dependencies? You can use the provided `Dockerfile` to build a container that will run the site for you if you have [Docker](https://www.docker.com/) installed.
-
-You can build and execute the container by running the following command in the repository:
-
-```bash
-chmod -R 777 .
-docker compose up
-```
-
-You should now be able to access the website from `localhost:4000`.
-
-### Using the DevContainer in VS Code
-
-If you are using [Visual Studio Code](https://code.visualstudio.com/) you can use the [Dev Container](https://code.visualstudio.com/docs/devcontainers/containers) that comes with this Repository. Normally VS Code detects that a development container configuration is available and asks you if you want to use the container. If this doesn't happen you can manually start the container by **F1->DevContainer: Reopen in Container**. This restarts your VS Code in the container and automatically hosts your academic page locally on http://localhost:4000. All changes will be updated live to that page after a few seconds.
-
-# Maintenance
-
-Bug reports and feature requests to the template should be [submitted via GitHub](https://github.com/academicpages/academicpages.github.io/issues/new/choose). For questions concerning how to style the template, please feel free to start a [new discussion on GitHub](https://github.com/academicpages/academicpages.github.io/discussions).
-
-This repository was forked (then detached) by [Stuart Geiger](https://github.com/staeiou) from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/), which is © 2016 Michael Rose and released under the MIT License (see LICENSE.md). It is currently being maintained by [Robert Zupko](https://github.com/rjzupkoii) and additional maintainers would be welcomed.
-
-## Bugfixes and enhancements
-
-If you have bugfixes and enhancements that you would like to submit as a pull request, you will need to [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) this repository as opposed to using it as a template. This will also allow you to [synchronize your copy](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) of template to your fork as well.
-
-Unfortunately, one logistical issue with a template theme like Academic Pages that makes it a little tricky to get bug fixes and updates to the core theme. If you use this template and customize it, you will probably get merge conflicts if you attempt to synchronize. If you want to save your various .yml configuration files and markdown files, you can delete the repository and fork it again. Or you can manually patch.
+This website is built with Jekyll (the AcademicPages template). GitHub builds it automatically.
+**Every time you save a change on GitHub, the live site updates in about 1–2 minutes.**
+To check whether the update is finished, open the **Actions** tab of the repository. A green check means it's live.
 
 ---
-<div align="center">
-    
-![pages-build-deployment](https://github.com/academicpages/academicpages.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)
-[![GitHub contributors](https://img.shields.io/github/contributors/academicpages/academicpages.github.io.svg)](https://github.com/academicpages/academicpages.github.io/graphs/contributors)
-[![GitHub release](https://img.shields.io/github/v/release/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/releases/latest)
-[![GitHub license](https://img.shields.io/github/license/academicpages/academicpages.github.io?color=blue)](https://github.com/academicpages/academicpages.github.io/blob/master/LICENSE)
 
-[![GitHub stars](https://img.shields.io/github/stars/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io)
-[![GitHub forks](https://img.shields.io/github/forks/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/fork)
-</div>
+## Quick map: "I want to change…"
+
+| I want to change… | Open this file |
+|---|---|
+| My name, bio, email, location, university, profile photo | `_config.yml` → `author:` section |
+| My Google Scholar / LinkedIn / GitHub / ORCID / ResearchGate links | `_config.yml` → `author:` section |
+| The tabs in the top menu (order, add, remove) | `_data/navigation.yml` |
+| Home page text (About me, Education table, Skills cards) | `_pages/about.md` |
+| Research projects | `_research/` folder (one file per project) |
+| Publications list | `_pages/publications.html` |
+| Teaching | `_teaching/` folder (one file per course) |
+| CV PDF | `files/CV/` folder + `_pages/cv.md` |
+| Gallery photos and sections | `images/NU/`, `images/UCF/` + `_data/gallery.yml` |
+| Colors, fonts, card style, overall look | `_sass/_custom.scss` |
+| Footer links (bottom of every page) | `_includes/footer.html` (reads links from `_config.yml`) |
+| Browser tab icon (favicon) | `images/Icon.png` |
+
+---
+
+## Folder guide
+
+```
+_config.yml            Main settings: site title, your profile info, social links
+README.md              This guide
+
+_data/
+  navigation.yml       Top menu tabs
+  gallery.yml          Gallery sections
+
+_pages/                One file = one page on the site
+  about.md             Home page  (address: /)
+  publications.html    Publications (/publications/)
+  research.md          Research list page (/research/) - lists everything in _research/
+  teaching.html        Teaching list page (/teaching/) - lists everything in _teaching/
+  cv.md                CV (/cv/)
+  gallery.md           Gallery (/gallery/)
+  404.md               "Page not found" page
+
+_research/             One file per research project
+_teaching/             One file per course
+
+images/                All pictures (profile photo, project pictures, gallery folders)
+files/                 PDFs (CV, resume, papers)
+
+_sass/_custom.scss     YOUR personal style (colors, fonts, cards) - the only style file you need
+
+_includes/, _layouts/, assets/, _sass/ (other files)
+                       Template machinery. You normally never need to touch these.
+```
+
+**Unused template folders.** `_posts`, `_portfolio`, `_talks`, `_publications`, `_drafts`, `markdown_generator`, `talkmap`, and `scripts` came with the template. They are hidden from the live site through the `exclude:` list in `_config.yml`, so you can ignore them.
+
+---
+
+## How to edit a file on GitHub (no software needed)
+
+1. Go to https://github.com/ShidMoosavi/ShidMoosavi.github.io
+2. Click the folder, then the file you want to change.
+3. Click the **pencil icon** (✏️ "Edit this file") at the top right of the file.
+4. Make your change.
+5. Click the green **Commit changes…** button, then **Commit changes** again.
+6. Wait 1–2 minutes and refresh your website. Use Ctrl+F5 to skip the browser's saved copy.
+
+**To upload a file** (photo, PDF): open the folder on GitHub → **Add file** → **Upload files** → drag the file in → **Commit changes**.
+If a file with the same name already exists, it gets replaced.
+
+> **Tip:** Lines starting with `#` in `.yml` files, and text between `<!--` and `-->` in `.md`/`.html` files, are notes. They don't appear on the website.
+
+---
+
+## Common tasks
+
+### Add a new tab (a new page in the top menu)
+
+**Step 1: Create the page.** In the `_pages/` folder, click **Add file → Create new file** and name it, for example, `awards.md`. Paste:
+
+```markdown
+---
+layout: archive
+title: "Awards"
+permalink: /awards/
+author_profile: true
+---
+
+Write your content here. You can use **bold**, *italic*, lists:
+
+- First award, 2025
+- Second award, 2024
+```
+
+**Step 2: Add the tab to the menu.** Open `_data/navigation.yml` and add (at the position where you want the tab):
+
+```yaml
+  - title: "Awards"
+    url: /awards/
+```
+
+The `url` must match the `permalink` from Step 1, including the slashes.
+
+To **remove a tab**, delete its two lines in `_data/navigation.yml`. The page file can stay; it just won't be in the menu.
+
+### Add a research project
+
+1. Upload the project picture to `images/projects/` (e.g. `MyProject.png`).
+2. In `_research/`, open an existing file (e.g. `Project_5.md`), copy all its text, then **Add file → Create new file** named `Project_6.md` and paste.
+3. Change these lines at the top:
+   - `title:` the project name
+   - `permalink: /research/project_6/` (must be unique)
+   - `excerpt:` the short summary shown on the Research list page. Change the image path inside it to `/images/projects/MyProject.png`.
+4. Below the second `---`, write the full project description (shown when someone clicks the project).
+
+Projects are listed newest-file-first. `Project_6` appears above `Project_5`.
+
+### Add a publication
+
+Open `_pages/publications.html`. Copy one block from `<li>` to `</li>`, paste it at the top of the list (just under `<ul class="pub-list">`), and edit it:
+
+```html
+<li><strong>Shid-Moosavi, S.</strong>, Co-Author, A., and Co-Author, B.,
+<a href = https://doi.org/xxxx>Paper Title</a>, <i>Journal Name</i>, (2027).
+</li>
+```
+
+The numbers and card style are added automatically.
+
+### Add a teaching entry
+
+In `_teaching/`, copy an existing file (e.g. `2025-2-Fall-teaching.md`) into a new file such as `2026-1-spring-teaching.md`. Then change:
+
+- `title:` course name
+- `permalink:` must be **unique**, e.g. `/teaching/2026-1-spring-teaching`
+- `venue:`, `date:`, `location:`
+
+The list sorts by the `date:` line (newest at the top). Entries with the same date are sorted by file name.
+
+### Update the CV
+
+Upload the new PDF to `files/CV/` with the **same name** (`CV_ShidMoosavi.pdf`). It replaces the old one.
+Then in `_pages/cv.md`, change `last_updated: "August 2026"` to the new date.
+(If you use a different file name, change the `cv_file:` line in `_pages/cv.md`.)
+
+### Add gallery photos
+
+- **Add a photo to an existing section:** upload it to `images/NU/` (or `images/UCF/`) named with the **next number**. For example, if the last one is `21.jpg`, name the new one `22.jpg`. It must be `.jpg`. The page counts photos automatically, and the newest (highest number) shows first.
+- **Add a new section:** create a folder such as `images/Conferences/`. On GitHub: **Add file → Upload files**, then drag a folder in, or upload `1.jpg`, `2.jpg`, and so on. Then add to `_data/gallery.yml`:
+
+  ```yaml
+  - title: "Conferences"
+    folder: "Conferences"
+    description: "Talks and posters"   # optional
+  ```
+
+Visitors can click any photo to open it full screen and use the arrow keys to browse.
+
+### Add a Skills card on the home page
+
+In `_pages/about.md`, copy one block from `<div class="skill-card">` to its closing `</div>` (about 10 lines, marked `<!-- Card 1 -->`). Paste it after the last card, then change the image, title, and text.
+
+### Change profile photo
+
+Upload the new photo to `images/` named `Profile.png` (this replaces the old one), or upload any name and change `avatar:` in `_config.yml`.
+
+### Change the colors or fonts
+
+Open `_sass/_custom.scss`:
+
+- **Section 1**: light mode colors. `--brand-color` is the main accent color used for links, the menu underline, card edges, and buttons. Change this one value to recolor the whole site.
+- **Section 2**: dark mode colors.
+- **Section 3**: heading font. Body font is the first name in `$sans-serif` in `_sass/_themes.scss`.
+  Fonts come from Google Fonts. The link that loads them is in `_includes/head/custom.html`.
+
+Color picker for hex codes such as `#17607a`: https://htmlcolorcodes.com
+
+---
+
+## If something breaks
+
+- Open the **Actions** tab on GitHub. A red ❌ means the last change has an error. Click it to see which file and line.
+- Most common causes:
+  - In `.yml` files, the **indentation** (spaces) must match the lines around it. Use spaces, not tabs.
+  - A missing quote `"` or a missing `---` at the top of a page.
+- To undo a change: open the file on GitHub → **History** → open the previous version → copy its content back.
+
+---
+
+## Credits
+
+Based on the [AcademicPages](https://github.com/academicpages/academicpages.github.io) template (MIT License, see `LICENSE`), which is a fork of [Minimal Mistakes](https://mademistakes.com/work/minimal-mistakes-jekyll-theme/) by Michael Rose.

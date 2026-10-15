@@ -11,7 +11,7 @@ locale                   : "en-US"
 site_theme               : "default" # Currently available options are "default", "air"
 title                    : "Sina Shid-Moosavi"
 title_separator          : "-"
-name                     : &name "Sina Shid_Moosavi"
+name                     : &name "Sina Shid-Moosavi"
 description              : &description "PhD Candidate in Data and Systems"   # Update this with a general description of your site, this is the default if not overridden by a page
 url                      : https://ShidMoosavi.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
@@ -190,6 +190,33 @@ exclude:
   - README
   - tmp
   - vendor
+  # --- Unused template demo content (hidden from the live site) ---
+  # Remove a line to bring that page/section back.
+  - _posts                              # sample blog posts
+  - _drafts
+  - _portfolio                          # sample portfolio items
+  - _talks                              # sample talks
+  - _publications                       # sample "Paper Title Number X" pages (real list is in _pages/publications.html)
+  - _pages/archive-layout-with-content.md
+  - _pages/category-archive.html
+  - _pages/collection-archive.html
+  - _pages/cv-json.md
+  - _pages/markdown.md
+  - _pages/non-menu-page.md
+  - _pages/page-archive.html
+  - _pages/portfolio.html
+  - _pages/tag-archive.html
+  - _pages/talkmap.html
+  - _pages/talks.html
+  - _pages/year-archive.html
+  - markdown_generator
+  - scripts
+  - talkmap
+  - talkmap.py
+  - "*.ipynb"
+  - docker-compose.yaml
+  - CONTRIBUTING.md
+  - README.md
 keep_files:
   - .git
   - .svn
