@@ -41,3 +41,6 @@
     "vendor/font-awesome/solid",
     "vendor/font-awesome/brands"
 ;
+
+/* Personal colors & style (_sass/_custom.scss) - loaded last so it overrides the template */
+@import "custom";
