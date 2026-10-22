@@ -1,0 +1,149 @@
+# ==========================================================================
+#  TEACHING  (shown on the Teaching page, /teaching/)
+# --------------------------------------------------------------------------
+#  This is the only file you edit to add, remove, or change a course.
+#  The page layout lives in _pages/teaching.html and the style in
+#  _sass/_custom.scss (section 9b). See README.md -> "Add a teaching entry".
+# ==========================================================================
+
+# --------------------------------------------------------------------------
+#  UNIVERSITIES = the first tag on each course and the "University" filter.
+#  - key      : short id; each course's "university:" must match one of these
+#  - short    : text of the tag and the filter button (e.g. NU)
+#  - name     : full name (shown when the mouse is over the tag)
+#  - location : shown when the mouse is over the tag
+#  - color    : teal, purple, amber, green, red, blue or gray
+#  Filter buttons appear in this order, only for universities with courses.
+# --------------------------------------------------------------------------
+universities:
+  - key: nu
+    short: "NU"
+    name: "Northeastern University"
+    location: "Boston, MA"
+    color: red
+
+  - key: ucf
+    short: "UCF"
+    name: "University of Central Florida"
+    location: "Orlando, FL"
+    color: amber
+
+  - key: shiraz
+    short: "ShirazU"
+    name: "Shiraz University"
+    location: "Shiraz, Iran"
+    color: blue
+
+# --------------------------------------------------------------------------
+#  ROLES = the second tag on each course and the "Role" filter.
+#  Same fields as above. A role with no courses gets no filter button,
+#  so you can define roles before you need them (e.g. Lecturer).
+# --------------------------------------------------------------------------
+roles:
+  - key: gta
+    short: "GTA"
+    name: "Graduate Teaching Assistant"
+    color: teal
+
+  - key: uta
+    short: "UTA"
+    name: "Undergraduate Teaching Assistant"
+    color: green
+
+  - key: lecturer
+    short: "Lecturer"
+    name: "Lecturer"
+    color: purple
+
+  # More examples. Remove the # in front of the lines to use them.
+  # - key: instructor
+  #   short: "Instructor"
+  #   name: "Instructor of Record"
+  #   color: purple
+
+# --------------------------------------------------------------------------
+#  COURSES - newest at the top. They appear on the page in this order.
+#
+#  Copy this template, paste it at the top of the list, and fill it in:
+#
+#  - course: "Course Name"
+#    university: nu              # a key from UNIVERSITIES above
+#    role: gta                   # a key from ROLES above
+#    term: "Fall 2026"
+#    note: ""                    # optional: one short line shown under the course name
+#
+#  Avoid double quotes (") inside the text; use single quotes (') instead.
+# --------------------------------------------------------------------------
+courses:
+
+  - course: "Structural Analysis"
+    university: nu
+    role: gta
+    term: "Fall 2025"
+    note: ""
+
+  - course: "Statics and Solid Mechanics"
+    university: nu
+    role: gta
+    term: "Fall 2024"
+    note: ""
+
+  - course: "Structural Analysis"
+    university: nu
+    role: gta
+    term: "Spring 2024"
+    note: ""
+
+  - course: "Mechanics of Materials Laboratory"
+    university: ucf
+    role: gta
+    term: "Summer 2023"
+    note: ""
+
+  - course: "Mechanics of Materials Laboratory"
+    university: ucf
+    role: gta
+    term: "Spring 2023"
+    note: ""
+
+  - course: "Mechanics of Materials Laboratory"
+    university: ucf
+    role: gta
+    term: "Fall 2022"
+    note: ""
+
+  - course: "Statics"
+    university: shiraz
+    role: uta
+    term: "Spring 2014"
+    note: ""
+
+  - course: "Strength of Materials I"
+    university: shiraz
+    role: uta
+    term: "Spring 2014"
+    note: ""
+
+  - course: "Structural Analysis II"
+    university: shiraz
+    role: uta
+    term: "Spring 2014"
+    note: ""
+
+  - course: "Structural Analysis I"
+    university: shiraz
+    role: uta
+    term: "Fall 2013"
+    note: ""
+
+  - course: "Numerical Analysis"
+    university: shiraz
+    role: uta
+    term: "Fall 2013"
+    note: ""
+
+  - course: "Structural Drawing"
+    university: shiraz
+    role: uta
+    term: "Fall 2012"
+    note: ""
