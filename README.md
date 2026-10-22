@@ -119,6 +119,7 @@ To **remove a tab**, delete its two lines in `_data/navigation.yml`. The page fi
    - `permalink: /research/project_6/` (must be unique)
    - `excerpt:` the short summary shown on the Research list page. Change the image path inside it to `/images/projects/MyProject.png`.
 4. Below the second `---`, write the full project description (shown when someone clicks the project).
+   Keep the line `{% include project-papers.html %}` between the text and the picture. It shows the related papers (next section).
 
 Projects are listed newest-file-first. `Project_6` appears above `Project_5`.
 
@@ -132,6 +133,7 @@ All publications are in **`_data/publications.yml`**. Each paper is one block. C
     venue: "Journal Name"
     year: 2027
     type: journal
+    project: "Project_5"
     description: "One or two short sentences about the paper."
     doi: "https://doi.org/10.xxxx/xxxxx"
     paper: ""
@@ -142,6 +144,7 @@ All publications are in **`_data/publications.yml`**. Each paper is one block. C
 - Keep the two spaces before `- title:` and the four spaces before the other lines.
 - `type:` sets the colored tag on the card and the filter button. Use `journal`, `conference`, or `thesis` (or a type you add, see below).
 - Your name (`Shid-Moosavi, S.`) is made bold automatically. The spelling must match the `me:` line at the top of the file.
+- `project:` links the paper to a research project (see "Link papers to research projects" below). Use `""` if there is none.
 - Cards appear in the same order as in the file.
 - If the text contains a double quote `"`, use a single quote `'` instead.
 
@@ -171,6 +174,29 @@ Then set `type: preprint` on the papers you want. A few ready-made examples (Pre
 
 The filter buttons always start with **All**. After that, a button appears for each type that has **at least one paper**, in the order of the `types:` list. A type with no papers gets no button, so you can define types before you need them.
 
+### Link papers to research projects
+
+In `_data/publications.yml`, give a paper the line `project: "Project_5"`, using the file name of the project in `_research/` (without `.md`). Two things then happen automatically:
+
+- On the **Publications** page, that paper gets a **Project** button that opens the project page.
+- On the **project page**, a "Related publications" row appears under the text with one colored button per paper, such as **Journal Paper 1**, **Journal Paper 2**, **Conference Paper**. Each button opens the paper's DOI (or its `paper` / `manuscript` link if it has no DOI). Papers are grouped by type; when a type has more than one paper they are numbered, oldest first.
+
+A paper that belongs to more than one project: `project: ["Project_3", "Project_5"]`.
+
+**Boxes with your own text.** For anything that is not in `_data/publications.yml` (an internship, a talk, a dataset), add a `boxes:` list at the top of the project file, between the two `---` lines (see `Project_6.md`):
+
+```yaml
+boxes:
+  - text: "Industry Data Science Internship Project"
+    link: ""            # optional: the box opens this link
+    color: gray         # teal, purple, amber, green, red, blue or gray
+  - text: "AGU Presentation"
+    link: "https://ui.adsabs.harvard.edu/abs/2022AGUFM.H36D..05S/abstract"
+    color: blue
+```
+
+Boxes appear after the paper buttons, in the same row. With no `link`, the box is plain text.
+
 ### Add a teaching entry
 
 In `_teaching/`, copy an existing file (e.g. `2025-2-Fall-teaching.md`) into a new file such as `2026-1-spring-teaching.md`. Then change:
@@ -198,7 +224,7 @@ Then in `_pages/cv.md`, change `last_updated: "August 2026"` to the new date.
     description: "Talks and posters"   # optional
   ```
 
-Visitors can click any photo to open it full screen and use the arrow keys to browse. Clicking a section title hides or shows that section's photos (all sections start open).
+Visitors can click any photo to open it full screen and use the arrow keys to browse. Clicking a section title hides or shows that section's photos (all sections start open). Each section first shows 2 rows of photos (as many per row as fit the screen) with a **Show all** button under them. To show a different number of rows, change `var ROWS = 2;` at the top of `assets/js/gallery.js`.
 
 **Fast loading.** You can upload photos at full size. The page does not load the large files; it shows small copies made automatically by the free image service [wsrv.nl](https://wsrv.nl), and a medium copy in the full-screen view. Your uploaded files are never changed. If the service is unavailable, the original photos are shown instead. Settings are at the top of `_pages/gallery.md`:
 
