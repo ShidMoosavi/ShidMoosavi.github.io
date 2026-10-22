@@ -1,12 +1,11 @@
 ---
 title: "Mechanics of Materials Laboratory"
 collection: teaching
-type: "Graduate Teaching Assistant"
+university: ucf            # a key from _data/teaching.yml -> universities
+role: gta                  # a key from _data/teaching.yml -> roles
+term: "Spring 2023"
+date: 2023-01-15            # used only to sort the list (newest first)
 permalink: /teaching/2023-1-spring-teaching
-venue: "University of Central Florida, Spring"
-date: 2023-01-01
-location: "Orlando, USA"
 ---
 
-Led the lab sections and conducted experiments for undergraduate students. 
-
+Led the lab sections and conducted experiments for undergraduate students.

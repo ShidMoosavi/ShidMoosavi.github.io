@@ -1,12 +1,11 @@
 ---
 title: "Structural Analysis"
 collection: teaching
-type: "Graduate Teaching Assistant"
+university: nu            # a key from _data/teaching.yml -> universities
+role: gta                  # a key from _data/teaching.yml -> roles
+term: "Fall 2025"
+date: 2025-09-01            # used only to sort the list (newest first)
 permalink: /teaching/2025-2-Fall-teaching
-venue: "Northeastern University, Fall"
-date: 2025-01-01
-location: "Boston, USA"
 ---
 
 Led classes and conducted problem-solving sessions for undergraduate students.
-
