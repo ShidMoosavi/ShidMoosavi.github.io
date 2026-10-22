@@ -11,6 +11,8 @@ Explore images and visuals from my journey.
 {% comment %}
   Sections and folders are listed in _data/gallery.yml - edit that file, not this one.
   Style lives in _sass/_custom.scss (section 12). Photo viewer: assets/js/gallery.js.
+  Each section first shows 2 rows of photos (as many as fit the screen width) and a
+  "Show all" button. To change the number of rows, edit ROWS at the top of assets/js/gallery.js.
 
   FAST LOADING
   The uploaded photos are large. The page does not load them directly: it asks the free
@@ -54,6 +56,7 @@ Explore images and visuals from my journey.
       <img src="{{ thumb }}" data-full="{{ full }}" data-original="{{ original }}" alt="{{ section.title }} {{ n }}" loading="lazy" decoding="async" onerror="this.onerror=null;this.src=this.dataset.original;this.dataset.full=this.dataset.original;">
     {% endfor %}
   </div>
+  <button class="gallery-more" type="button" aria-expanded="false" data-count="{{ photos.size }}" hidden>Show all {{ photos.size }} photos</button>
 </details>
 {% endfor %}
 </div>
