@@ -645,8 +645,13 @@ html[data-theme="dark"] .pub-filter[aria-pressed="true"] {
   color: var(--muted-text-color);
 }
 
-/* the course list: one compact card with one line per course */
+/* the course list: one compact card with one line per course.
+   The list is one grid (term | course | role | university) and every row
+   uses the same columns (subgrid), so each column lines up from the left. */
 .teach-list {
+  display: grid;
+  grid-template-columns: 115px minmax(0, 1fr) auto auto;
+  column-gap: 16px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -663,11 +668,11 @@ html[data-theme="dark"] .pub-filter[aria-pressed="true"] {
 
 .teach-row {
   position: relative;
+  grid-column: 1 / -1;
   display: grid;
-  grid-template-columns: 105px minmax(0, 1fr) auto;
+  grid-template-columns: subgrid;
   align-items: center;
-  gap: 16px;
-  margin: 0;
+  margin: -1px 0 0;   /* pulled up 1px: the first row's divider is hidden under the card edge */
   padding: 0.7em 1.2em;
   border-top: 1px solid var(--global-border-color);
   transition: background 0.15s ease;
@@ -680,17 +685,35 @@ html[data-theme="dark"] .pub-filter[aria-pressed="true"] {
     display: none;
   }
 
-  /* narrower screens: tags go under the course name */
-  @media (max-width: 1280px) {
-    grid-template-columns: 105px minmax(0, 1fr);
+  /* role and university tags each sit in their own column */
+  .teach-tags {
+    display: contents;
+  }
+
+  .pub-tag {
+    justify-self: start;
+  }
+}
+
+/* narrower screens: the tags go under the course name */
+@media (max-width: 1280px) {
+  .teach-list {
+    display: block;
+  }
+
+  .teach-row {
+    grid-template-columns: 115px minmax(0, 1fr);
     gap: 4px 16px;
 
     .teach-tags {
+      display: flex;
       grid-column: 2;
     }
   }
+}
 
-  @media (max-width: 600px) {
+@media (max-width: 600px) {
+  .teach-row {
     grid-template-columns: minmax(0, 1fr);
 
     .teach-tags {
@@ -699,13 +722,8 @@ html[data-theme="dark"] .pub-filter[aria-pressed="true"] {
   }
 }
 
-/* each row is pulled up 1px, so the divider of the first visible row is
-   clipped by the card edge (works with any filter) */
-.teach-list > .teach-row {
-  margin-top: -1px;
-}
-
 .teach-row__term {
+  white-space: nowrap;
   font-size: 0.75em;
   font-weight: 600;
   color: var(--muted-text-color);
