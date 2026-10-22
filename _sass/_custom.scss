@@ -267,6 +267,57 @@ hr {
   }
 }
 
+/* Project page: "Related publications" buttons under the text (_includes/project-papers.html).
+   Colors come from the publication types (section 9). */
+.project-papers {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 1.4em 0 0.6em;
+}
+
+.project-papers__label {
+  margin-right: 4px;
+  font-size: 0.75em;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted-text-color);
+}
+
+.page__content .project-paper {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0.45em 1em;
+  font-size: 0.8em;
+  font-weight: 700;
+  line-height: 1.3;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+
+  i {
+    font-size: 0.8em;
+    opacity: 0.7;
+  }
+}
+
+@each $c in teal, purple, amber, green, red, blue, gray {
+  .page__content .project-paper.pub-tag--#{$c} {
+    color: var(--pub-#{$c});
+    background: var(--pub-#{$c}-soft);
+  }
+}
+
+.page__content a.project-paper:hover {
+  border-color: currentColor;
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+
 /* Research page: show project cards in 2 columns (1 column on phones) */
 .research-grid {
   display: grid;
