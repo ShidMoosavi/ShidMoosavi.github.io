@@ -197,7 +197,6 @@ exclude:
   - _portfolio                          # sample portfolio items
   - _talks                              # sample talks
   - _publications                       # sample "Paper Title Number X" pages (real list is in _data/publications.yml)
-  - _teaching                           # old one-file-per-course pages (real list is in _data/teaching.yml)
   - _pages/archive-layout-with-content.md
   - _pages/category-archive.html
   - _pages/collection-archive.html

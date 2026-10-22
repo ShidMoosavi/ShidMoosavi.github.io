@@ -18,7 +18,8 @@ To check whether the update is finished, open the **Actions** tab of the reposit
 | Home page text (About me, Education table, Skills cards) | `_pages/about.md` |
 | Research projects | `_research/` folder (one file per project) |
 | Publications list (papers, tags, filters, DOI/slides links) | `_data/publications.yml` |
-| Teaching (courses, universities, roles, filters) | `_data/teaching.yml` |
+| Teaching courses (one file per course) | `_teaching/` folder |
+| Teaching universities and roles (tags, filters) | `_data/teaching.yml` |
 | CV PDF | `files/CV/` folder + `_pages/cv.md` |
 | Gallery photos and sections | `images/NU/`, `images/UCF/` + `_data/gallery.yml` |
 | Colors, fonts, card style, overall look | `_sass/_custom.scss` |
@@ -36,19 +37,20 @@ README.md              This guide
 _data/
   navigation.yml       Top menu tabs
   publications.yml     Publications list (one block per paper)
-  teaching.yml         Teaching list (one block per course)
+  teaching.yml         Teaching universities and roles
   gallery.yml          Gallery sections
 
 _pages/                One file = one page on the site
   about.md             Home page  (address: /)
   publications.html    Publications page layout (/publications/) - the papers are in _data/publications.yml
   research.md          Research list page (/research/) - lists everything in _research/
-  teaching.html        Teaching page layout (/teaching/) - the courses are in _data/teaching.yml
+  teaching.html        Teaching page layout (/teaching/) - lists the courses in _teaching/
   cv.md                CV (/cv/)
   gallery.md           Gallery (/gallery/)
   404.md               "Page not found" page
 
 _research/             One file per research project
+_teaching/             One file per course
 
 images/                All pictures (profile photo, project pictures, gallery folders)
 files/                 PDFs (CV, resume, papers)
@@ -59,7 +61,7 @@ _includes/, _layouts/, assets/, _sass/ (other files)
                        Template machinery. You normally never need to touch these.
 ```
 
-**Unused template folders.** `_posts`, `_portfolio`, `_talks`, `_publications`, `_teaching`, `_drafts`, `markdown_generator`, `talkmap`, and `scripts` came with the template. They are hidden from the live site through the `exclude:` list in `_config.yml`, so you can ignore them.
+**Unused template folders.** `_posts`, `_portfolio`, `_talks`, `_publications`, `_drafts`, `markdown_generator`, `talkmap`, and `scripts` came with the template. They are hidden from the live site through the `exclude:` list in `_config.yml`, so you can ignore them.
 
 ---
 
@@ -199,24 +201,29 @@ Boxes appear after the paper buttons, in the same row. With no `link`, the box i
 
 ### Add a teaching entry
 
-All courses are in **`_data/teaching.yml`**. Copy a block, paste it at the top of the `courses:` list (newest first), and edit it:
+Each course is one file in the **`_teaching/`** folder, and has its own page (opened by clicking the course on the Teaching page).
+Copy an existing file (e.g. `2025-2-Fall-teaching.md`) into a new file such as `2026-1-spring-teaching.md`, then change:
 
 ```yaml
-  - course: "Structural Analysis"
-    university: nu
-    role: gta
-    term: "Fall 2026"
-    note: ""
+---
+title: "Structural Analysis"
+collection: teaching
+university: nu
+role: gta
+term: "Spring 2026"
+date: 2026-01-15
+permalink: /teaching/2026-1-spring-teaching
+---
+
+Describe what you did in the class. This text is shown on the course's own page.
 ```
 
-- `university:` and `role:` must be a `key` from the `universities:` and `roles:` lists at the top of the file. They set the two colored tags on the line and the filter buttons.
-- `note:` is optional: one short line shown in small text under the course name.
-- Courses appear in the same order as in the file.
+- `university:` and `role:` must be a `key` from the `universities:` and `roles:` lists in `_data/teaching.yml`. They set the two colored tags and the filter buttons.
+- `term:` is the text shown on the page. `date:` is only used to sort the list (newest at the top; use e.g. `-01-15` for Spring, `-05-15` for Summer, `-09-01` for Fall). Courses with the same date are sorted by file name.
+- `permalink:` must be **unique**.
 
-**Add a university or a role.** Copy one block in `universities:` or `roles:` and change it. `short` is the text on the tag and the filter button (e.g. `NU`, `GTA`), `name` is the full name (shown in the legend under the list and when the mouse is over a tag), `color` is teal, purple, amber, green, red, blue or gray.
+**Add a university or a role.** In `_data/teaching.yml`, copy one block in `universities:` or `roles:` and change it. `short` is the text of the filter button (e.g. `NU`, `GTA`), `name` is the full name shown on the tags, `color` is teal, purple, amber, green, red, blue or gray.
 A `Lecturer` role is already defined. Its filter button appears as soon as one course uses `role: lecturer`. In general a university or role with no courses gets no button.
-
-The old `_teaching/` folder (one file per course) is no longer used and is hidden through the `exclude:` list in `_config.yml`.
 
 ### Update the CV
 
