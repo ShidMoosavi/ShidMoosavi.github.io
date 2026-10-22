@@ -218,11 +218,11 @@ permalink: /teaching/2026-1-spring-teaching
 Describe what you did in the class. This text is shown on the course's own page.
 ```
 
-- `university:` and `role:` must be a `key` from the `universities:` and `roles:` lists in `_data/teaching.yml`. They set the two colored tags and the filter buttons.
+- `university:` and `role:` must be a `key` from the `universities:` and `roles:` lists in `_data/teaching.yml`. They set the two tags and the filter buttons.
 - `term:` is the text shown on the page. `date:` is only used to sort the list (newest at the top; use e.g. `-01-15` for Spring, `-05-15` for Summer, `-09-01` for Fall). Courses with the same date are sorted by file name.
 - `permalink:` must be **unique**.
 
-**Add a university or a role.** In `_data/teaching.yml`, copy one block in `universities:` or `roles:` and change it. `short` is the text of the filter button (e.g. `NU`, `GTA`), `name` is the full name shown on the tags, `color` is teal, purple, amber, green, red, blue or gray.
+**Add a university or a role.** In `_data/teaching.yml`, copy one block in `universities:` or `roles:` and change it. `short` is the text of the filter button (e.g. `NU`, `GTA`) and `name` is the full name shown on the tags. All teaching tags are gray; each course line shows the role first, then the university.
 A `Lecturer` role is already defined. Its filter button appears as soon as one course uses `role: lecturer`. In general a university or role with no courses gets no button.
 
 ### Update the CV
