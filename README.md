@@ -18,7 +18,7 @@ To check whether the update is finished, open the **Actions** tab of the reposit
 | Home page text (About me, Education table, Skills cards) | `_pages/about.md` |
 | Research projects | `_research/` folder (one file per project) |
 | Publications list (papers, tags, filters, DOI/slides links) | `_data/publications.yml` |
-| Teaching | `_teaching/` folder (one file per course) |
+| Teaching (courses, universities, roles, filters) | `_data/teaching.yml` |
 | CV PDF | `files/CV/` folder + `_pages/cv.md` |
 | Gallery photos and sections | `images/NU/`, `images/UCF/` + `_data/gallery.yml` |
 | Colors, fonts, card style, overall look | `_sass/_custom.scss` |
@@ -36,19 +36,19 @@ README.md              This guide
 _data/
   navigation.yml       Top menu tabs
   publications.yml     Publications list (one block per paper)
+  teaching.yml         Teaching list (one block per course)
   gallery.yml          Gallery sections
 
 _pages/                One file = one page on the site
   about.md             Home page  (address: /)
   publications.html    Publications page layout (/publications/) - the papers are in _data/publications.yml
   research.md          Research list page (/research/) - lists everything in _research/
-  teaching.html        Teaching list page (/teaching/) - lists everything in _teaching/
+  teaching.html        Teaching page layout (/teaching/) - the courses are in _data/teaching.yml
   cv.md                CV (/cv/)
   gallery.md           Gallery (/gallery/)
   404.md               "Page not found" page
 
 _research/             One file per research project
-_teaching/             One file per course
 
 images/                All pictures (profile photo, project pictures, gallery folders)
 files/                 PDFs (CV, resume, papers)
@@ -59,7 +59,7 @@ _includes/, _layouts/, assets/, _sass/ (other files)
                        Template machinery. You normally never need to touch these.
 ```
 
-**Unused template folders.** `_posts`, `_portfolio`, `_talks`, `_publications`, `_drafts`, `markdown_generator`, `talkmap`, and `scripts` came with the template. They are hidden from the live site through the `exclude:` list in `_config.yml`, so you can ignore them.
+**Unused template folders.** `_posts`, `_portfolio`, `_talks`, `_publications`, `_teaching`, `_drafts`, `markdown_generator`, `talkmap`, and `scripts` came with the template. They are hidden from the live site through the `exclude:` list in `_config.yml`, so you can ignore them.
 
 ---
 
@@ -199,13 +199,24 @@ Boxes appear after the paper buttons, in the same row. With no `link`, the box i
 
 ### Add a teaching entry
 
-In `_teaching/`, copy an existing file (e.g. `2025-2-Fall-teaching.md`) into a new file such as `2026-1-spring-teaching.md`. Then change:
+All courses are in **`_data/teaching.yml`**. Copy a block, paste it at the top of the `courses:` list (newest first), and edit it:
 
-- `title:` course name
-- `permalink:` must be **unique**, e.g. `/teaching/2026-1-spring-teaching`
-- `venue:`, `date:`, `location:`
+```yaml
+  - course: "Structural Analysis"
+    university: nu
+    role: gta
+    term: "Fall 2026"
+    note: ""
+```
 
-The list sorts by the `date:` line (newest at the top). Entries with the same date are sorted by file name.
+- `university:` and `role:` must be a `key` from the `universities:` and `roles:` lists at the top of the file. They set the two colored tags on the line and the filter buttons.
+- `note:` is optional: one short line shown in small text under the course name.
+- Courses appear in the same order as in the file.
+
+**Add a university or a role.** Copy one block in `universities:` or `roles:` and change it. `short` is the text on the tag and the filter button (e.g. `NU`, `GTA`), `name` is the full name (shown in the legend under the list and when the mouse is over a tag), `color` is teal, purple, amber, green, red, blue or gray.
+A `Lecturer` role is already defined. Its filter button appears as soon as one course uses `role: lecturer`. In general a university or role with no courses gets no button.
+
+The old `_teaching/` folder (one file per course) is no longer used and is hidden through the `exclude:` list in `_config.yml`.
 
 ### Update the CV
 
