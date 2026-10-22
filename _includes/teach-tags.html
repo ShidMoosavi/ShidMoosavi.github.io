@@ -1,10 +1,10 @@
 {%- comment -%}
-  University and role tags (full names) for one course from the _teaching/ folder:
+  Role and university tags (full names, gray) for one course from the _teaching/ folder:
     {% include teach-tags.html course=post %}   <- Teaching list
     {% include teach-tags.html course=page %}   <- the course's own page
-  Names and colors come from _data/teaching.yml.
+  Names come from _data/teaching.yml. Gray colors: _sass/_custom.scss (section 9, --pub-gray).
 {%- endcomment -%}
 {%- assign tag_course = include.course -%}
 {%- assign tag_uni = site.data.teaching.universities | where: "key", tag_course.university | first -%}
 {%- assign tag_role = site.data.teaching.roles | where: "key", tag_course.role | first -%}
-<span class="teach-tags"><span class="pub-tag pub-tag--{{ tag_uni.color | default: 'gray' }}"{% if tag_uni.location %} title="{{ tag_uni.location }}"{% endif %}>{{ tag_uni.name | default: tag_course.university }}</span><span class="pub-tag pub-tag--{{ tag_role.color | default: 'gray' }}">{{ tag_role.name | default: tag_course.role }}</span></span>
+<span class="teach-tags"><span class="pub-tag pub-tag--gray">{{ tag_role.name | default: tag_course.role }}</span><span class="pub-tag pub-tag--gray"{% if tag_uni.location %} title="{{ tag_uni.location }}"{% endif %}>{{ tag_uni.name | default: tag_course.university }}</span></span>
