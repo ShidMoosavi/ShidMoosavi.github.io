@@ -1,16 +1,18 @@
 # ==========================================================================
 #  TEACHING  (shown on the Teaching page, /teaching/)
 # --------------------------------------------------------------------------
-#  This is the only file you edit to add, remove, or change a course.
-#  The page layout lives in _pages/teaching.html and the style in
-#  _sass/_custom.scss (section 9b). See README.md -> "Add a teaching entry".
+#  This file defines the universities and roles (tags and filters).
+#  The courses themselves are in the _teaching/ folder, one file per course
+#  (each course also gets its own page with the text written in its file).
+#  Page layout: _pages/teaching.html. Style: _sass/_custom.scss (section 9b).
+#  See README.md -> "Add a teaching entry".
 # ==========================================================================
 
 # --------------------------------------------------------------------------
 #  UNIVERSITIES = the first tag on each course and the "University" filter.
-#  - key      : short id; each course's "university:" must match one of these
-#  - short    : text of the tag and the filter button (e.g. NU)
-#  - name     : full name (shown when the mouse is over the tag)
+#  - key      : short id; the "university:" line of each course file uses it
+#  - short    : text of the filter button (e.g. NU)
+#  - name     : full name, shown on the tag of each course
 #  - location : shown when the mouse is over the tag
 #  - color    : teal, purple, amber, green, red, blue or gray
 #  Filter buttons appear in this order, only for universities with courses.
@@ -60,90 +62,3 @@ roles:
   #   short: "Instructor"
   #   name: "Instructor of Record"
   #   color: purple
-
-# --------------------------------------------------------------------------
-#  COURSES - newest at the top. They appear on the page in this order.
-#
-#  Copy this template, paste it at the top of the list, and fill it in:
-#
-#  - course: "Course Name"
-#    university: nu              # a key from UNIVERSITIES above
-#    role: gta                   # a key from ROLES above
-#    term: "Fall 2026"
-#    note: ""                    # optional: one short line shown under the course name
-#
-#  Avoid double quotes (") inside the text; use single quotes (') instead.
-# --------------------------------------------------------------------------
-courses:
-
-  - course: "Structural Analysis"
-    university: nu
-    role: gta
-    term: "Fall 2025"
-    note: ""
-
-  - course: "Statics and Solid Mechanics"
-    university: nu
-    role: gta
-    term: "Fall 2024"
-    note: ""
-
-  - course: "Structural Analysis"
-    university: nu
-    role: gta
-    term: "Spring 2024"
-    note: ""
-
-  - course: "Mechanics of Materials Laboratory"
-    university: ucf
-    role: gta
-    term: "Summer 2023"
-    note: ""
-
-  - course: "Mechanics of Materials Laboratory"
-    university: ucf
-    role: gta
-    term: "Spring 2023"
-    note: ""
-
-  - course: "Mechanics of Materials Laboratory"
-    university: ucf
-    role: gta
-    term: "Fall 2022"
-    note: ""
-
-  - course: "Statics"
-    university: shiraz
-    role: uta
-    term: "Spring 2014"
-    note: ""
-
-  - course: "Strength of Materials I"
-    university: shiraz
-    role: uta
-    term: "Spring 2014"
-    note: ""
-
-  - course: "Structural Analysis II"
-    university: shiraz
-    role: uta
-    term: "Spring 2014"
-    note: ""
-
-  - course: "Structural Analysis I"
-    university: shiraz
-    role: uta
-    term: "Fall 2013"
-    note: ""
-
-  - course: "Numerical Analysis"
-    university: shiraz
-    role: uta
-    term: "Fall 2013"
-    note: ""
-
-  - course: "Structural Drawing"
-    university: shiraz
-    role: uta
-    term: "Fall 2012"
-    note: ""
