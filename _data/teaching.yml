@@ -5,16 +5,16 @@
 #  The courses themselves are in the _teaching/ folder, one file per course
 #  (each course also gets its own page with the text written in its file).
 #  Page layout: _pages/teaching.html. Style: _sass/_custom.scss (section 9b).
+#  All tags are gray (same gray as other gray tags on the site).
 #  See README.md -> "Add a teaching entry".
 # ==========================================================================
 
 # --------------------------------------------------------------------------
-#  UNIVERSITIES = the first tag on each course and the "University" filter.
+#  UNIVERSITIES = the second tag on each course and the "University" filter.
 #  - key      : short id; the "university:" line of each course file uses it
 #  - short    : text of the filter button (e.g. NU)
 #  - name     : full name, shown on the tag of each course
 #  - location : shown when the mouse is over the tag
-#  - color    : teal, purple, amber, green, red, blue or gray
 #  Filter buttons appear in this order, only for universities with courses.
 # --------------------------------------------------------------------------
 universities:
@@ -22,22 +22,19 @@ universities:
     short: "NU"
     name: "Northeastern University"
     location: "Boston, MA"
-    color: red
 
   - key: ucf
     short: "UCF"
     name: "University of Central Florida"
     location: "Orlando, FL"
-    color: amber
 
   - key: shiraz
     short: "ShirazU"
     name: "Shiraz University"
     location: "Shiraz, Iran"
-    color: blue
 
 # --------------------------------------------------------------------------
-#  ROLES = the second tag on each course and the "Role" filter.
+#  ROLES = the first tag on each course and the "Role" filter.
 #  Same fields as above. A role with no courses gets no filter button,
 #  so you can define roles before you need them (e.g. Lecturer).
 # --------------------------------------------------------------------------
@@ -45,20 +42,16 @@ roles:
   - key: gta
     short: "GTA"
     name: "Graduate Teaching Assistant"
-    color: teal
 
   - key: uta
     short: "UTA"
     name: "Undergraduate Teaching Assistant"
-    color: green
 
   - key: lecturer
     short: "Lecturer"
     name: "Lecturer"
-    color: purple
 
   # More examples. Remove the # in front of the lines to use them.
   # - key: instructor
   #   short: "Instructor"
   #   name: "Instructor of Record"
-  #   color: purple
