@@ -17,7 +17,7 @@ To check whether the update is finished, open the **Actions** tab of the reposit
 | The tabs in the top menu (order, add, remove) | `_data/navigation.yml` |
 | Home page text (About me, Education table, Skills cards) | `_pages/about.md` |
 | Research projects | `_research/` folder (one file per project) |
-| Publications list | `_pages/publications.html` |
+| Publications list (papers, tags, filters, DOI/slides links) | `_data/publications.yml` |
 | Teaching | `_teaching/` folder (one file per course) |
 | CV PDF | `files/CV/` folder + `_pages/cv.md` |
 | Gallery photos and sections | `images/NU/`, `images/UCF/` + `_data/gallery.yml` |
@@ -35,11 +35,12 @@ README.md              This guide
 
 _data/
   navigation.yml       Top menu tabs
+  publications.yml     Publications list (one block per paper)
   gallery.yml          Gallery sections
 
 _pages/                One file = one page on the site
   about.md             Home page  (address: /)
-  publications.html    Publications (/publications/)
+  publications.html    Publications page layout (/publications/) - the papers are in _data/publications.yml
   research.md          Research list page (/research/) - lists everything in _research/
   teaching.html        Teaching list page (/teaching/) - lists everything in _teaching/
   cv.md                CV (/cv/)
@@ -123,15 +124,52 @@ Projects are listed newest-file-first. `Project_6` appears above `Project_5`.
 
 ### Add a publication
 
-Open `_pages/publications.html`. Copy one block from `<li>` to `</li>`, paste it at the top of the list (just under `<ul class="pub-list">`), and edit it:
+All publications are in **`_data/publications.yml`**. Each paper is one block. Copy a block, paste it at the top of the `papers:` list (newest first), and edit it:
 
-```html
-<li><strong>Shid-Moosavi, S.</strong>, Co-Author, A., and Co-Author, B.,
-<a href = https://doi.org/xxxx>Paper Title</a>, <i>Journal Name</i>, (2027).
-</li>
+```yaml
+  - title: "Paper Title"
+    authors: "Shid-Moosavi, S., Co-Author, A., and Co-Author, B."
+    venue: "Journal Name"
+    year: 2027
+    type: journal
+    description: "One or two short sentences about the paper."
+    doi: "https://doi.org/10.xxxx/xxxxx"
+    paper: ""
+    manuscript: ""
+    slides: ""
 ```
 
-The numbers and card style are added automatically.
+- Keep the two spaces before `- title:` and the four spaces before the other lines.
+- `type:` sets the colored tag on the card and the filter button. Use `journal`, `conference`, or `thesis` (or a type you add, see below).
+- Your name (`Shid-Moosavi, S.`) is made bold automatically. The spelling must match the `me:` line at the top of the file.
+- Cards appear in the same order as in the file.
+- If the text contains a double quote `"`, use a single quote `'` instead.
+
+**Links (buttons under each card).** Each of these is optional. If it is empty (`""`) or the line is missing, no button is shown.
+
+| Line | Button | Use it for |
+|---|---|---|
+| `doi:` | DOI | The DOI link. `https://doi.org/10.xxxx` or just `10.xxxx` both work. |
+| `paper:` | Paper | Any other link to the paper (arXiv, ResearchGate, university repository, PDF) |
+| `manuscript:` | Manuscript | Your manuscript PDF (e.g. for a paper under review) |
+| `slides:` | Slides | Your presentation slides |
+
+The paper title links to the DOI, or to `paper` / `manuscript` if there is no DOI.
+
+**To add slides or a PDF you have on your computer:** upload it to the `files/` folder (for example `files/slides/IMAC2026.pdf`, see "To upload a file" above), then write `slides: "/files/slides/IMAC2026.pdf"`.
+
+**Add a new type (tag + filter button).** At the top of `_data/publications.yml`, under `types:`, copy one block and change it:
+
+```yaml
+  - key: preprint          # short id, used as "type: preprint" on papers
+    tag: "Preprint"        # text of the colored tag on the card
+    filter: "Preprints"    # text of the filter button
+    color: gray            # teal, purple, amber, green, red, blue or gray
+```
+
+Then set `type: preprint` on the papers you want. A few ready-made examples (Preprint, Book Chapter, Under Review) are already in the file behind `#`. Remove the `#` to use them.
+
+The filter buttons always start with **All**. After that, a button appears for each type that has **at least one paper**, in the order of the `types:` list. A type with no papers gets no button, so you can define types before you need them.
 
 ### Add a teaching entry
 
