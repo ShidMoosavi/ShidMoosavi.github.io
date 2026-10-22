@@ -629,6 +629,77 @@ html[data-theme="dark"] .btn-brand {
    -------------------------------------------------------------------------- */
 .gallery-section {
   margin-bottom: 40px;
+
+  &:not([open]) {
+    margin-bottom: 10px;
+  }
+}
+
+/* Section heading: click it to hide / show that section's photos */
+.gallery-section__head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 1.6em 0 0.9em;
+  padding-bottom: 0.35em;
+  border-bottom: 1px solid var(--global-border-color);
+  list-style: none;
+  cursor: pointer;
+  user-select: none;
+
+  &::-webkit-details-marker {
+    display: none;
+  }
+
+  .archive & h2 {
+    flex: 1;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  &:hover h2 {
+    color: var(--brand-color);
+  }
+}
+
+.gallery-section__count {
+  font-size: 0.75em;
+  color: var(--muted-text-color);
+  white-space: nowrap;
+}
+
+/* round chevron button; points up when open, down when closed */
+.gallery-section__toggle {
+  flex: none;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--global-border-color);
+  border-radius: 50%;
+  transition: border-color 0.15s ease, background 0.15s ease;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid var(--brand-color);
+    border-bottom: 2px solid var(--brand-color);
+    transform: translate(-50%, -75%) rotate(45deg);
+    transition: transform 0.2s ease;
+  }
+
+  .gallery-section[open] &::before {
+    transform: translate(-50%, -25%) rotate(-135deg);
+  }
+
+  .gallery-section__head:hover & {
+    border-color: var(--brand-color);
+    background: var(--brand-color-soft);
+  }
 }
 
 .gallery-description {
