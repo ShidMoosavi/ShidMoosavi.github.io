@@ -1,0 +1,197 @@
+# ==========================================================================
+#  PUBLICATIONS  (shown on the Publications page, /publications/)
+# --------------------------------------------------------------------------
+#  This is the only file you edit to add, remove, or change a publication.
+#  The page layout lives in _pages/publications.html and the card style in
+#  _sass/_custom.scss (section 9). See README.md -> "Add a publication".
+# ==========================================================================
+
+# Your name exactly as it is written in the author lists. It is shown in bold.
+me: "Shid-Moosavi, S."
+
+# --------------------------------------------------------------------------
+#  TYPES = the coloured tag on each card and the filter buttons at the top.
+#  - key    : short id; each paper's "type:" must match one of these keys
+#  - tag    : text of the coloured tag on the card
+#  - filter : text of the filter button
+#  - color  : teal, purple, amber, green, red, blue or gray
+#  Filter buttons appear in this order, and only for types that have at
+#  least one paper. To add a new type, copy one block (see the examples
+#  at the bottom of this list) and use its key on a paper.
+# --------------------------------------------------------------------------
+types:
+  - key: journal
+    tag: "Journal Paper"
+    filter: "Journal Papers"
+    color: teal
+
+  - key: conference
+    tag: "Conference Paper"
+    filter: "Conference Papers"
+    color: purple
+
+  - key: thesis
+    tag: "Thesis"
+    filter: "Theses"
+    color: amber
+
+  # More examples. Remove the # in front of the lines to use them.
+  # - key: preprint
+  #   tag: "Preprint"
+  #   filter: "Preprints"
+  #   color: gray
+  #
+  # - key: chapter
+  #   tag: "Book Chapter"
+  #   filter: "Book Chapters"
+  #   color: green
+  #
+  # - key: review
+  #   tag: "Under Review"
+  #   filter: "Under Review"
+  #   color: red
+
+# --------------------------------------------------------------------------
+#  PAPERS - newest at the top. They appear on the page in this order.
+#
+#  Copy this template, paste it at the top of the list, and fill it in:
+#
+#  - title: "Paper Title"
+#    authors: "Shid-Moosavi, S., Co-Author, A., and Co-Author, B."
+#    venue: "Journal or Conference Name"
+#    year: 2027
+#    type: journal               # a key from the TYPES list above
+#    description: "One or two short sentences about the paper."
+#    doi: "https://doi.org/10.xxxx/xxxxx"   # optional
+#    paper: ""                   # optional: other link (arXiv, ResearchGate, PDF)
+#    manuscript: ""              # optional: link to the manuscript PDF
+#    slides: ""                  # optional: link to the slides PDF
+#
+#  Optional links: leave them empty ("") or delete the line, and their
+#  button is not shown. The paper title links to the DOI, or to "paper"
+#  or "manuscript" if there is no DOI. To link a file you uploaded to the
+#  files/ folder, use for example: "/files/slides/my-talk.pdf"
+#  Avoid double quotes (") inside the text; use single quotes (') instead.
+# --------------------------------------------------------------------------
+papers:
+
+  - title: "Calibration of Wake Models for the Block Island Offshore Wind Farm Using SCADA Measurements"
+    authors: "Di Cioccio, F., Shid-Moosavi, S., Haghi, R., Tronci, E., Moaveni, B., Liberatore, S., and Hines, E."
+    venue: "Journal of Fluids and Structures"
+    year: 2026
+    type: journal
+    description: "Uses SCADA data from the Block Island Wind Farm to calibrate low-fidelity wake models through deterministic and Bayesian updating, raising power prediction accuracy (R² from about 75% to over 99% in the best turbine alignments)."
+    doi: "https://doi.org/10.1016/j.jfluidstructs.2026.104655"
+    paper: ""
+    manuscript: ""
+    slides: ""
+
+  - title: "Dynamic Recognition of Damage States in Wind Turbines Using Cepstral Coefficients and ANOVA Analysis"
+    authors: "Speciale, C., Shid-Moosavi, S., Milana, S., and Tronci, E."
+    venue: "International Modal Analysis Conference (IMAC-XLIV)"
+    year: 2026
+    type: conference
+    description: "A semi-supervised framework that combines cepstral coefficients with LDA and PLDA to recognize new damage states as they appear, with an ANOVA-based sensitivity analysis for parameter tuning. Validated on the Aventa AV-7 wind turbine."
+    doi: "https://doi.org/10.13052/rp-9788743814160A04"
+    paper: ""
+    manuscript: ""
+    slides: ""
+
+  - title: "Pattern Recognition and Damage Detection in Wind Turbine Monitoring Using Cepstral Coefficients"
+    authors: "Tronci, E., Shid-Moosavi, S., and Speciale, C."
+    venue: "11th International Conference on Experimental Vibration Analysis of Civil Engineering Structures (EVACES)"
+    year: 2025
+    type: conference
+    description: "Uses cepstral coefficients extracted from vibration data as damage-sensitive features to recognize patterns and detect damage in wind turbine monitoring."
+    doi: "https://doi.org/10.1007/978-3-031-96106-9_101"
+    paper: ""
+    manuscript: ""
+    slides: ""
+
+  - title: "Modeling and Experimentally-Driven Sensitivity Analysis of Wake-Induced Power Loss in Offshore Wind Farms: Insights from Block Island Wind Farm"
+    authors: "Shid-Moosavi, S., Di Cioccio, F., Haghi, R., Tronci, E., Moaveni, B., Liberatore, S., and Hines, E."
+    venue: "Renewable Energy"
+    year: 2025
+    type: journal
+    description: "A FLORIS-based sensitivity analysis of turbulence intensity, yaw misalignment, and power and thrust coefficients, grounded in measured data from the first U.S. offshore wind farm. Turbulence intensity and its seasonal variation dominate wake losses."
+    doi: "https://doi.org/10.1016/j.renene.2024.122126"
+    paper: ""
+    manuscript: ""
+    slides: ""
+
+  - title: "Damage Identification Strategy in Time-Varying Dynamic Systems Combining Cepstral and Image-Based Features"
+    authors: "Shid-Moosavi, S., Tronci, E., and Speciale, C."
+    venue: "International Modal Analysis Conference (IMAC-XLII)"
+    year: 2025
+    type: conference
+    description: "Fuses cepstral features with Gramian Angular Field time-image features, so image-based machine learning can track changes in frequency content and classify damage in time-varying systems."
+    doi: "https://doi.org/10.13052/97887-438-0147-4_6"
+    paper: ""
+    manuscript: ""
+    slides: ""
+
+  - title: "Smart Mobility Sensing of Origin-Destination Pairs Using Computer Vision"
+    authors: "Shid-Moosavi, S."
+    venue: "M.S. Thesis, University of Central Florida"
+    year: 2023
+    type: thesis
+    description: "A privacy-preserving system that combines GPS with person detection, tracking, and re-identification to record where bus passengers board and leave. Deployed on the public bus system in Benton Harbor, Michigan."
+    doi: ""
+    paper: "https://stars.library.ucf.edu/etd2020/1760/"
+    manuscript: ""
+    slides: ""
+
+  - title: "Towards Full-Field Sensing of 3D Deformation in Structural Components using Multi-Camera Photogrammetry"
+    authors: "Shid-Moosavi, S., Hassan, Z., and Sun, P."
+    venue: "8th World Conference on Structural Control and Monitoring (8WCSCM)"
+    year: 2022
+    type: conference
+    description: "A multi-camera photogrammetry approach for non-contact, full-field measurement of 3D deformation in structural components."
+    doi: ""
+    paper: "https://www.researchgate.net/publication/366581669_Towards_Full-Field_Sensing_of_3D_Deformation_in_Structural_Components_using_Multi-Camera_Photogrammetry"
+    manuscript: ""
+    slides: ""
+
+  - title: "Monitoring the Seismic Behavior of a Scaled RC Frame with Intermediate Ductility in a Shaking Table Test"
+    authors: "Vasef, M., Marefat, M., Shid-Moosavi, S., and Sun, P."
+    venue: "8th World Conference on Structural Control and Monitoring (8WCSCM)"
+    year: 2022
+    type: conference
+    description: "Shaking table tests of a 1/2.78-scale, three-story RC intermediate moment frame loaded up to failure, monitored with both conventional sensors and computer vision."
+    doi: ""
+    paper: "https://arxiv.org/abs/2403.01587"
+    manuscript: ""
+    slides: ""
+
+  - title: "Seismic Performance of Integral, Semi-Integral, and Conventional Bridges"
+    authors: "Abasi, A., Shid-Moosavi, S., and Rahai, A."
+    venue: "5th International Conference on Bridges"
+    year: 2019
+    type: conference
+    description: "Compares the seismic response of integral, semi-integral, and conventional bridges."
+    doi: ""
+    paper: "https://www.researchgate.net/publication/341909051_Seismic_Performance_of_Integral_Semi-Integral_and_Conventional_Bridges"
+    manuscript: ""
+    slides: ""
+
+  - title: "The Performance of Integral and Semi-integral pre-tensioned concrete bridges under thermal loads depending on various deck to pier connections"
+    authors: "Shid-Moosavi, S., and Rahai, A."
+    venue: "11th National Congress On Civil Engineering (11-NCCE)"
+    year: 2019
+    type: conference
+    description: "Studies how deck-to-pier connections affect abutment deformation and backfill pressure under thermal loads. Semi-integral bridges show better soil-structure interaction than integral ones."
+    doi: ""
+    paper: "https://www.researchgate.net/publication/334064146_The_Performance_of_Integral_and_Semi-integral_pre-tensioned_concrete_bridges_under_thermal_loads_depending_on_various_deck_to_pier_connections"
+    manuscript: ""
+    slides: ""
+
+  - title: "The performance of integral and semi-integral pre-tensioned concrete bridges under seismic loads in comparison with conventional bridges"
+    authors: "Shid-Moosavi, S., and Rahai, A."
+    venue: "Amirkabir Journal of Civil Engineering"
+    year: 2018
+    type: journal
+    description: "3D finite element models with nonlinear soil springs compare the seismic response of integral, semi-integral, and conventional pre-tensioned concrete bridges, including the forces transmitted by the backfill."
+    doi: ""
+    paper: "https://ajce.aut.ac.ir/article_2909_0.html"
+    manuscript: ""
+    slides: ""
