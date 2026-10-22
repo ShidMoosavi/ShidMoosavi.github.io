@@ -38,7 +38,7 @@ types:
   # More examples. Remove the # in front of the lines to use them.
   # - key: preprint
   #   tag: "Preprint"
-  #   filter: "Preprints"
+  #   filter: "Journal Papers"
   #   color: gray
   #
   # - key: chapter
@@ -48,7 +48,7 @@ types:
   #
   # - key: review
   #   tag: "Under Review"
-  #   filter: "Under Review"
+  #   filter: "Journal Papers"
   #   color: red
 
 # --------------------------------------------------------------------------
@@ -192,6 +192,6 @@ papers:
     type: journal
     description: "3D finite element models with nonlinear soil springs compare the seismic response of integral, semi-integral, and conventional pre-tensioned concrete bridges, including the forces transmitted by the backfill."
     doi: ""
-    paper: "https://ajce.aut.ac.ir/article_2909_0.html"
+    paper: "https://www.researchgate.net/profile/Sina-Shid-Moosavi/publication/334064045_The_Performance_of_Integral_and_Semi-integral_Pre-tensioned_Concrete_Bridges_Under_Seismic_Loads_in_Comparison_with_Conventional_Bridges/links/5d30d778a6fdcc2462eb9dc8/The-Performance-of-Integral-and-Semi-integral-Pre-tensioned-Concrete-Bridges-Under-Seismic-Loads-in-Comparison-with-Conventional-Bridges.pdf"
     manuscript: ""
     slides: ""
