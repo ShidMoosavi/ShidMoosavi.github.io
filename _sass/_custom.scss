@@ -662,8 +662,9 @@ html[data-theme="dark"] .pub-filter[aria-pressed="true"] {
 }
 
 .teach-row {
+  position: relative;
   display: grid;
-  grid-template-columns: 110px minmax(0, 1fr) auto;
+  grid-template-columns: 105px minmax(0, 1fr) auto;
   align-items: center;
   gap: 16px;
   margin: 0;
@@ -679,12 +680,21 @@ html[data-theme="dark"] .pub-filter[aria-pressed="true"] {
     display: none;
   }
 
-  @media (max-width: 600px) {
-    grid-template-columns: minmax(0, 1fr) auto;
-    gap: 2px 12px;
+  /* narrower screens: tags go under the course name */
+  @media (max-width: 1280px) {
+    grid-template-columns: 105px minmax(0, 1fr);
+    gap: 4px 16px;
 
-    .teach-row__term {
-      grid-column: 1 / -1;
+    .teach-tags {
+      grid-column: 2;
+    }
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: minmax(0, 1fr);
+
+    .teach-tags {
+      grid-column: 1;
     }
   }
 }
@@ -702,40 +712,45 @@ html[data-theme="dark"] .pub-filter[aria-pressed="true"] {
   font-variant-numeric: tabular-nums;
 }
 
+/* course name links to the course page; the whole row is clickable */
 .teach-row__course {
   font-size: 0.88em;
   font-weight: 600;
-  color: var(--global-text-color);
+  color: var(--global-text-color) !important;
+  text-decoration: none !important;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+  }
 }
 
-.teach-row__note {
-  display: block;
-  font-size: 0.85em;
-  font-weight: 400;
-  color: var(--muted-text-color);
+.teach-row:hover .teach-row__course {
+  color: var(--brand-color) !important;
 }
 
-.teach-row__tags {
+.teach-tags {
   display: flex;
+  flex-wrap: wrap;
   gap: 6px;
+}
+
+/* term and tags under the title on a course's own page (_layouts/single.html) */
+.teach-page-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+
+  .teach-row__term {
+    font-size: 0.85em;
+  }
 }
 
 .teach-empty {
   margin: 1em 0;
   color: var(--muted-text-color);
-}
-
-.teach-legend {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px 18px;
-  margin: 1em 0 0;
-  font-size: 0.72em;
-  color: var(--muted-text-color);
-
-  strong {
-    color: var(--global-text-color);
-  }
 }
 
 
