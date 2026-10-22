@@ -706,6 +706,40 @@ html[data-theme="dark"] .btn-brand {
   color: var(--muted-text-color);
 }
 
+/* photos beyond the first rows, until "Show all" is clicked (assets/js/gallery.js) */
+.gallery-images img.is-hidden {
+  display: none;
+}
+
+/* "Show all N photos" / "Show less" button under each section */
+.gallery-more {
+  display: block;
+  margin: 18px auto 0;
+  padding: 0.5em 1.4em;
+  font-family: inherit;
+  font-size: 0.8em;
+  font-weight: 600;
+  color: var(--brand-color);
+  background: var(--card-bg-color);
+  border: 1px solid var(--brand-color);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+
+  &:hover {
+    color: #fff;
+    background: var(--brand-color);
+  }
+
+  &[hidden] {
+    display: none;
+  }
+}
+
+html[data-theme="dark"] .gallery-more:hover {
+  color: #10181f;
+}
+
 .gallery-images {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
