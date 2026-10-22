@@ -14,10 +14,9 @@ This study conducts a sensitivity analysis of influential operational and enviro
 As offshore wind farms expand in scale and density, addressing wake induced inefficiencies becomes increasingly important. The study integrates experimental observations with modeling frameworks to calibrate predictive tools that better reflect real world conditions. Seasonal variations in turbulence and their influence on wake recovery are also evaluated, offering insight into temporal changes in farm performance.
 
 These findings help guide turbine layout decisions and operational strategies that minimize energy losses and enhance overall wind farm reliability.
-
-<a href="https://doi.org/10.1016/j.renene.2024.122126"><b>(Journal Paper 1,</b></a>
-<a href="https://doi.org/10.1016/j.jfluidstructs.2026.104655"><b>Journal Paper 2)</b></a>
 </div>
+
+{% include project-papers.html %}
 
 <center>
   <img alt="Wake Dynamics" class="align-center"

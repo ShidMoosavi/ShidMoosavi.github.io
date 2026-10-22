@@ -3,6 +3,11 @@ title: "Wind Power Forecasting Across North American Power Grids"
 permalink: /research/project_6/
 excerpt: "A forecasting framework that combines weather models with data driven and physics based approaches to predict wind power generation for grid operators across North America, from the regional level down to individual wind farms.<br/><center><img alt='Wind Power Forecasting' class='align-center' src='/images/projects/NA_Wind_Forecasting.png' style='width: 700px; padding: 10px; margin: 10px 20px' /></center>"
 collection: research
+# Extra boxes shown under the text, next to any paper buttons (see README).
+boxes:
+  - text: "Industry Internship Project"
+    link: ""
+    color: gray
 ---
 
 <div style="text-align: justify;">
@@ -13,9 +18,9 @@ This project develops a forecasting framework for Regional Transmission Organiza
 The framework combines multiple weather sources, including reanalysis data and global numerical weather prediction models, with both data driven and physics based approaches. Machine learning models learn the relationship between wind conditions and power output, while turbine power curves provide a physically grounded representation of generation at each farm. Together, these approaches produce power forecasts across a range of forecast horizons.
 
 Forecasts are generated at the regional and subregional levels and then disaggregated to individual wind farms, providing a consistent view of expected generation from the grid scale down to the farm scale. This multi level structure supports operational planning, market decisions, and a better understanding of how wind resources contribute to the evolving North American power system.
-
-<b>(Industry Data Science Internship Project)</b>
 </div>
+
+{% include project-papers.html %}
 
 <center>
   <img alt="Wind Power Forecasting" class="align-center"

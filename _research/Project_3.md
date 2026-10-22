@@ -11,10 +11,9 @@ Structural monitoring relies on advanced technologies to measure displacements a
 The multi vision triangulation method achieves precise 3D displacement measurement using synchronized images from multiple cameras. By intersecting viewing rays from various angles, this approach accurately determines spatial positions of structural features, even under complex motion. Using direct linear transformation (DLT) methods, it captures structural responses in three dimensions, offering valuable insights into structural behavior during dynamic tests.
 
 Data synchronization is equally vital. Time drift between camera clocks can cause frame mismatches that lead to measurement errors. To mitigate this, audio based synchronization with cross correlation techniques was used to align video frames precisely. This ensures that data from all cameras corresponds to the same time points, allowing integrated multi vision analysis.
-
-<a href="https://arxiv.org/abs/2403.01587"><b>(Conference Paper 1, </b></a>
-<a href="https://www.researchgate.net/publication/366581669_Towards_Full-Field_Sensing_of_3D_Deformation_in_Structural_Components_using_Multi-Camera_Photogrammetry"><b>Conference Paper 2)</b></a>
 </div>
+
+{% include project-papers.html %}
 
 <center>
   <img alt="Photogrammetry" class="align-center"

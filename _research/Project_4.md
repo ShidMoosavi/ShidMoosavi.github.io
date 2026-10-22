@@ -11,9 +11,9 @@ Understanding passenger movement within public transportation systems is essenti
 Combining advanced modules like passenger detection, tracking, and re identification with GPS data, the framework offers a robust privacy preserving solution tailored to areas where expensive sensing systems or smart card technologies are not feasible. It highlights how low cost scalable tools can support equitable transportation planning.
 
 Using deep learning models and edge computing, the system achieves high accuracy under real world conditions, overcoming challenges such as occlusion and pose variation. The approach adapts existing algorithms to localized constraints and deploys them effectively within resource limited transit systems. Results show that the system improves OD data precision and provides actionable insights that support route optimization and enhance overall system performance.
-
-<a href="https://stars.library.ucf.edu/etd2020/1760/"><b>(Master Thesis)</b></a>
 </div>
+
+{% include project-papers.html %}
 
 <center>
   <img alt="Smart Mobility" class="align-center"

@@ -13,6 +13,8 @@ This research applies UAV-based lidar to estimate water surface areas with high 
 <a href="https://lidarmag.com/2022/12/23/uav-based-watershed-surveying-over-florida-forests/"><b>Workshop Presentation)</b></a>
 </div>
 
+{% include project-papers.html %}
+
 <center>
   <img alt="UAV Lidar" class="align-center"
        src="/images/projects/UAV.png"
