@@ -1,0 +1,50 @@
+{%- comment -%}
+  Buttons linking a research project to its papers. Used in each _research/Project_X.md:
+    {% include project-papers.html %}
+  Papers come from _data/publications.yml: every paper whose "project:" is this file's name
+  (e.g. "Project_5") is listed, grouped by type in the order of the "types:" list.
+  If a type has more than one paper they are numbered, oldest first: Journal Paper 1, 2 ...
+  Each button opens the paper's DOI, or else its "paper" or "manuscript" link.
+  Extra boxes with your own text come from "boxes:" at the top of the project file:
+    boxes:
+      - text: "Industry Data Science Internship Project"
+        link: ""          # optional: the box opens this link
+        color: gray       # teal, purple, amber, green, red, blue or gray
+  Style: _sass/_custom.scss (section 7).
+{%- endcomment -%}
+{%- assign pubs = site.data.publications -%}
+{%- assign this_project = page.relative_path | split: "/" | last | split: "." | first -%}
+{%- assign related = "" | split: "" -%}
+{%- for p in pubs.papers reversed -%}
+  {%- assign project_list = p.project | join: "," | split: "," -%}
+  {%- if project_list contains this_project -%}{%- assign related = related | push: p -%}{%- endif -%}
+{%- endfor -%}
+{%- assign box_count = page.boxes | size -%}
+{%- if related.size > 0 or box_count > 0 -%}
+<div class="project-papers">
+{%- if related.size > 0 %}<span class="project-papers__label">Related publications</span>{% endif -%}
+{%- for t in pubs.types -%}
+  {%- assign group = related | where: "type", t.key -%}
+  {%- for p in group -%}
+    {%- assign url = p.doi | default: "" | strip -%}
+    {%- if url != "" -%}{%- unless url contains "://" -%}{%- assign url = url | prepend: "https://doi.org/" -%}{%- endunless -%}{%- endif -%}
+    {%- if url == "" -%}{%- assign url = p.paper | default: p.manuscript | default: "" | strip -%}{%- endif -%}
+    {%- assign label = t.tag -%}
+    {%- if group.size > 1 -%}{%- assign label = label | append: " " | append: forloop.index -%}{%- endif -%}
+    {%- if url != "" %}
+<a class="project-paper pub-tag--{{ t.color | default: 'gray' }}" href="{{ url }}" target="_blank" rel="noopener" title="{{ p.title | escape }}">{{ label }}<i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+    {%- else %}
+<span class="project-paper pub-tag--{{ t.color | default: 'gray' }}" title="{{ p.title | escape }}">{{ label }}</span>
+    {%- endif -%}
+  {%- endfor -%}
+{%- endfor -%}
+{%- for box in page.boxes -%}
+  {%- assign box_link = box.link | default: "" | strip -%}
+  {%- if box_link != "" %}
+<a class="project-paper pub-tag--{{ box.color | default: 'gray' }}" href="{{ box_link }}" target="_blank" rel="noopener">{{ box.text }}<i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+  {%- else %}
+<span class="project-paper pub-tag--{{ box.color | default: 'gray' }}">{{ box.text }}</span>
+  {%- endif -%}
+{%- endfor %}
+</div>
+{%- endif -%}
