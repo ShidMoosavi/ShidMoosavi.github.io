@@ -198,7 +198,13 @@ Then in `_pages/cv.md`, change `last_updated: "August 2026"` to the new date.
     description: "Talks and posters"   # optional
   ```
 
-Visitors can click any photo to open it full screen and use the arrow keys to browse.
+Visitors can click any photo to open it full screen and use the arrow keys to browse. Clicking a section title hides or shows that section's photos (all sections start open).
+
+**Fast loading.** You can upload photos at full size. The page does not load the large files; it shows small copies made automatically by the free image service [wsrv.nl](https://wsrv.nl), and a medium copy in the full-screen view. Your uploaded files are never changed. If the service is unavailable, the original photos are shown instead. Settings are at the top of `_pages/gallery.md`:
+
+- If you **replace** a photo with a different one under the same name and the old one still appears, increase `photo_version` by 1.
+- To turn this off and always load the original photos, set `resize = false`.
+- New photos only appear about 1–2 minutes after you upload them (once the site has updated), because the image service reads them from the live site.
 
 ### Add a Skills card on the home page
 
