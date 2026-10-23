@@ -10,6 +10,8 @@
       - text: "Industry Data Science Internship Project"
         link: ""          # optional: the box opens this link
         color: gray       # teal, purple, amber, green, red, blue or gray
+  Talks come from "presentations:" (same fields as boxes) and get their own
+  "Related presentations" row; color defaults to gray.
   Style: _sass/_custom.scss (section 7).
 {%- endcomment -%}
 {%- assign pubs = site.data.publications -%}
@@ -44,6 +46,19 @@
 <a class="project-paper pub-tag--{{ box.color | default: 'gray' }}" href="{{ box_link }}" target="_blank" rel="noopener">{{ box.text }}<i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
   {%- else %}
 <span class="project-paper pub-tag--{{ box.color | default: 'gray' }}">{{ box.text }}</span>
+  {%- endif -%}
+{%- endfor %}
+</div>
+{%- endif -%}
+{%- if page.presentations.size > 0 %}
+<div class="project-papers">
+<span class="project-papers__label">Related presentations</span>
+{%- for pres in page.presentations -%}
+  {%- assign pres_link = pres.link | default: "" | strip -%}
+  {%- if pres_link != "" %}
+<a class="project-paper pub-tag--{{ pres.color | default: 'gray' }}" href="{{ pres_link }}" target="_blank" rel="noopener">{{ pres.text }}<i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+  {%- else %}
+<span class="project-paper pub-tag--{{ pres.color | default: 'gray' }}">{{ pres.text }}</span>
   {%- endif -%}
 {%- endfor %}
 </div>
