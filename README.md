@@ -199,6 +199,15 @@ boxes:
 
 Boxes appear after the paper buttons, in the same row. With no `link`, the box is plain text.
 
+**Related presentations.** Talks go in a `presentations:` list (same fields as `boxes:`, see `Project_2.md`). They get their own "Related presentations" row below the publications, gray by default:
+
+```yaml
+presentations:
+  - text: "Conference Presentation"
+    link: "https://ui.adsabs.harvard.edu/abs/2022AGUFM.H36D..05S/abstract"
+    color: gray
+```
+
 ### Add a teaching entry
 
 Each course is one file in the **`_teaching/`** folder, and has its own page (opened by clicking the course on the Teaching page).
