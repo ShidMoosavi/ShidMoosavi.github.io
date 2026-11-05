@@ -92,6 +92,16 @@ a {
 }
 
 
+/* Same content width on every page: the template's ".page" layout (home page,
+   course pages) adds extra empty space on the right that list pages
+   (".archive": Research, Publications, ...) don't have. Remove it. */
+.page {
+  @include breakpoint($large) {
+    padding-right: 0;
+  }
+}
+
+
 /* --------------------------------------------------------------------------
    4. TOP MENU (masthead)
    -------------------------------------------------------------------------- */
