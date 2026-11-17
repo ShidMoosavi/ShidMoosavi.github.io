@@ -1,7 +1,7 @@
 ---
 title: "Reinforcement Learning Supervised Damage Detection for Wind Turbines"
 permalink: /research/project_8/
-excerpt: "A reinforcement learning supervisory layer that adaptively tunes the parameters of a feature based, open set damage detection framework in real time, keeping wind turbine diagnostics robust and interpretable under changing operating conditions.<br/><center><img alt='RL Supervised Damage Detection' class='align-center' src='/images/projects/RL_damage_detection_abstract_box80.png' style='width: 700px; padding: 10px; margin: 10px 20px' /></center>"
+excerpt: "A reinforcement learning supervisory layer that adaptively tunes the parameters of a feature based, open set damage detection framework in real time, keeping wind turbine diagnostics robust and interpretable under changing operating conditions.<br/><center><img alt='RL Supervised Damage Detection' class='align-center' src='/images/projects/RL_damage_detection.png' style='width: 700px; padding: 10px; margin: 10px 20px' /></center>"
 collection: research
 ---
 
@@ -20,6 +20,6 @@ The framework is demonstrated on experimental data from the Aventa AV-7 research
 <!-- Graphical abstract placeholder: replace with the final figure when available -->
 <center>
   <img alt="RL Supervised Damage Detection" class="align-center"
-       src="/images/projects/RL_damage_detection_abstract_box80.png"
+       src="/images/projects/RL_damage_detection.png"
        style="width: 700px; padding: 10px; margin: 10px 20px" />
 </center>
