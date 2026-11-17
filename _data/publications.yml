@@ -98,7 +98,7 @@ papers:
     venue: "International Modal Analysis Conference (IMAC-XLIV)"
     year: 2026
     type: conference
-    project: ""
+    project: "Project_8"
     description: "A semi-supervised framework that combines cepstral coefficients with LDA and PLDA to recognize new damage states as they appear, with an ANOVA-based sensitivity analysis for parameter tuning. Validated on the Aventa AV-7 wind turbine."
     doi: "https://doi.org/10.13052/rp-9788743814160A04"
     paper: ""
@@ -110,7 +110,7 @@ papers:
     venue: "11th International Conference on Experimental Vibration Analysis of Civil Engineering Structures (EVACES)"
     year: 2025
     type: conference
-    project: ""
+    project: "Project_8"
     description: "Uses cepstral coefficients extracted from vibration data as damage-sensitive features to recognize patterns and detect damage in wind turbine monitoring."
     doi: "https://doi.org/10.1007/978-3-031-96106-9_101"
     paper: ""
