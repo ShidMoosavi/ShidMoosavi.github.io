@@ -18,5 +18,5 @@ Using deep learning models and edge computing, the system achieves high accuracy
 <center>
   <img alt="Smart Mobility" class="align-center"
        src="/images/projects/Bus_IOT.png"
-       style="width: 700px; padding: 10px; margin: 10px 20px" />
+       style="width: 800px; padding: 10px; margin: 10px 20px" />
 </center>
