@@ -20,5 +20,5 @@ These findings support more reliable risk assessment and maintenance decisions b
 <center>
   <img alt="Two Stage Framework" class="align-center"
        src="/images/projects/Two_Stage_GP_2.png"
-       style="width: 700px; padding: 10px; margin: 10px 20px" />
+       style="width: 900px; padding: 10px; margin: 10px 20px" />
 </center>
