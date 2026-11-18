@@ -15,5 +15,5 @@ Bridges are essential elements of transportation networks, but their performance
 <center>
   <img alt="Integral bridge" class="align-center"
        src="/images/projects/Integral.png"
-       style="width: 500px; padding: 10px; margin: 10px 20px" />
+       style="width: 700px; padding: 10px; margin: 10px 20px" />
 </center>
