@@ -18,6 +18,6 @@ Data synchronization is equally vital. Time drift between camera clocks can caus
 <center>
   <img alt="Photogrammetry" class="align-center"
        src="/images/projects/Shacking.png"
-       style="width: 500px; padding: 10px; margin: 10px 20px" />
+       style="width: 800px; padding: 10px; margin: 10px 20px" />
 </center>
 
