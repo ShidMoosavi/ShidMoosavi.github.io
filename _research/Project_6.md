@@ -25,5 +25,5 @@ Forecasts are generated at the regional and subregional levels and then disaggre
 <center>
   <img alt="Wind Power Forecasting" class="align-center"
        src="/images/projects/NA_Wind_Forecasting.png"
-       style="width: 700px; padding: 10px; margin: 10px 20px" />
+       style="width: 900px; padding: 10px; margin: 10px 20px" />
 </center>
