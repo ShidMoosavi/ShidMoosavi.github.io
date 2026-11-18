@@ -21,5 +21,5 @@ The framework is demonstrated on a wind turbine case study, trained only on heal
 <center>
   <img alt="RL Based Tuning for Damage Detection" class="align-center"
        src="/images/projects/RL_damage_detection.png"
-       style="width: 700px; padding: 10px; margin: 10px 20px" />
+       style="width: 900px; padding: 10px; margin: 10px 20px" />
 </center>
