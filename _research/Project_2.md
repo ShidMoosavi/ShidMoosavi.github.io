@@ -23,6 +23,6 @@ This research applies UAV-based lidar to estimate water surface areas with high 
 <center>
   <img alt="UAV Lidar" class="align-center"
        src="/images/projects/UAV.png"
-       style="width: 700px; padding: 10px; margin: 10px 20px" />
+       style="width: 800px; padding: 10px; margin: 10px 20px" />
 </center>
 
