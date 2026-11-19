@@ -156,9 +156,9 @@ papers:
     featured: true
     project: "Project_4"
     description: "A privacy-preserving system that combines GPS with person detection, tracking, and re-identification to record where bus passengers board and leave. Deployed on the public bus system in Benton Harbor, Michigan."
-    doi: "https://stars.library.ucf.edu/etd2020/1760/"
+    doi: ""
     paper: ""
-    manuscript: ""
+    manuscript: "https://stars.library.ucf.edu/etd2020/1760/"
     slides: ""
 
   - title: "Towards Full-Field Sensing of 3D Deformation in Structural Components using Multi-Camera Photogrammetry"
