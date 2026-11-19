@@ -2,11 +2,10 @@
 layout: archive
 title: "Curriculum Vitae"
 permalink: /cv/
-author_profile: true
 redirect_from:
   - /resume
-last_updated: "August 2026"
-# To update your CV: upload the new PDF to files/CV/ with the same name (or change the path below)
+# To update your CV: upload the new PDF to files/CV/ with the same name (or change the path below).
+# The "last updated" date on this page and on the home page is read from GitHub automatically.
 cv_file: "/files/CV/CV_ShidMoosavi.pdf"
 ---
 
@@ -14,7 +13,7 @@ cv_file: "/files/CV/CV_ShidMoosavi.pdf"
 {% assign cv_url = page.cv_file | prepend: base_path %}
 
 <p>
-    A PDF copy of my CV, <strong>last updated {{ page.last_updated }}</strong>, is available below:
+    A PDF copy of my CV{% include cv-updated.html file=page.cv_file before=", last updated <strong>" after="</strong>" %}, is available below:
 </p>
 
 <div class="cv-actions">

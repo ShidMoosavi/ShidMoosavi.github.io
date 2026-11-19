@@ -1,8 +1,7 @@
 ---
 layout: archive
-title: "Projects"
+title: "Research Projects"
 permalink: /research/
-author_profile: true
 ---
 
 <hr>  

@@ -93,11 +93,20 @@ a {
 }
 
 
-/* Same content width on every page: the template's ".page" layout (home page,
-   course pages) adds extra empty space on the right that list pages
-   (".archive": Research, Publications, ...) don't have. Remove it. */
-.page {
+/* No profile column on the left: every page uses the full width, centered.
+   (The template reserves the left 2/12 of the screen for that column.) */
+#main {
+  max-width: 1100px;
+}
+
+.page,
+.archive {
   @include breakpoint($large) {
+    float: none;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
     padding-right: 0;
   }
 }
@@ -139,41 +148,6 @@ a {
     &:before {
       transform: scaleX(1);
     }
-  }
-}
-
-
-/* --------------------------------------------------------------------------
-   5. LEFT SIDEBAR (photo, name, links)
-   -------------------------------------------------------------------------- */
-.author__avatar img {
-  padding: 4px;
-  border: 2px solid var(--brand-color) !important;
-  box-shadow: 0 4px 14px rgba(15, 35, 50, 0.15);
-}
-
-.author__name {
-  font-size: 1.25em !important;
-  margin-top: 0.6em;
-}
-
-.author__bio {
-  color: var(--muted-text-color);
-}
-
-.author__urls {
-  a {
-    color: var(--global-text-color);
-    transition: color 0.2s ease, padding-left 0.2s ease;
-
-    &:hover {
-      color: var(--brand-color);
-      padding-left: 3px;
-    }
-  }
-
-  .icon-pad-right {
-    color: var(--brand-color);
   }
 }
 
@@ -352,7 +326,7 @@ hr {
 
 
 /* --------------------------------------------------------------------------
-   8. HOME PAGE - Education table and Technical Skills cards
+   8. TABLES and TECHNICAL SKILLS cards (skills: home page, text in _data/home.yml)
    -------------------------------------------------------------------------- */
 .page__content table {
   border-radius: 10px;
@@ -551,7 +525,7 @@ html[data-theme="dark"] .pub-filter[aria-pressed="true"] {
   font-variant-numeric: tabular-nums;
 }
 
-.archive h2.pub-card__title {
+.pub-cards .pub-card .pub-card__title {
   margin: 0 0 0.5em;
   padding: 0;
   border: 0;
@@ -1045,4 +1019,390 @@ html[data-theme="dark"] .gallery-more:hover {
 
 .page__footer-copyright {
   color: var(--muted-text-color);
+}
+
+
+/* --------------------------------------------------------------------------
+   14. HOME PAGE  (layout: _layouts/home.html, text: _data/home.yml)
+   -------------------------------------------------------------------------- */
+.home-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.25em;
+}
+
+/* Name, headline and links */
+.home-hero {
+  padding: 3.5em 0 3em;
+  background: linear-gradient(180deg, var(--brand-color-soft) 0%, var(--global-bg-color) 100%);
+}
+
+.home-hero__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 3em;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 1.8em;
+  }
+}
+
+.home-eyebrow {
+  margin: 0 0 0.7em;
+  font-size: 0.78em;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--brand-color);
+}
+
+.home-hero__name {
+  margin: 0;
+  font-size: 3.2em;
+  line-height: 1.05;
+
+  @media (max-width: 600px) {
+    font-size: 2.4em;
+  }
+}
+
+.home-nowrap {
+  white-space: nowrap;
+}
+
+.home-hero__lead {
+  max-width: 30em;
+  margin: 0.7em 0 1.1em;
+  font-size: 1.2em;
+  line-height: 1.5;
+  color: var(--muted-text-color);
+}
+
+.home-hero__facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3em 1.5em;
+  margin: 0 0 1.4em;
+  padding: 0;
+  list-style: none;
+  font-size: 0.9em;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 0.45em;
+    margin: 0;
+  }
+
+  i {
+    color: var(--brand-color);
+  }
+}
+
+.home-social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    margin: 0;
+  }
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    font-size: 1.1em;
+    color: var(--brand-color-strong);
+    text-decoration: none;
+    background: var(--card-bg-color);
+    border: 1px solid var(--global-border-color);
+    border-radius: 50%;
+    box-shadow: var(--card-shadow);
+    transition: color 0.15s ease, background 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+
+    &:hover {
+      color: #fff;
+      background: var(--brand-color);
+      border-color: var(--brand-color);
+      transform: translateY(-2px);
+    }
+  }
+}
+
+html[data-theme="dark"] .home-social a:hover {
+  color: #0d1117;
+}
+
+.home-hero__portrait {
+  margin: 0;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 24px;
+    box-shadow: var(--card-shadow-hover);
+  }
+
+  @media (max-width: 768px) {
+    order: -1;
+    max-width: 200px;
+  }
+}
+
+/* Sections (every second one has a tinted background) */
+.home-section {
+  padding: 3em 0;
+
+  &--alt {
+    background: var(--brand-color-soft);
+  }
+}
+
+.home-section__title {
+  position: relative;
+  margin: 0 0 1.2em;
+  padding-bottom: 0.4em;
+  font-size: 1.6em;
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 48px;
+    height: 3px;
+    border-radius: 3px;
+    background: var(--brand-color);
+  }
+}
+
+.home-section__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5em 1em;
+  margin-bottom: 1.2em;
+
+  .home-section__title {
+    margin-bottom: 0;
+  }
+}
+
+.home-more {
+  font-size: 0.85em;
+  font-weight: 600;
+  text-decoration: none;
+
+  i {
+    margin-left: 0.3em;
+    transition: transform 0.15s ease;
+  }
+
+  &:hover i {
+    transform: translateX(3px);
+  }
+}
+
+/* About me */
+.home-prose {
+  max-width: 48em;
+
+  p {
+    margin: 0 0 1em;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* Education timeline */
+.home-edu {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 3em;
+  align-items: start;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+    gap: 2em;
+  }
+}
+
+.home-timeline {
+  margin: 0;
+  padding: 0 0 0 1.4em;
+  list-style: none;
+  border-left: 2px solid var(--global-border-color);
+
+  li {
+    position: relative;
+    margin: 0 0 1.6em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0.3em;
+      left: calc(-1.4em - 8px);
+      width: 14px;
+      height: 14px;
+      box-sizing: border-box;
+      background: var(--card-bg-color);
+      border: 3px solid var(--brand-color);
+      border-radius: 50%;
+    }
+  }
+
+  h3 {
+    margin: 0.15em 0;
+    font-size: 1.1em;
+  }
+
+  p {
+    margin: 0;
+    font-size: 0.9em;
+    color: var(--muted-text-color);
+  }
+}
+
+.home-timeline__date {
+  font-size: 0.75em;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--brand-color);
+}
+
+.home-timeline .home-timeline__note {
+  margin-top: 0.2em;
+  font-size: 0.8em;
+  font-style: italic;
+}
+
+/* CV and Recent Awards cards */
+.home-side {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+}
+
+.home-card {
+  padding: 1.3em 1.4em;
+  background: var(--card-bg-color);
+  border: 1px solid var(--global-border-color);
+  border-radius: 12px;
+  box-shadow: var(--card-shadow);
+
+  h3 {
+    margin: 0 0 0.35em;
+    font-size: 1.1em;
+  }
+
+  p {
+    margin: 0 0 1em;
+    font-size: 0.85em;
+    color: var(--muted-text-color);
+  }
+
+  .home-card__label {
+    margin: 0 0 0.5em;
+    font-size: 0.7em;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--brand-color);
+  }
+}
+
+.home-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6em;
+
+  a {
+    font-size: 0.8em;
+  }
+}
+
+.btn-ghost {
+  display: inline-block;
+  padding: 0.6em 1.4em;
+  font-weight: 600;
+  color: var(--brand-color) !important;
+  text-decoration: none !important;
+  border: 1px solid var(--brand-color);
+  border-radius: 999px;
+  transition: background 0.2s ease;
+
+  &:hover {
+    background: var(--brand-color-soft);
+  }
+}
+
+.home-awards {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: grid;
+    grid-template-columns: 3em minmax(0, 1fr);
+    gap: 0.6em;
+    margin: 0;
+    padding: 0.7em 0;
+    border-top: 1px solid var(--global-border-color);
+
+    &:first-child {
+      padding-top: 0;
+      border-top: 0;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  strong {
+    display: block;
+    font-size: 0.9em;
+    line-height: 1.4;
+    color: var(--brand-color-strong);
+  }
+
+  div span {
+    display: block;
+    font-size: 0.78em;
+    line-height: 1.45;
+    color: var(--muted-text-color);
+  }
+}
+
+.home-awards__year {
+  padding-top: 0.15em;
+  font-size: 0.8em;
+  font-weight: 700;
+  color: var(--brand-color);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Technical Skills on the home page: cards start on the left */
+.home .skills-row {
+  justify-content: flex-start;
+  margin-top: 0;
 }

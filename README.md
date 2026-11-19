@@ -15,12 +15,14 @@ To check whether the update is finished, open the **Actions** tab of the reposit
 | My name, bio, email, location, university, profile photo | `_config.yml` → `author:` section |
 | My Google Scholar / LinkedIn / GitHub / ORCID / ResearchGate links | `_config.yml` → `author:` section |
 | The tabs in the top menu (order, add, remove) | `_data/navigation.yml` |
-| Home page text (About me, Education table, Skills cards) | `_pages/about.md` |
+| Home page: headline, Education, Recent Awards, Technical Skills | `_data/home.yml` |
+| Home page: About Me text | `_pages/about.md` |
+| Home page: Selected Publications | `_data/publications.yml` → add `featured: true` to a paper |
 | Research projects | `_research/` folder (one file per project) |
 | Publications list (papers, tags, filters, DOI/slides links) | `_data/publications.yml` |
 | Teaching courses (one file per course) | `_teaching/` folder |
 | Teaching universities and roles (tags, filters) | `_data/teaching.yml` |
-| CV PDF | `files/CV/` folder + `_pages/cv.md` |
+| CV PDF (the "updated" date is automatic) | `files/CV/` folder |
 | Gallery photos and sections | `images/NU/`, `images/UCF/` + `_data/gallery.yml` |
 | Colors, fonts, card style, overall look | `_sass/_custom.scss` |
 | Footer links (bottom of every page) | `_includes/footer.html` (reads links from `_config.yml`) |
@@ -35,13 +37,14 @@ _config.yml            Main settings: site title, your profile info, social link
 README.md              This guide
 
 _data/
+  home.yml             Home page text (headline, education, awards, skills)
   navigation.yml       Top menu tabs
   publications.yml     Publications list (one block per paper)
   teaching.yml         Teaching universities and roles
   gallery.yml          Gallery sections
 
 _pages/                One file = one page on the site
-  about.md             Home page  (address: /)
+  about.md             Home page About Me text (address: /) - the rest is in _data/home.yml
   publications.html    Publications page layout (/publications/) - the papers are in _data/publications.yml
   research.md          Research list page (/research/) - lists everything in _research/
   teaching.html        Teaching page layout (/teaching/) - lists the courses in _teaching/
@@ -61,7 +64,7 @@ _includes/, _layouts/, assets/, _sass/ (other files)
                        Template machinery. You normally never need to touch these.
 ```
 
-**Unused template folders.** `_posts`, `_portfolio`, `_talks`, `_publications`, `_drafts`, `markdown_generator`, `talkmap`, and `scripts` came with the template. They are hidden from the live site through the `exclude:` list in `_config.yml`, so you can ignore them.
+**Home page.** Its layout is `_layouts/home.html` (you normally never edit it). Sections, top to bottom: name and links, About Me, Education with the CV and Recent Awards cards, Selected Publications, Technical Skills.
 
 ---
 
@@ -92,7 +95,6 @@ If a file with the same name already exists, it gets replaced.
 layout: archive
 title: "Awards"
 permalink: /awards/
-author_profile: true
 ---
 
 Write your content here. You can use **bold**, *italic*, lists:
@@ -237,7 +239,7 @@ A `Lecturer` role is already defined. Its filter button appears as soon as one c
 ### Update the CV
 
 Upload the new PDF to `files/CV/` with the **same name** (`CV_ShidMoosavi.pdf`). It replaces the old one.
-Then in `_pages/cv.md`, change `last_updated: "August 2026"` to the new date.
+That's all: the "updated" date on the home page and the CV page is read from GitHub automatically (the date you uploaded the file).
 (If you use a different file name, change the `cv_file:` line in `_pages/cv.md`.)
 
 ### Add gallery photos
@@ -259,9 +261,12 @@ Visitors can click any photo to open it full screen and use the arrow keys to br
 - To turn this off and always load the original photos, set `resize = false`.
 - New photos only appear about 1–2 minutes after you upload them (once the site has updated), because the image service reads them from the live site.
 
-### Add a Skills card on the home page
+### Edit the home page
 
-In `_pages/about.md`, copy one block from `<div class="skill-card">` to its closing `</div>` (about 10 lines, marked `<!-- Card 1 -->`). Paste it after the last card, then change the image, title, and text.
+- **Headline, Education, Recent Awards, Technical Skills:** `_data/home.yml`. Copy an existing block (e.g. one award or one skill card), paste it, and change the text. Only the first 3 awards are shown, so put the newest at the top.
+- **About Me:** `_pages/about.md` (plain paragraphs under the `---` lines).
+- **Selected Publications:** in `_data/publications.yml`, add the line `featured: true` to any paper (same indentation as `type:`). Delete the line to remove it from the home page. They appear in the same order as in that file.
+- **Links under your name (Email, Scholar, ORCID, ...):** the `author:` section of `_config.yml`. Empty fields are not shown.
 
 ### Change profile photo
 

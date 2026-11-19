@@ -1,0 +1,65 @@
+{%- comment -%}
+  One publication card. Shared by the Publications page and the home page:
+    {% include pub-card.html paper=p %}
+    {% include pub-card.html paper=p heading="h3" %}
+  "paper" is one entry of "papers:" in _data/publications.yml.
+  Card style: _sass/_custom.scss (section 9).
+{%- endcomment -%}
+{%- include base_path -%}
+{%- assign pubs = site.data.publications -%}
+{%- assign p = include.paper -%}
+{%- assign card_heading = include.heading | default: "h2" -%}
+{%- assign me_bold = pubs.me | prepend: '<strong>' | append: '</strong>' -%}
+{%- assign t = pubs.types | where: "key", p.type | first -%}
+
+{%- assign doi_url = p.doi | default: "" | strip -%}
+{%- if doi_url != "" %}{% unless doi_url contains "://" %}{% assign doi_url = doi_url | prepend: "https://doi.org/" %}{% endunless %}{% endif -%}
+{%- assign paper_url = p.paper | default: "" | strip -%}
+{%- assign manuscript_url = p.manuscript | default: "" | strip -%}
+{%- assign slides_url = p.slides | default: "" | strip -%}
+{%- assign project_list = p.project | join: "," | split: "," -%}
+{%- assign title_url = doi_url | default: paper_url | default: manuscript_url -%}
+
+<li class="pub-card" data-type="{{ p.type }}">
+  <div class="pub-card__meta">
+    <span class="pub-tag pub-tag--{{ t.color | default: 'gray' }}">{{ t.tag | default: p.type }}</span>
+    <span class="pub-card__year">{{ p.year }}</span>
+  </div>
+  <div class="pub-card__body">
+    <{{ card_heading }} class="pub-card__title">
+      {%- if title_url != "" %}<a href="{{ title_url }}" target="_blank" rel="noopener">{{ p.title }}</a>{% else %}{{ p.title }}{% endif -%}
+    </{{ card_heading }}>
+    {%- if p.authors %}
+    <p class="pub-card__authors">{{ p.authors | replace: pubs.me, me_bold }}</p>
+    {%- endif %}
+    {%- if p.venue %}
+    <p class="pub-card__venue"><em>{{ p.venue }}</em></p>
+    {%- endif %}
+    {%- if p.description %}
+    <p class="pub-card__desc">{{ p.description }}</p>
+    {%- endif %}
+    {%- if doi_url != "" or paper_url != "" or manuscript_url != "" or slides_url != "" or project_list.size > 0 %}
+    <div class="pub-card__links">
+      {%- if doi_url != "" %}
+      <a class="pub-link" href="{{ doi_url }}" target="_blank" rel="noopener"><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>DOI</a>
+      {%- endif %}
+      {%- if paper_url != "" %}
+      <a class="pub-link" href="{{ paper_url }}" target="_blank" rel="noopener"><i class="fas fa-file-lines" aria-hidden="true"></i>Paper</a>
+      {%- endif %}
+      {%- if manuscript_url != "" %}
+      <a class="pub-link" href="{{ manuscript_url }}" target="_blank" rel="noopener"><i class="fas fa-file-pdf" aria-hidden="true"></i>Manuscript</a>
+      {%- endif %}
+      {%- if slides_url != "" %}
+      <a class="pub-link" href="{{ slides_url }}" target="_blank" rel="noopener"><i class="fas fa-person-chalkboard" aria-hidden="true"></i>Slides</a>
+      {%- endif %}
+      {%- for project_name in project_list %}
+      {%- assign project_file = "_research/" | append: project_name | append: ".md" %}
+      {%- assign project = site.research | where: "relative_path", project_file | first %}
+      {%- if project %}
+      <a class="pub-link pub-link--project" href="{{ base_path }}{{ project.url }}" title="{{ project.title | escape }}"><i class="fas fa-diagram-project" aria-hidden="true"></i>Project</a>
+      {%- endif %}
+      {%- endfor %}
+    </div>
+    {%- endif %}
+  </div>
+</li>

@@ -62,6 +62,7 @@ types:
 #    year: 2027
 #    type: journal               # a key from the TYPES list above
 #    project: "Project_5"        # optional: related research project (see below)
+#    featured: true              # optional: also show it on the HOME page (see below)
 #    description: "One or two short sentences about the paper."
 #    doi: "https://doi.org/10.xxxx/xxxxx"   # optional
 #    paper: ""                   # optional: other link (arXiv, ResearchGate, PDF)
@@ -72,6 +73,10 @@ types:
 #  _research/ folder, e.g. "Project_5". The paper then gets a "Project"
 #  button here, and a button on that project's page. For more than one
 #  project write: project: ["Project_3", "Project_5"]. Leave "" for none.
+#
+#  featured: true puts the paper in "Selected Publications" on the home
+#  page as well (in the same order as here). Delete the line, or write
+#  featured: false, to show it only on the Publications page.
 #
 #  Optional links: leave them empty ("") or delete the line, and their
 #  button is not shown. The paper title links to the DOI, or to "paper"
@@ -86,6 +91,7 @@ papers:
     venue: "Journal of Fluids and Structures"
     year: 2026
     type: journal
+    featured: true
     project: "Project_5"
     description: "Uses SCADA data from the Block Island Wind Farm to calibrate low-fidelity wake models through deterministic and Bayesian updating, raising power prediction accuracy (R² from about 75% to over 99% in the best turbine alignments)."
     doi: "https://doi.org/10.1016/j.jfluidstructs.2026.104655"
@@ -122,6 +128,7 @@ papers:
     venue: "Renewable Energy"
     year: 2025
     type: journal
+    featured: true
     project: "Project_5"
     description: "A FLORIS-based sensitivity analysis of turbulence intensity, yaw misalignment, and power and thrust coefficients, grounded in measured data from the first U.S. offshore wind farm. Turbulence intensity and its seasonal variation dominate wake losses."
     doi: "https://doi.org/10.1016/j.renene.2024.122126"
@@ -134,6 +141,7 @@ papers:
     venue: "International Modal Analysis Conference (IMAC-XLII)"
     year: 2025
     type: conference
+    featured: true
     project: ""
     description: "Fuses cepstral features with Gramian Angular Field time-image features, so image-based machine learning can track changes in frequency content and classify damage in time-varying systems."
     doi: "https://doi.org/10.13052/97887-438-0147-4_6"

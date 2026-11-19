@@ -18,9 +18,9 @@ url                      : https://ShidMoosavi.github.io # The base hostname & p
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "ShidMoosavi/ShidMoosavi.github.io"
 
-# Site Author - The following control what appear as part of the author content on the side bar.
+# Site Author - Your name, photo and links. They appear at the top of the home page
+#               (_layouts/home.html) and in the footer of every page.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
-#               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
   avatar           : "Profile.png"
@@ -82,20 +82,12 @@ author:
   youtube          : # Username
   zhihu            : # Username
 
-# Publication Category - The following the list of publication categories and their headings
-publication_category:
-  manuscripts:
-    title: 'Journal Articles'    
-  conferences:
-    title: 'Conference Papers'
-
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
 future                   : true
 read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
-talkmap_link             : false      #change to true to add link to talkmap on talks page
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
   disqus:
@@ -106,22 +98,6 @@ comments:
     appid                :
     num_posts            : # 5 (default)
     colorscheme          : "light" # "light" (default), "dark"
-staticman:
-  allowedFields          : ['name', 'email', 'url', 'message']
-  branch                 : "gh-pages" # "master", "gh-pages"
-  commitMessage          : "New comment."
-  filename               : comment-{@timestamp}
-  format                 : "yml"
-  moderation             : true
-  path                   : "_data/comments/{options.slug}"
-  requiredFields         : ['name', 'email', 'message']
-  transforms:
-    email                : "md5"
-  generatedFields:
-    date:
-      type               : "date"
-      options:
-        format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
 atom_feed:
   hide                   : True     # change to true to hide the RSS feed in the footer
   path                   : # blank (default) uses feed.xml
@@ -190,32 +166,6 @@ exclude:
   - README
   - tmp
   - vendor
-  # --- Unused template demo content (hidden from the live site) ---
-  # Remove a line to bring that page/section back.
-  - _posts                              # sample blog posts
-  - _drafts
-  - _portfolio                          # sample portfolio items
-  - _talks                              # sample talks
-  - _publications                       # sample "Paper Title Number X" pages (real list is in _data/publications.yml)
-  - _pages/archive-layout-with-content.md
-  - _pages/category-archive.html
-  - _pages/collection-archive.html
-  - _pages/cv-json.md
-  - _pages/markdown.md
-  - _pages/non-menu-page.md
-  - _pages/page-archive.html
-  - _pages/portfolio.html
-  - _pages/tag-archive.html
-  - _pages/talkmap.html
-  - _pages/talks.html
-  - _pages/year-archive.html
-  - markdown_generator
-  - scripts
-  - talkmap
-  - talkmap.py
-  - "*.ipynb"
-  - docker-compose.yaml
-  - CONTRIBUTING.md
   - README.md
 keep_files:
   - .git
@@ -249,56 +199,25 @@ collections:
   teaching:
     output: true
     permalink: /:collection/:path/
-  publications:
-    output: true
-    permalink: /:collection/:path/
   research:
-    output: true
-    permalink: /:collection/:path/
-  portfolio:
-    output: true
-    permalink: /:collection/:path/
-  talks:
     output: true
     permalink: /:collection/:path/
 
 
 # These settings control how pages and collections are included in the site
 defaults:
-  # _posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
   # _pages
   - scope:
       path: ""
       type: pages
     values:
       layout: talk
-      author_profile: true
   # _teaching
   - scope:
       path: ""
       type: teaching
     values:
       layout: single
-      author_profile: true
-      share: true
-      comments: true
-  # _publications
-  - scope:
-      path: ""
-      type: publications
-    values:
-      layout: single
-      author_profile: true
       share: true
       comments: true
   # _research
@@ -307,26 +226,8 @@ defaults:
       type: research
     values:
       layout: talk
-      author_profile: true
       share: true
       comment: true
-  # _portfolio
-  - scope:
-      path: ""
-      type: portfolio
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comment: true
-  # _talks
-  - scope:
-      path: ""
-      type: talks
-    values:
-      layout: talk
-      author_profile: true
-      share: true
 
 
 # Sass/SCSS

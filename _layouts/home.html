@@ -1,0 +1,184 @@
+---
+layout: default
+---
+{%- comment -%}
+  HOME PAGE. You normally never edit this file. The text comes from:
+    _data/home.yml            headline, education, awards, technical skills
+    _pages/about.md           the About me text (shown as {{ content }})
+    _data/publications.yml    papers with  featured: true  -> Selected Publications
+    _config.yml  (author:)    name, photo, location, email and profile links
+    _pages/cv.md              path of the CV PDF (cv_file)
+  Style: _sass/_custom.scss (section 14).
+{%- endcomment -%}
+{% include base_path %}
+{%- assign home = site.data.home -%}
+{%- assign author = site.author -%}
+{%- assign name_parts = author.name | split: " " -%}
+{%- assign family_name = name_parts | last -%}
+{%- assign given_names = name_parts | pop | join: " " -%}
+{%- assign featured = site.data.publications.papers | where: "featured", true -%}
+{%- assign cv_page = site.pages | where: "permalink", "/cv/" | first -%}
+{%- assign cv_file = cv_page.cv_file | default: "/files/CV/CV_ShidMoosavi.pdf" -%}
+
+<div class="home">
+
+  <!-- 1. Name, headline and links -->
+  <header class="home-hero">
+    <div class="home-wrap home-hero__grid">
+      <div class="home-hero__text">
+        <p class="home-eyebrow">{{ home.eyebrow }}</p>
+        <h1 class="home-hero__name">{{ given_names }}<br><span class="home-nowrap">{{ family_name }}</span></h1>
+        <p class="home-hero__lead">{{ home.lead }}</p>
+
+        <ul class="home-hero__facts">
+          {%- if author.employer %}
+          <li><i class="fas fa-fw fa-building-columns" aria-hidden="true"></i>{{ author.employer }}</li>
+          {%- endif %}
+          {%- if author.location %}
+          <li><i class="fas fa-fw fa-location-dot" aria-hidden="true"></i>{{ author.location }}</li>
+          {%- endif %}
+        </ul>
+
+        <ul class="home-social">
+          {%- if author.email %}
+          <li><a href="mailto:{{ author.email }}" title="Email" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a></li>
+          {%- endif %}
+          {%- if author.googlescholar %}
+          <li><a href="{{ author.googlescholar }}" title="Google Scholar" aria-label="Google Scholar"><i class="ai ai-google-scholar" aria-hidden="true"></i></a></li>
+          {%- endif %}
+          {%- if author.orcid %}
+          <li><a href="{{ author.orcid }}" title="ORCID" aria-label="ORCID"><i class="ai ai-orcid" aria-hidden="true"></i></a></li>
+          {%- endif %}
+          {%- if author.researchgate %}
+          <li><a href="{{ author.researchgate }}" title="ResearchGate" aria-label="ResearchGate"><i class="fab fa-researchgate" aria-hidden="true"></i></a></li>
+          {%- endif %}
+          {%- if author.semantic %}
+          <li><a href="{{ author.semantic }}" title="Semantic Scholar" aria-label="Semantic Scholar"><i class="ai ai-semantic-scholar" aria-hidden="true"></i></a></li>
+          {%- endif %}
+          {%- if author.arxiv %}
+          <li><a href="{{ author.arxiv }}" title="arXiv" aria-label="arXiv"><i class="ai ai-arxiv" aria-hidden="true"></i></a></li>
+          {%- endif %}
+          {%- if author.github %}
+          <li><a href="https://github.com/{{ author.github }}" title="GitHub" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a></li>
+          {%- endif %}
+          {%- if author.linkedin %}
+          <li><a href="https://www.linkedin.com/in/{{ author.linkedin }}/" title="LinkedIn" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></li>
+          {%- endif %}
+          {%- if author.twitter %}
+          <li><a href="https://x.com/{{ author.twitter }}" title="X (Twitter)" aria-label="X (Twitter)"><i class="fab fa-x-twitter" aria-hidden="true"></i></a></li>
+          {%- endif %}
+          {%- if author.bluesky %}
+          <li><a href="https://bsky.app/profile/{{ author.bluesky }}" title="Bluesky" aria-label="Bluesky"><i class="fab fa-bluesky" aria-hidden="true"></i></a></li>
+          {%- endif %}
+          {%- if author.youtube %}
+          <li><a href="https://www.youtube.com/@{{ author.youtube }}" title="YouTube" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+          {%- endif %}
+        </ul>
+      </div>
+
+      {%- if author.avatar %}
+      <figure class="home-hero__portrait">
+        <img src="{% if author.avatar contains '://' %}{{ author.avatar }}{% else %}{{ base_path }}/images/{{ author.avatar }}{% endif %}" alt="Portrait of {{ author.name }}" fetchpriority="high">
+      </figure>
+      {%- endif %}
+    </div>
+  </header>
+
+  <!-- 2. About me -->
+  <section class="home-section" id="about" aria-labelledby="about-title">
+    <div class="home-wrap">
+      <h2 class="home-section__title" id="about-title">About Me</h2>
+      <div class="home-prose">
+        {{ content }}
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Education, with the CV and Recent Awards cards on the right -->
+  <section class="home-section home-section--alt" id="education" aria-labelledby="edu-title">
+    <div class="home-wrap home-edu">
+      <div>
+        <h2 class="home-section__title" id="edu-title">Education</h2>
+        <ol class="home-timeline">
+          {%- for e in home.education %}
+          <li>
+            <span class="home-timeline__date">{{ e.dates }}</span>
+            <h3>{{ e.degree }}</h3>
+            <p>{{ e.school }}</p>
+            {%- if e.note %}
+            <p class="home-timeline__note">{{ e.note }}</p>
+            {%- endif %}
+          </li>
+          {%- endfor %}
+        </ol>
+      </div>
+
+      <div class="home-side">
+        <div class="home-card">
+          <p class="home-card__label">Curriculum Vitae</p>
+          <h3>Full CV{% include cv-updated.html file=cv_file before=", updated " %}</h3>
+          <p>Research, publications, teaching, leadership, and awards.</p>
+          <div class="home-card__actions">
+            <a class="btn-brand" href="{{ base_path }}/cv/"><i class="fas fa-file-lines" aria-hidden="true"></i> View CV</a>
+            <a class="btn-ghost" href="{{ base_path }}{{ cv_file }}" download><i class="fas fa-download" aria-hidden="true"></i> PDF</a>
+          </div>
+        </div>
+
+        {%- if home.awards %}
+        <div class="home-card">
+          <p class="home-card__label">Recent Awards</p>
+          <ul class="home-awards">
+            {%- for a in home.awards limit: 3 %}
+            <li>
+              <span class="home-awards__year">{{ a.year }}</span>
+              <div>
+                <strong>{{ a.title }}</strong>
+                {%- if a.from %}<span>{{ a.from }}</span>{% endif %}
+              </div>
+            </li>
+            {%- endfor %}
+          </ul>
+        </div>
+        {%- endif %}
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Selected Publications (papers with  featured: true  in _data/publications.yml) -->
+  {%- if featured.size > 0 %}
+  <section class="home-section" id="publications" aria-labelledby="pubs-title">
+    <div class="home-wrap">
+      <div class="home-section__head">
+        <h2 class="home-section__title" id="pubs-title">Selected Publications</h2>
+        <a class="home-more" href="{{ base_path }}/publications/">All publications <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+      </div>
+      <ol class="pub-cards">
+        {%- for paper in featured %}
+        {% include pub-card.html paper=paper heading="h3" %}
+        {%- endfor %}
+      </ol>
+    </div>
+  </section>
+  {%- endif %}
+
+  <!-- 5. Technical Skills -->
+  {%- if home.skills %}
+  <section class="home-section home-section--alt" id="skills" aria-labelledby="skills-title">
+    <div class="home-wrap">
+      <h2 class="home-section__title" id="skills-title">Technical Skills</h2>
+      <div class="skills-row">
+        {%- for s in home.skills %}
+        <div class="skill-card">
+          {%- if s.image %}<img src="{{ base_path }}{{ s.image }}" alt="" loading="lazy">{% endif %}
+          <div class="skill-card__body">
+            <h3>{{ s.title }}</h3>
+            <p>{{ s.text }}</p>
+          </div>
+        </div>
+        {%- endfor %}
+      </div>
+    </div>
+  </section>
+  {%- endif %}
+
+</div>

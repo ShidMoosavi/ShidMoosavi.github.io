@@ -1,0 +1,58 @@
+# ==========================================================================
+#  HOME PAGE TEXT  (the page layout is _layouts/home.html)
+# --------------------------------------------------------------------------
+#  Elsewhere:
+#    About me text            -> _pages/about.md
+#    Selected Publications    -> add  featured: true  to a paper in _data/publications.yml
+#    Name, photo, email, links (Scholar, ORCID, GitHub, ...) -> author: in _config.yml
+#    CV "updated" date        -> automatic (date you last uploaded files/CV/CV_ShidMoosavi.pdf)
+#  Avoid double quotes (") inside the text; use single quotes (') instead.
+# ==========================================================================
+
+# Small line above your name
+eyebrow: "PhD Candidate · Data and Systems"
+
+# One line under your name
+lead: "Turning sensor data into smarter, more resilient infrastructure."
+
+# --------------------------------------------------------------------------
+#  EDUCATION - newest first. "note" is optional (advisor, honors, ...).
+# --------------------------------------------------------------------------
+education:
+  - dates: "2023 – present"
+    degree: "Ph.D. Candidate, Data and Systems"
+    school: "Northeastern University, Boston, MA"
+  - dates: "2021 – 2023"
+    degree: "M.S., Smart Cities"
+    school: "University of Central Florida, Orlando, FL"
+  - dates: "2014 – 2017"
+    degree: "M.S., Structural Engineering"
+    school: "Amirkabir University of Technology, Tehran, Iran"
+  - dates: "2010 – 2014"
+    degree: "B.Sc., Civil Engineering"
+    school: "Shiraz University, Shiraz, Iran"
+
+# --------------------------------------------------------------------------
+#  RECENT AWARDS - newest first. Only the first 3 are shown.
+# --------------------------------------------------------------------------
+awards:
+  - year: 2026
+    title: "PhD Teaching Award"
+    from: "Department of Civil and Environmental Engineering, Northeastern University"
+  - year: 2024
+    title: "Best Poster Award"
+    from: "CEE Graduate Research Exposition, Northeastern University"
+  - year: 2023
+    title: "CEE PhD Fellowship"
+    from: "Northeastern University"
+
+# --------------------------------------------------------------------------
+#  TECHNICAL SKILLS - one card each. Pictures go in images/.
+# --------------------------------------------------------------------------
+skills:
+  - title: "Programming and Tools"
+    image: /images/Programing.png
+    text: "Python (TensorFlow, PyTorch, Keras, OpenCV, scikit-learn, NumPy, pandas, Matplotlib, Seaborn) | MATLAB | FLORIS | ArcGIS | arcpy | Bash | Git"
+  - title: "Machine Learning and Data Science"
+    image: /images/ML.png
+    text: "Machine learning (decision trees, random forests, SVM, KNN, ANN) | Deep learning (RNN, CNN, LSTM, GNN, transformers) | Statistical analysis and regression | Clustering and classification | Time series forecasting | Data assimilation"

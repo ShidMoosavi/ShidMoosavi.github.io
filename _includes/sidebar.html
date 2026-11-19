@@ -1,9 +1,13 @@
 {% include base_path %}
 
-{% if page.author_profile or layout.author_profile or page.sidebar %}
+{% comment %}
+  The profile column (photo, name, links) was removed from every page.
+  Your links now live in the header of the home page (_layouts/home.html)
+  and in the footer. This file only shows a sidebar if a page asks for one
+  with "sidebar:" in its front matter.
+{% endcomment %}
+{% if page.sidebar %}
   <div class="sidebar sticky">
-  {% if page.author_profile or layout.author_profile %}{% include author-profile.html %}{% endif %}
-  {% if page.sidebar %}
     {% for s in page.sidebar %}
       {% if s.image %}
         <img src=
@@ -20,6 +24,5 @@
     {% if page.sidebar.nav %}
       {% include nav_list nav=page.sidebar.nav %}
     {% endif %}
-  {% endif %}
   </div>
 {% endif %}

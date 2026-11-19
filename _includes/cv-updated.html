@@ -1,0 +1,9 @@
+{%- comment -%}
+  The date the CV PDF was last uploaded, filled in by assets/js/cv-updated.js.
+  Nothing to edit here: the date comes from GitHub automatically.
+    {% include cv-updated.html file="/files/CV/CV_ShidMoosavi.pdf" before=", updated " %}
+  "before" / "after" is text shown around the date. Everything stays hidden
+  until the date is known.
+{%- endcomment -%}
+{%- assign cv_repo_path = include.file | remove_first: "/" -%}
+<span class="cv-updated" data-cv-file="{{ cv_repo_path }}" data-repo="{{ site.repository }}" hidden>{{ include.before }}<span data-cv-date></span>{{ include.after }}</span>
