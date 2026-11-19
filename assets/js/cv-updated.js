@@ -7,11 +7,12 @@
   the month and year into it ("November 2026") and shows it. If GitHub cannot
   be reached, the text simply stays hidden.
 
-  The answer is kept in the browser for a few hours, so repeat visits do not
-  call GitHub again (GitHub allows 60 calls per hour per visitor).
+  GitHub is asked on every page load, so a new upload shows up right away.
+  The last answer is also saved in the browser: it is shown instantly while
+  GitHub is asked, and used if GitHub cannot be reached (GitHub allows 60
+  calls per hour per visitor).
 */
 (function () {
-  var CACHE_HOURS = 6;
   var elements = document.querySelectorAll('[data-cv-file]');
   if (!elements.length || !window.fetch) return;
 
@@ -35,10 +36,7 @@
     var key = 'cv-updated:' + repo + ':' + path;
     try {
       var cached = JSON.parse(localStorage.getItem(key) || 'null');
-      if (cached && Date.now() - cached.saved < CACHE_HOURS * 3600 * 1000) {
-        show(path, cached.date);
-        return;
-      }
+      if (cached && cached.date) show(path, cached.date);
     } catch (e) {}
 
     fetch('https://api.github.com/repos/' + repo + '/commits?per_page=1&path=' + encodeURIComponent(path))
