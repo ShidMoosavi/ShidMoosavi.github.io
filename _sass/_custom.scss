@@ -39,26 +39,27 @@
    2. COLORS - DARK MODE  (moon/sun button in the top menu)
    -------------------------------------------------------------------------- */
 html[data-theme="dark"] {
-  --brand-color             : #5cc3dc;
-  --brand-color-strong      : #9fdcec;
-  --brand-color-soft        : #16303b;
-  --card-bg-color           : #18232c;
-  --card-shadow             : 0 1px 3px rgba(0, 0, 0, 0.4);
-  --card-shadow-hover       : 0 6px 22px rgba(0, 0, 0, 0.55);
-  --muted-text-color        : #a7b4bd;
+  /* GitHub-style dark palette (blue-gray, not green) */
+  --brand-color             : #58a6ff;   /* GitHub link blue                  */
+  --brand-color-strong      : #a5d0ff;   /* headings, hover                   */
+  --brand-color-soft        : #121d2f;   /* subtle blue tint for backgrounds  */
+  --card-bg-color           : #161b22;
+  --card-shadow             : 0 1px 3px rgba(1, 4, 9, 0.5);
+  --card-shadow-hover       : 0 6px 22px rgba(1, 4, 9, 0.7);
+  --muted-text-color        : #8b949e;
 
-  --global-base-color          : #10181f;
-  --global-bg-color            : #10181f;
-  --global-footer-bg-color     : #0c1318;
-  --global-text-color          : #e4eaee;
-  --global-text-color-light    : #b9c4cc;
+  --global-base-color          : #0d1117;
+  --global-bg-color            : #0d1117;
+  --global-footer-bg-color     : #010409;
+  --global-text-color          : #e6edf3;
+  --global-text-color-light    : #c9d1d9;
   --global-link-color          : var(--brand-color);
   --global-link-color-hover    : var(--brand-color-strong);
   --global-link-color-visited  : var(--brand-color);
-  --global-masthead-link-color : #e4eaee;
+  --global-masthead-link-color : #e6edf3;
   --global-masthead-link-color-hover : var(--brand-color);
-  --global-border-color        : #2a3843;
-  --global-thead-color         : #1c2a34;
+  --global-border-color        : #30363d;
+  --global-thead-color         : #161b22;
 }
 
 
@@ -435,13 +436,13 @@ hr {
 }
 
 html[data-theme="dark"] {
-  --pub-teal: #5cc3dc;    --pub-teal-soft: #16303b;
+  --pub-teal: #56d4dd;    --pub-teal-soft: #0f2a30;
   --pub-purple: #b692f6;  --pub-purple-soft: #2a1d4a;
   --pub-amber: #f5b544;   --pub-amber-soft: #3a2a08;
   --pub-green: #5fd197;   --pub-green-soft: #0e2e1f;
   --pub-red: #f58b80;     --pub-red-soft: #3b1512;
   --pub-blue: #7fb0ff;    --pub-blue-soft: #14284a;
-  --pub-gray: #b9c4cc;    --pub-gray-soft: #26323b;
+  --pub-gray: #c9d1d9;    --pub-gray-soft: #21262d;
 }
 
 /* Filter buttons (All / Journal Papers / ...) */
@@ -477,7 +478,7 @@ html[data-theme="dark"] {
 }
 
 html[data-theme="dark"] .pub-filter[aria-pressed="true"] {
-  color: #10181f;
+  color: #0d1117;
 }
 
 /* Publication cards */
@@ -807,7 +808,7 @@ html[data-theme="dark"] .pub-filter[aria-pressed="true"] {
 }
 
 html[data-theme="dark"] .btn-brand {
-  color: #10181f !important;
+  color: #0d1117 !important;
 }
 
 
@@ -950,7 +951,7 @@ html[data-theme="dark"] .btn-brand {
 }
 
 html[data-theme="dark"] .gallery-more:hover {
-  color: #10181f;
+  color: #0d1117;
 }
 
 .gallery-images {
@@ -983,7 +984,7 @@ html[data-theme="dark"] .gallery-more:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(8, 14, 20, 0.92);
+  background: rgba(1, 4, 9, 0.92);
   align-items: center;
   justify-content: center;
   cursor: zoom-out;
