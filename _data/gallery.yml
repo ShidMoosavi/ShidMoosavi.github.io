@@ -1,0 +1,23 @@
+# GALLERY SECTIONS
+#
+# Each block below is one section on the Gallery page (shown top to bottom).
+#
+#   title       : heading shown on the page
+#   folder      : folder inside /images/ that holds the photos
+#   description : (optional) one line of text under the heading
+#
+# PHOTO RULES
+#   - Photos must be .jpg and named with numbers: 1.jpg, 2.jpg, 3.jpg ...
+#   - To add a photo, upload it to the folder with the NEXT number (e.g. images/NU/22.jpg).
+#     It is counted automatically - nothing else to edit.
+#   - The highest number is shown first (newest first).
+#
+# TO ADD A NEW SECTION
+#   1. Create a new folder in /images/ (e.g. images/Conferences/) and upload 1.jpg, 2.jpg ...
+#   2. Copy one block below, paste it, and change title + folder.
+
+- title: "Northeastern University"
+  folder: "NU"
+
+- title: "University of Central Florida"
+  folder: "UCF"
