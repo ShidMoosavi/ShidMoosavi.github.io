@@ -1217,10 +1217,9 @@ html[data-theme="dark"] .home-social a:hover {
 
 /* About me */
 .home-prose {
-  max-width: 48em;
-
   p {
     margin: 0 0 1em;
+    text-align: justify;
   }
 
   p:last-child {
@@ -1401,8 +1400,8 @@ html[data-theme="dark"] .home-social a:hover {
   font-variant-numeric: tabular-nums;
 }
 
-/* Technical Skills on the home page: cards start on the left */
+/* Technical Skills on the home page: cards centered */
 .home .skills-row {
-  justify-content: flex-start;
+  justify-content: center;
   margin-top: 0;
 }

@@ -35,7 +35,7 @@
     {%- if p.venue %}
     <p class="pub-card__venue"><em>{{ p.venue }}</em></p>
     {%- endif %}
-    {%- if p.description %}
+    {%- if p.description and include.show_description != "no" %}
     <p class="pub-card__desc">{{ p.description }}</p>
     {%- endif %}
     {%- if doi_url != "" or paper_url != "" or manuscript_url != "" or slides_url != "" or project_list.size > 0 %}

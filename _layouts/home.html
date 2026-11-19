@@ -27,7 +27,7 @@ layout: default
     <div class="home-wrap home-hero__grid">
       <div class="home-hero__text">
         <p class="home-eyebrow">{{ home.eyebrow }}</p>
-        <h1 class="home-hero__name">{{ given_names }}<br><span class="home-nowrap">{{ family_name }}</span></h1>
+        <h1 class="home-hero__name">{{ given_names }} <span class="home-nowrap">{{ family_name }}</span></h1>
         <p class="home-hero__lead">{{ home.lead }}</p>
 
         <ul class="home-hero__facts">
@@ -154,7 +154,7 @@ layout: default
       </div>
       <ol class="pub-cards">
         {%- for paper in featured %}
-        {% include pub-card.html paper=paper heading="h3" %}
+        {% include pub-card.html paper=paper heading="h3" show_description="no" %}
         {%- endfor %}
       </ol>
     </div>
